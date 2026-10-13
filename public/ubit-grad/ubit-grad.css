@@ -1,0 +1,99 @@
+/* Ubit graduacion rig — CSS puro, sin dependencias.
+   Generado de Piezas 2 con scripts/build-ubit-grad.py.
+   Canvas 456x512. Anims: float + blink + breathe + wave (saludo) + tassel sway.
+   Sin JS sigue animando; ubit-grad.js solo pausa offscreen. */
+
+.ubit-rig {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    min-height: 0;
+    overflow: clip;
+    animation: ubit-float 3.2s ease-in-out infinite;
+    filter: drop-shadow(0 14px 20px rgb(0 0 0 / 0.4));
+}
+
+/* Tamaño natural (sin caja asignada): respeta proporción 456/512. */
+.ubit-rig--auto {
+    height: auto;
+    aspect-ratio: 456 / 512;
+}
+
+.ubit-rig img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    pointer-events: none;
+}
+
+.ubit-rig .layer-wing-left {
+    transform-origin: 20% 45%;
+    animation: ubit-breathe-l 3.2s ease-in-out infinite;
+}
+
+.ubit-rig .layer-wing-right {
+    transform-origin: 55% 45%;
+    animation: ubit-breathe-r 3.2s ease-in-out infinite;
+}
+
+.ubit-rig .layer-wing-up {
+    transform-origin: 56% 68%;
+    animation: ubit-wave 2.4s ease-in-out infinite;
+}
+
+.ubit-rig .layer-eyes {
+    transform-origin: 38% 39%;
+    animation: ubit-blink 4.5s ease-in-out infinite;
+}
+
+.ubit-rig .layer-tassel {
+    transform-origin: 66% 13%;
+    animation: ubit-sway 5s ease-in-out infinite;
+}
+
+.ubit-rig.is-paused,
+.ubit-rig.is-paused img {
+    animation-play-state: paused;
+}
+
+@keyframes ubit-float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-4px); }
+}
+
+@keyframes ubit-breathe-l {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.03, 1.015); }
+}
+
+@keyframes ubit-breathe-r {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.03, 1.015); }
+}
+
+@keyframes ubit-wave {
+    0%, 100% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
+}
+
+@keyframes ubit-blink {
+    0%, 92%, 100% { transform: scaleY(1); }
+    95% { transform: scaleY(0.12); }
+}
+
+@keyframes ubit-sway {
+    0%, 100% { transform: rotate(2deg); }
+    50% { transform: rotate(-3deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .ubit-rig,
+    .ubit-rig img {
+        animation: none;
+    }
+}

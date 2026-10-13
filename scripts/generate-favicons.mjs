@@ -6,7 +6,7 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const input = path.join(__dirname, '../src/logo.jpeg');
+const input = path.join(__dirname, '../src/logo.webp');
 const publicDir = path.join(__dirname, '../public');
 
 async function run() {

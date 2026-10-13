@@ -1,0 +1,15 @@
+layers:
+  foot-left.webp 1KB
+  foot-right.webp 1KB
+  wing-shadow-left.webp 2KB
+  wing-shadow-right.webp 2KB
+  wing-left.webp 3KB
+  wing-right.webp 3KB
+  wing-up.webp 4KB
+  torso.webp 10KB
+  beak.webp 2KB
+  eyes.webp 1KB
+  glasses.webp 6KB
+  cap.webp 5KB
+  tassel.webp 3KB
+total layers 49KB

@@ -1,0 +1,249 @@
+{
+  "canvas": [
+    456,
+    512
+  ],
+  "scaleFrom2048": 0.37209302325581395,
+  "unionBox2048": [
+    525,
+    112,
+    1751,
+    1488
+  ],
+  "layers": [
+    {
+      "id": "foot-left",
+      "src": "layers/foot-left.webp",
+      "z": 0,
+      "size": [
+        456,
+        512
+      ],
+      "bbox": [
+        100,
+        419,
+        139,
+        496
+      ],
+      "anim": "none",
+      "desc": "pata izq"
+    },
+    {
+      "id": "foot-right",
+      "src": "layers/foot-right.webp",
+      "z": 1,
+      "size": [
+        456,
+        512
+      ],
+      "bbox": [
+        194,
+        425,
+        236,
+        493
+      ],
+      "anim": "none",
+      "desc": "pata der"
+    },
+    {
+      "id": "wing-shadow-left",
+      "src": "layers/wing-shadow-left.webp",
+      "z": 2,
+      "size": [
+        456,
+        512
+      ],
+      "bbox": [
+        71,
+        207,
+        99,
+        386
+      ],
+      "anim": "none",
+      "desc": "sombra ala izq"
+    },
+    {
+      "id": "wing-shadow-right",
+      "src": "layers/wing-shadow-right.webp",
+      "z": 3,
+      "size": [
+        456,
+        512
+      ],
+      "bbox": [
+        251,
+        203,
+        283,
+        369
+      ],
+      "anim": "none",
+      "desc": "sombra ala der"
+    },
+    {
+      "id": "wing-left",
+      "src": "layers/wing-left.webp",
+      "z": 4,
+      "size": [
+        456,
+        512
+      ],
+      "bbox": [
+        17,
+        203,
+        96,
+        408
+      ],
+      "anim": "breathe",
+      "desc": "ala izq reposo"
+    },
+    {
+      "id": "wing-right",
+      "src": "layers/wing-right.webp",
+      "z": 5,
+      "size": [
+        456,
+        512
+      ],
+      "bbox": [
+        256,
+        200,
+        335,
+        405
+      ],
+      "anim": "breathe",
+      "desc": "ala der reposo"
+    },
+    {
+      "id": "wing-up",
+      "src": "layers/wing-up.webp",
+      "z": 6,
+      "size": [
+        456,
+        512
+      ],
+      "bbox": [
+        256,
+        153,
+        441,
+        341
+      ],
+      "anim": "wave",
+      "desc": "ala der levantada (saludo)"
+    },
+    {
+      "id": "torso",
+      "src": "layers/torso.webp",
+      "z": 7,
+      "size": [
+        456,
+        512
+      ],
+      "bbox": [
+        16,
+        42,
+        289,
+        442
+      ],
+      "anim": "none",
+      "desc": "torso"
+    },
+    {
+      "id": "beak",
+      "src": "layers/beak.webp",
+      "z": 8,
+      "size": [
+        456,
+        512
+      ],
+      "bbox": [
+        134,
+        214,
+        216,
+        280
+      ],
+      "anim": "none",
+      "desc": "pico"
+    },
+    {
+      "id": "eyes",
+      "src": "layers/eyes.webp",
+      "z": 9,
+      "size": [
+        456,
+        512
+      ],
+      "bbox": [
+        105,
+        158,
+        252,
+        244
+      ],
+      "anim": "blink",
+      "desc": "ojos felices"
+    },
+    {
+      "id": "glasses",
+      "src": "layers/glasses.webp",
+      "z": 10,
+      "size": [
+        456,
+        512
+      ],
+      "bbox": [
+        76,
+        171,
+        276,
+        256
+      ],
+      "anim": "none",
+      "desc": "gafas"
+    },
+    {
+      "id": "cap",
+      "src": "layers/cap.webp",
+      "z": 11,
+      "size": [
+        456,
+        512
+      ],
+      "bbox": [
+        56,
+        16,
+        316,
+        165
+      ],
+      "anim": "none",
+      "desc": "birrete"
+    },
+    {
+      "id": "tassel",
+      "src": "layers/tassel.webp",
+      "z": 12,
+      "size": [
+        456,
+        512
+      ],
+      "bbox": [
+        276,
+        78,
+        335,
+        198
+      ],
+      "anim": "sway",
+      "desc": "borla"
+    }
+  ],
+  "variants": {
+    "wave-hat": [
+      "wing-right"
+    ],
+    "rest-hat": [
+      "wing-up"
+    ],
+    "rest": [
+      "cap",
+      "tassel",
+      "wing-up"
+    ]
+  }
+}

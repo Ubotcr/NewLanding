@@ -1,0 +1,45 @@
+---
+interface Props {
+  class?: string;
+  loading?: "eager" | "lazy";
+  base?: string;
+  pose?: "wave" | "rest";
+  hat?: boolean;
+}
+
+const {
+  class: className = "",
+  loading = "eager",
+  base = "/ubit-grad",
+  pose = "wave",
+  hat = true,
+} = Astro.props;
+
+const waving = pose === "wave";
+const label = waving
+  ? "Ubit con birrete de graduación saludando"
+  : "Ubit con birrete de graduación";
+---
+
+<div class:list={["ubit-rig", className]} role="img" aria-label={label}>
+  <img class="layer-foot-left" src={`${base}/layers/foot-left.webp`} alt="" aria-hidden="true" loading={loading} draggable="false" />
+  <img class="layer-foot-right" src={`${base}/layers/foot-right.webp`} alt="" aria-hidden="true" loading={loading} draggable="false" />
+  {/* wing-shadow-* omitidas: las alas v2 las tapan (aportan 1px verificado) */}
+  <img class="layer-wing-left" src={`${base}/layers/wing-left.webp`} alt="" aria-hidden="true" loading={loading} draggable="false" />
+  {!waving && (
+    <img class="layer-wing-right" src={`${base}/layers/wing-right.webp`} alt="" aria-hidden="true" loading={loading} draggable="false" />
+  )}
+  {waving && (
+    <img class="layer-wing-up" src={`${base}/layers/wing-up.webp`} alt="" aria-hidden="true" loading={loading} draggable="false" />
+  )}
+  <img class="layer-torso" src={`${base}/layers/torso.webp`} alt="" aria-hidden="true" loading={loading} draggable="false" />
+  <img class="layer-beak" src={`${base}/layers/beak.webp`} alt="" aria-hidden="true" loading={loading} draggable="false" />
+  <img class="layer-eyes" src={`${base}/layers/eyes.webp`} alt="" aria-hidden="true" loading={loading} draggable="false" />
+  <img class="layer-glasses" src={`${base}/layers/glasses.webp`} alt="" aria-hidden="true" loading={loading} draggable="false" />
+  {hat && (
+    <img class="layer-cap" src={`${base}/layers/cap.webp`} alt="" aria-hidden="true" loading={loading} draggable="false" />
+  )}
+  {hat && (
+    <img class="layer-tassel" src={`${base}/layers/tassel.webp`} alt="" aria-hidden="true" loading={loading} draggable="false" />
+  )}
+</div>

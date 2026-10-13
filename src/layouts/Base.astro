@@ -66,6 +66,7 @@ const v = pkg.version;
     <link rel="icon" type="image/png" href={`/icon-192.png?v=${v}`} sizes="192x192" />
     <link rel="apple-touch-icon" href={`/apple-touch-icon.png?v=${v}`} />
     <link rel="manifest" href={`/site.webmanifest?v=${v}`} />
+    <link rel="stylesheet" href={`/ubit-grad/ubit-grad.css?v=${v}`} />
     <meta name="theme-color" content="#0f1117" />
     <meta name="generator" content={Astro.generator} />
 
@@ -99,6 +100,7 @@ const v = pkg.version;
         }
       }
     `} />
+    <script src={`/ubit-grad/ubit-grad.js?v=1`} defer></script>
     <slot name="head" />
     <!-- GA4 con respeto DNT + consentimiento local. Si activas DNT o rechazas, no mide. -->
     <script
