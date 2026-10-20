@@ -1,51 +1,5 @@
 [
   {
-    "id": "2026-09-20-examen-de-admisi-n-tec-4-convocatoria-landing-seed",
-    "slug": "2026-09-20-examen-de-admision-tec-4a-convocatoria",
-    "title": "Examen de admisión TEC (4ª convocatoria)",
-    "start": "2026-09-20",
-    "end": "2026-09-20",
-    "universities": [
-      "TEC"
-    ],
-    "category": "examen",
-    "description": "Cuarta convocatoria del examen de admisión del TEC.",
-    "link": "https://www.tec.ac.cr/examen-admision",
-    "calendarStatus": "cuenta_regresiva",
-    "daysRemaining": 14
-  },
-  {
-    "id": "2026-10-03-examen-paa-ucr-una-landing-seed",
-    "slug": "paa-2026",
-    "title": "Examen PAA (UCR/UNA)",
-    "start": "2026-10-03",
-    "end": "2026-10-04",
-    "universities": [
-      "UCR",
-      "UNA"
-    ],
-    "category": "examen",
-    "description": "Prueba de Aptitud Académica compartida por UCR y UNA. Mismo examen, misma fecha.",
-    "link": "https://www.admision.ac.cr",
-    "calendarStatus": "cuenta_regresiva",
-    "daysRemaining": 27
-  },
-  {
-    "id": "2026-10-05-elecci-n-de-carrera-definitiva-tec-landing-seed",
-    "slug": "2026-10-05-eleccion-de-carrera-definitiva-tec",
-    "title": "Elección de carrera definitiva TEC",
-    "start": "2026-10-05",
-    "end": "2026-10-07",
-    "universities": [
-      "TEC"
-    ],
-    "category": "inscripcion",
-    "description": "Periodo para definir las opciones de carrera a las que se desea ingresar en el TEC.",
-    "link": "https://www.tec.ac.cr",
-    "calendarStatus": "cuenta_regresiva",
-    "daysRemaining": 29
-  },
-  {
     "id": "2026-11-15-resultados-de-admisi-n-tec-landing-seed",
     "slug": "2026-11-15-resultados-de-admision-tec",
     "title": "Resultados de Admisión TEC",
@@ -57,8 +11,8 @@
     "category": "resultado",
     "description": "Publicación de la nota de admisión y lista de elegibles para las diferentes carreras del TEC (fecha aproximada).",
     "link": "https://www.tec.ac.cr",
-    "calendarStatus": "proximo",
-    "daysRemaining": 70
+    "calendarStatus": "cuenta_regresiva",
+    "daysRemaining": 27
   },
   {
     "id": "2026-11-28-resultados-de-admisi-n-ucr-y-una-landing-seed",
@@ -74,7 +28,7 @@
     "description": "Publicación de los promedios de admisión para la UCR y la UNA (fecha aproximada).",
     "link": "https://www.admision.ac.cr",
     "calendarStatus": "proximo",
-    "daysRemaining": 83
+    "daysRemaining": 40
   },
   {
     "id": "2027-01-05-concurso-a-carrera-e-ingreso-ucr-una-landing-seed",
@@ -90,7 +44,7 @@
     "description": "Proceso donde los estudiantes elegibles eligen y concursan por los cupos de las diferentes carreras.",
     "link": "https://ori.ucr.ac.cr",
     "calendarStatus": "proximo",
-    "daysRemaining": 121
+    "daysRemaining": 78
   },
   {
     "id": "2027-01-18-matr-cula-de-primer-ingreso-tec-landing-seed",
@@ -105,7 +59,7 @@
     "description": "Matrícula ordinaria para estudiantes de primer ingreso en el TEC.",
     "link": "https://www.tec.ac.cr",
     "calendarStatus": "proximo",
-    "daysRemaining": 134
+    "daysRemaining": 91
   },
   {
     "id": "2027-01-20-matr-cula-de-primer-ingreso-ucr-y-una-landing-seed",
@@ -121,6 +75,6 @@
     "description": "Proceso de matrícula para los estudiantes admitidos en las carreras de la UCR y la UNA.",
     "link": "https://ori.ucr.ac.cr",
     "calendarStatus": "proximo",
-    "daysRemaining": 136
+    "daysRemaining": 93
   }
 ]
