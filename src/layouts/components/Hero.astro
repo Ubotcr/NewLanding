@@ -25,15 +25,15 @@ const logoWidth = (meta: ImageMetadata) =>
   meta.format === "svg" ? undefined : 160;
 ---
 
-<section class="relative flex min-h-[calc(100svh-4rem)] items-center overflow-hidden px-4 py-12">
-  <div class="container relative z-10 mx-auto grid w-full max-w-6xl items-center gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-6">
+<section class="relative grid min-h-[calc(100svh-4rem)] grid-rows-[1fr_auto] items-center gap-y-4 overflow-hidden px-4 pb-4 pt-12">
+  <div class="container relative z-10 mx-auto grid w-full max-w-6xl items-center gap-8 self-center lg:grid-cols-[1.05fr_0.95fr] lg:gap-6">
     <div class="text-center lg:text-left">
       <div class="mb-6">
-        <div class="flex flex-wrap items-center justify-center gap-3 md:gap-4 lg:justify-start">
+        <div class="flex flex-wrap items-center justify-center gap-2 min-[420px]:gap-3 md:gap-4 lg:justify-start">
           {
             logos.map((logo) => (
               <div
-                class="flex h-20 w-20 items-center justify-center rounded-2xl border border-border bg-light p-4 shadow-sm transition-transform hover:-translate-y-1 md:h-24 md:w-24"
+                class="flex h-16 w-16 items-center justify-center rounded-2xl border border-border bg-light p-3 shadow-sm transition-transform hover:-translate-y-1 min-[420px]:h-20 min-[420px]:w-20 min-[420px]:p-4 md:h-24 md:w-24"
                 title={logo.alt}
               >
                 <Image
@@ -46,6 +46,9 @@ const logoWidth = (meta: ImageMetadata) =>
               </div>
             ))
           }
+          <div class="flex h-20 w-14 shrink-0 items-center justify-center min-[420px]:hidden">
+            <UbitRig loading="eager" />
+          </div>
         </div>
       </div>
 
@@ -95,7 +98,7 @@ const logoWidth = (meta: ImageMetadata) =>
 
   <a
     href="#diagnostico"
-    class="hero-scroll-cue absolute bottom-4 left-1/2 inline-flex -translate-x-1/2 flex-col items-center gap-2"
+    class="hero-scroll-cue relative z-10 mx-auto inline-flex flex-col items-center gap-2 justify-self-center"
     aria-label="Ver exámenes especiales nuevos, más abajo"
   >
     <span class="hero-scroll-cue__badge relative rounded-full bg-primary px-3 py-1 text-xs font-bold uppercase tracking-wide text-white">
