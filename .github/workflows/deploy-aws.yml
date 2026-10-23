@@ -1,0 +1,88 @@
+name: Publish landing to AWS
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: landing-aws-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9.15.9
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - name: Build static landing
+        env:
+          EVENTS_API_URL: https://api.ubotcr.com
+          PUBLIC_EVENTS_API_URL: https://api.ubotcr.com
+        run: pnpm run build
+      - name: Verify publish output
+        run: |
+          test -s dist/index.html
+          test -s dist/404.html
+          test -s dist/sitemap-index.xml
+          test -d dist/_astro
+      - uses: actions/upload-artifact@v4
+        with:
+          name: landing-dist
+          path: dist/
+          if-no-files-found: error
+          retention-days: 7
+
+  deploy:
+    needs: build
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: landing-dist
+          path: dist
+      - name: Verify role configuration
+        env:
+          AWS_ROLE_ARN: ${{ vars.AWS_ROLE_ARN }}
+        run: test -n "$AWS_ROLE_ARN"
+      - name: Configure AWS credentials with OIDC
+        uses: aws-actions/configure-aws-credentials@v6
+        with:
+          role-to-assume: ${{ vars.AWS_ROLE_ARN }}
+          aws-region: us-east-1
+          allowed-account-ids: "537528034060"
+      - name: Upload assets before pages
+        run: |
+          set -euo pipefail
+          aws s3 cp dist/_astro/ s3://ubot-landing-537528034060/_astro/ \
+            --recursive --cache-control "public,max-age=31536000,immutable" --only-show-errors
+          aws s3 cp dist/ s3://ubot-landing-537528034060/ \
+            --recursive --exclude "_astro/*" \
+            --cache-control "public,max-age=0,must-revalidate" --only-show-errors
+      - name: Refresh CloudFront cache
+        run: |
+          set -euo pipefail
+          invalidation_id=$(aws cloudfront create-invalidation \
+            --distribution-id E2BKWM9LMK1B99 --paths "/*" \
+            --query Invalidation.Id --output text)
+          aws cloudfront wait invalidation-completed \
+            --distribution-id E2BKWM9LMK1B99 --id "$invalidation_id"
