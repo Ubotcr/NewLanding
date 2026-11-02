@@ -1,0 +1,38 @@
+---
+import Base from "@/layouts/Base.astro";
+import Breadcrumbs from "@/components/Breadcrumbs.astro";
+import { getCollection, render } from "astro:content";
+import { canonicalUrl } from "@/lib/seo";
+import { formatDate, isoDate } from "@/lib/utils/blog";
+export async function getStaticPaths() {
+  const guides = await getCollection("guides", ({ data }) => !data.draft);
+  return guides.map(guide => ({ params: { slug: guide.id }, props: { guide } }));
+}
+const { guide } = Astro.props;
+const { Content } = await render(guide);
+const data = guide.data;
+const path = `/estandarizadas/matematicas/${guide.id}`;
+const breadcrumbs = [{ name: "Inicio", path: "/" }, { name: "Estandarizadas", path: "/estandarizadas" }, { name: "Matemáticas", path: "/estandarizadas/matematicas" }, { name: data.title, path }];
+const article = { "@context": "https://schema.org", "@type": "Article", headline: data.title,
+  description: data.description, datePublished: isoDate(data.date), dateModified: isoDate(data.updated || data.date),
+  author: { "@type": "Organization", name: data.author.name, url: canonicalUrl("/about") },
+  publisher: { "@id": `${canonicalUrl("/")}#organization` }, mainEntityOfPage: canonicalUrl(path), inLanguage: "es-CR" };
+---
+<Base title={data.title} meta_title={data.meta_title} description={data.description} breadcrumbs={breadcrumbs} structuredData={[article]} ogType="article">
+  <Breadcrumbs items={breadcrumbs} />
+  <article class="container mx-auto max-w-3xl px-4 py-12 content">
+    <h1>{data.title}</h1>
+    <p>{data.description}</p>
+    <p>Por <a href="/about">{data.author.name}</a> · <time datetime={isoDate(data.date)}>{formatDate(data.date)}</time></p>
+    {data.updated && <p>Actualizado: <time datetime={isoDate(data.updated)}>{formatDate(data.updated)}</time></p>}
+    {data.reviewedBy && data.reviewedAt && <p>Revisado por {data.reviewedBy} el {formatDate(data.reviewedAt)}.</p>}
+    <Content />
+    {data.sources.length > 0 && <section><h2>Fuentes y recursos</h2><ul>{data.sources.map(source => <li><a href={source.url}>{source.title}</a></li>)}</ul></section>}
+    <nav aria-label="Seguir estudiando"><h2>Seguí estudiando</h2><ul>
+      <li><a href="/estandarizadas/matematicas">Volver al repaso de Matemáticas</a></li>
+      {data.related.map(href => <li><a href={href}>Plan de preparación de Matemáticas</a></li>)}
+      <li><a href="https://estandarizadas.ubotcr.com/matematicas">Consultar las prácticas disponibles en Ubot</a></li>
+    </ul></nav>
+    <p>Ubot ofrece preparación independiente. Esta guía no sustituye el temario ni las indicaciones oficiales de tu convocatoria.</p>
+  </article>
+</Base>

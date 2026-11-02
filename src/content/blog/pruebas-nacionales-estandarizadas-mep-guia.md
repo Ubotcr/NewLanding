@@ -3,6 +3,14 @@ title: "Pruebas Nacionales Estandarizadas del MEP: qué son y cómo prepararte"
 meta_title: "Pruebas Estandarizadas MEP 2026: asignaturas, formato y preparación"
 description: "Qué son las Pruebas Nacionales Estandarizadas del MEP, qué asignaturas evalúan, cómo es el formato y cómo prepararte sin estrés."
 date: 2026-10-13T09:00:00Z
+updated: 2026-11-01
+sources:
+  - title: "Preguntas frecuentes oficiales DGEC 2026"
+    url: "https://dgec.mep.go.cr/pruebas-nacionales-estandarizadas/informacion-2026/preguntas-frecuentes/"
+  - title: "Documentos oficiales DGEC 2026"
+    url: "https://dgec.mep.go.cr/pruebas-nacionales-estandarizadas/informacion-2026/documentos-2026/"
+related:
+  - "/estandarizadas/matematicas"
 image: "/images/promo/preguntaExamen.png"
 category: "Guías"
 featured: false
@@ -51,7 +59,7 @@ Son exámenes distintos y se preparan distinto. Si ya usás Ubot para la PAA, no
 ## Cómo prepararte (plan realista)
 
 1. **Conseguí el temario oficial de tu convocatoria.** Estudiá contra la lista, no contra todo el cuaderno a ciegas.
-2. **Una materia a la vez.** Matemáticas y Español suelen pesar más; empezá por la que peor llevés.
+2. **Una materia a la vez.** Empezá por la asignatura en la que identifiques más dudas.
 3. **Repaso activo, no relectura.** Tarjetas de repaso (frente/reverso) para definiciones y fórmulas; ejercicios para lo procedimental.
 4. **Practica con tiempo.** Acostumbrate al ritmo: 60 ítems en 3 horas son 3 minutos por ítem, pero algunos salen en 30 segundos y otros piden más.
 5. **Preguntá lo que no entendás.** Traé tus dudas a [Ubot Estandarizadas](/estandarizadas) y consultá las actividades disponibles del piloto de Matemáticas.

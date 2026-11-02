@@ -3,6 +3,7 @@ import Base from "@/layouts/Base.astro";
 import PostSingle from "@/layouts/PostSingle.astro";
 import { getCollection } from "astro:content";
 import config from "@/config/config.json";
+import Breadcrumbs from "@/components/Breadcrumbs.astro";
 import { isoDate } from "@/lib/utils/blog";
 
 export async function getStaticPaths() {
@@ -17,10 +18,12 @@ export async function getStaticPaths() {
 }
 
 const { post } = Astro.props;
-const { title, meta_title, description, image, date, author } = post.data;
+const { title, meta_title, description, image, date, updated, author } = post.data;
 
 const canonicalUrl = `${config.site.base_url}/blog/${post.id}`;
 const published = date ? isoDate(date) : undefined;
+const modified = updated ? isoDate(updated) : published;
+const breadcrumbs = [{ name: "Inicio", path: "/" }, { name: "Blog", path: "/blog" }, { name: title, path: `/blog/${post.id}` }];
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
@@ -34,7 +37,7 @@ const articleSchema = {
     "url": `${config.site.base_url}/about`
   },
   "datePublished": published,
-  "dateModified": published,
+  "dateModified": modified,
   "mainEntityOfPage": canonicalUrl,
   "publisher": {
     "@type": "Organization",
@@ -53,15 +56,17 @@ const articleSchema = {
   description={description}
   image={image}
   canonical={canonicalUrl}
+  ogType="article"
+  structuredData={[articleSchema]}
+  breadcrumbs={breadcrumbs}
 >
   <Fragment slot="head">
-    <meta property="og:type" content="article" />
     {published && <meta property="article:published_time" content={published} />}
-    {published && <meta property="article:modified_time" content={published} />}
+    {modified && <meta property="article:modified_time" content={modified} />}
     {(author?.name || config.metadata.meta_author) && (
       <meta property="article:author" content={author?.name || config.metadata.meta_author} />
     )}
-    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
   </Fragment>
+  <Breadcrumbs items={breadcrumbs} />
   <PostSingle post={post} />
 </Base>

@@ -5,10 +5,10 @@ import social from "@/config/social.json";
 import { preparation } from "@/config/preparation";
 
 const { footer_company, footer_legal } = menu;
-const footer_product = preparation.choices.flatMap(choice => [
+const footer_product = [{ name: "Repaso de Matemáticas", url: "/estandarizadas/matematicas" }, ...preparation.choices.flatMap(choice => [
   { name: choice.name, url: choice.page },
   { name: choice.entryLabel, url: choice.app },
-]);
+])];
 const { params, site } = config;
 
 import Logo from "@/components/Logo.astro";

@@ -34,6 +34,14 @@ jobs:
           EVENTS_API_URL: https://api.ubotcr.com
           PUBLIC_EVENTS_API_URL: https://api.ubotcr.com
         run: pnpm run build
+      - name: Validate SEO and generate hosting function
+        run: |
+          pnpm run check
+          pnpm run seo:check
+          pnpm run hosting:build
+      - name: Check rendered pages on desktop and mobile
+        timeout-minutes: 5
+        run: pnpm run seo:browser
       - name: Verify publish output
         run: |
           test -s dist/index.html
@@ -46,6 +54,18 @@ jobs:
           path: dist/
           if-no-files-found: error
           retention-days: 7
+      - uses: actions/upload-artifact@v4
+        with:
+          name: landing-hosting
+          path: |
+            hosting/landing-routes.js
+            docs/aws/landing-headers.js
+          if-no-files-found: error
+      - uses: actions/upload-artifact@v4
+        with:
+          name: seo-smoke
+          path: scripts/seo-smoke.py
+          if-no-files-found: error
 
   deploy:
     needs: build
@@ -86,3 +106,9 @@ jobs:
             --query Invalidation.Id --output text)
           aws cloudfront wait invalidation-completed \
             --distribution-id E2BKWM9LMK1B99 --id "$invalidation_id"
+      - uses: actions/download-artifact@v4
+        with:
+          name: seo-smoke
+          path: seo-tools
+      - name: Verify published SEO
+        run: python3 seo-tools/seo-smoke.py --landing-only

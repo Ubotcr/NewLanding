@@ -1,0 +1,15 @@
+---
+import type { Breadcrumb } from "@/lib/seo";
+interface Props { items: Breadcrumb[] }
+const { items } = Astro.props;
+---
+<nav aria-label="Ruta de navegación" class="container mx-auto px-4 pt-6 text-sm text-gray">
+  <ol class="flex flex-wrap gap-2">
+    {items.map((item, index) => <li>
+      {index > 0 && <span aria-hidden="true" class="mr-2">/</span>}
+      {index === items.length - 1
+        ? <span aria-current="page">{item.name}</span>
+        : <a href={item.path} class="text-link hover:underline">{item.name}</a>}
+    </li>)}
+  </ol>
+</nav>
