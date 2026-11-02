@@ -1,7 +1,7 @@
 ---
 import Icon from "@/components/Icon.astro";
 import { Image } from "astro:assets";
-import happyUbit from "@/promo/promoImages/happyUbit.webp";
+import ubitBooks from "@/assets/ubit-books.webp";
 
 interface Props {
   data: any;
@@ -14,14 +14,17 @@ const { badge, title, description, button, enable } = data.frontmatter;
 {
   enable && (
     <section id="diagnostico" class="border-y border-border bg-card px-4 py-12 md:py-20">
-      <div class="container relative mx-auto max-w-3xl pt-14 md:pt-20">
+      <div class="container relative mx-auto max-w-3xl">
         <Image
-          src={happyUbit}
+          src={ubitBooks}
           alt=""
           aria-hidden="true"
+          widths={[160, 320]}
+          sizes="(min-width: 768px) 144px, 96px"
           width={320}
           loading="lazy"
-          class="diagnostic-card__ubit pointer-events-none absolute left-1/2 top-0 z-20 block w-24 -translate-x-1/2 select-none md:w-36"
+          decoding="async"
+          class="diagnostic-card__ubit pointer-events-none relative z-20 mx-auto -mb-8 block h-auto w-24 select-none md:-mb-12 md:w-36"
         />
 
         <div class="diagnostic-card relative z-10 overflow-hidden rounded-2xl bg-gradient-dark px-6 py-14 text-center shadow-lg md:px-12 md:py-20">
@@ -78,7 +81,7 @@ const { badge, title, description, button, enable } = data.frontmatter;
   }
 
   .diagnostic-card__ubit {
-    animation: diagnostic-card-ubit-float 3.2s ease-in-out infinite;
+    animation: diagnostic-card-ubit-arrive 450ms ease-out both;
   }
 
   .diagnostic-card__cta {
@@ -132,13 +135,14 @@ const { badge, title, description, button, enable } = data.frontmatter;
     }
   }
 
-  @keyframes diagnostic-card-ubit-float {
-    0%,
-    100% {
-      transform: translateY(0);
+  @keyframes diagnostic-card-ubit-arrive {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
     }
-    50% {
-      transform: translateY(-6px);
+    to {
+      opacity: 1;
+      transform: translateY(0);
     }
   }
 
