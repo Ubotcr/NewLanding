@@ -12,7 +12,7 @@
     "description": "Publicación de la nota de admisión y lista de elegibles para las diferentes carreras del TEC (fecha aproximada).",
     "link": "https://www.tec.ac.cr",
     "calendarStatus": "cuenta_regresiva",
-    "daysRemaining": 27
+    "daysRemaining": 14
   },
   {
     "id": "2026-11-28-resultados-de-admisi-n-ucr-y-una-landing-seed",
@@ -27,8 +27,8 @@
     "category": "resultado",
     "description": "Publicación de los promedios de admisión para la UCR y la UNA (fecha aproximada).",
     "link": "https://www.admision.ac.cr",
-    "calendarStatus": "proximo",
-    "daysRemaining": 40
+    "calendarStatus": "cuenta_regresiva",
+    "daysRemaining": 27
   },
   {
     "id": "2027-01-05-concurso-a-carrera-e-ingreso-ucr-una-landing-seed",
@@ -44,7 +44,7 @@
     "description": "Proceso donde los estudiantes elegibles eligen y concursan por los cupos de las diferentes carreras.",
     "link": "https://ori.ucr.ac.cr",
     "calendarStatus": "proximo",
-    "daysRemaining": 78
+    "daysRemaining": 65
   },
   {
     "id": "2027-01-18-matr-cula-de-primer-ingreso-tec-landing-seed",
@@ -59,7 +59,7 @@
     "description": "Matrícula ordinaria para estudiantes de primer ingreso en el TEC.",
     "link": "https://www.tec.ac.cr",
     "calendarStatus": "proximo",
-    "daysRemaining": 91
+    "daysRemaining": 78
   },
   {
     "id": "2027-01-20-matr-cula-de-primer-ingreso-ucr-y-una-landing-seed",
@@ -75,6 +75,6 @@
     "description": "Proceso de matrícula para los estudiantes admitidos en las carreras de la UCR y la UNA.",
     "link": "https://ori.ucr.ac.cr",
     "calendarStatus": "proximo",
-    "daysRemaining": 93
+    "daysRemaining": 80
   }
 ]
