@@ -24,6 +24,8 @@ server.listen(0,'127.0.0.1'); await once(server,'listening');
 const base = `http://127.0.0.1:${server.address().port}`;
 const profile=fs.mkdtempSync(path.join(os.tmpdir(),'ubot-seo-chrome-'));
 const proc=spawn(process.env.CHROME_BIN || '/usr/bin/google-chrome',['--headless','--no-sandbox','--disable-gpu','--disable-dev-shm-usage','--no-first-run','--remote-debugging-port=0',`--user-data-dir=${profile}`,'about:blank'],{stdio:'ignore'});
+const browserExited = new Promise(resolve => { proc.once('exit', resolve); proc.once('error', resolve); });
+const hasExited = () => proc.exitCode !== null || proc.signalCode !== null;
 let socket;
 try {
   for(let i=0;i<100 && !fs.existsSync(path.join(profile,'DevToolsActivePort'));i++) await new Promise(r=>setTimeout(r,100));
@@ -59,7 +61,23 @@ try {
   }
   console.log('PASS Chrome: 8 pages desktop/mobile, rendered metadata, content, overflow and mobile menu; analytics blocked');
 } finally {
-  socket?.close(); proc.kill(); server.close();
-  await new Promise(resolve=>{if(proc.exitCode !== null) resolve(); else proc.once('exit',resolve);});
-  fs.rmSync(profile,{recursive:true,force:true,maxRetries:5,retryDelay:100});
+  // Let Chrome flush its profile and stop its children before removing the directory.
+  if (socket?.readyState === WebSocket.OPEN) {
+    try { socket.send(JSON.stringify({id: -1, method: 'Browser.close'})); } catch { }
+  }
+  await Promise.race([browserExited, new Promise(resolve => setTimeout(resolve, 2000))]);
+  if (!hasExited()) {
+    proc.kill('SIGTERM');
+    await Promise.race([browserExited, new Promise(resolve => setTimeout(resolve, 1000))]);
+    if (!hasExited()) proc.kill('SIGKILL');
+  }
+  socket?.close(); server.close(); server.closeAllConnections();
+  try {
+    await fs.promises.rm(profile,{recursive:true,force:true,maxRetries:10,retryDelay:200});
+  } catch (error) {
+    // Child processes may briefly recreate profile files even after the launcher exits.
+    // The runner removes temporary files; preserve the actual test result in this case.
+    if (!['ENOTEMPTY', 'EBUSY'].includes(error.code)) throw error;
+    console.warn(`Chrome profile cleanup deferred to runner: ${profile} (${error.code})`);
+  }
 }
