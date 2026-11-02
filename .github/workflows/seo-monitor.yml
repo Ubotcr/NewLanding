@@ -1,0 +1,17 @@
+name: Monitor public SEO
+on:
+  schedule:
+    - cron: '20 12 * * *'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Check landing and both apps
+        run: python3 scripts/seo-smoke.py

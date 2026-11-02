@@ -29,7 +29,7 @@ export const readingTime = (content: string): string => {
 };
 
 // Ordena entradas por fecha descendente (espera frontmatter.date).
-export const sortByDate = <T extends { frontmatter?: { date?: string } }>(
+export const sortByDate = <T extends { frontmatter?: { date?: string | Date } }>(
   arr: T[],
 ): T[] =>
   [...arr].sort(

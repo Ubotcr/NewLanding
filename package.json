@@ -12,7 +12,11 @@
     "check": "astro check",
     "format": "prettier -w ./src",
     "astro": "astro",
-    "events:sync": "node scripts/sync-events.mjs"
+    "events:sync": "node scripts/sync-events.mjs",
+    "seo:check": "python3 tests/seo-checks.py && node tests/hosting-checks.mjs",
+    "hosting:build": "node scripts/build-hosting.mjs",
+    "seo:smoke": "python3 scripts/seo-smoke.py",
+    "seo:browser": "node tests/browser-checks.mjs"
   },
   "dependencies": {
     "@astrojs/check": "0.9.9",

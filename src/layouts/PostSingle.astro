@@ -10,7 +10,7 @@ interface Props {
 }
 
 const { post } = Astro.props;
-const { title, description, image, category, author, date } = post.data;
+const { title, description, image, category, author, date, updated, reviewedBy, reviewedAt, sources, related: relatedLinks } = post.data;
 const { Content, headings } = await render(post);
 const imageMeta = image ? resolvePublicImage(image) : undefined;
 
@@ -66,6 +66,8 @@ const toc = (headings || []).filter((h: any) => h.depth >= 2 && h.depth <= 3);
         {author?.designation && <span>({author.designation})</span>}
         {author?.name && date && <span aria-hidden="true">&middot;</span>}
         {date && <time datetime={isoDate(date)}>{formatDate(date)}</time>}
+        {updated && <span>Actualizado: <time datetime={isoDate(updated)}>{formatDate(updated)}</time></span>}
+        {reviewedBy && reviewedAt && <span>Revisión: {reviewedBy}, {formatDate(reviewedAt)}</span>}
         {readTime && <span aria-hidden="true">&middot;</span>}
         {readTime && <span>{readTime}</span>}
       </div>
@@ -104,6 +106,8 @@ const toc = (headings || []).filter((h: any) => h.depth >= 2 && h.depth <= 3);
       <div>
         <div class="content">
           <Content />
+          {sources?.length > 0 && <section aria-label="Fuentes"><h2>Fuentes</h2><ul>{sources.map((source: any) => <li><a href={source.url}>{source.title}</a></li>)}</ul></section>}
+          {relatedLinks?.length > 0 && <nav aria-label="Recursos relacionados"><h2>Seguí preparando tu examen</h2><ul>{relatedLinks.map((href: string) => <li><a href={href}>Ver recurso: {href.split("/").pop()?.replaceAll("-", " ")}</a></li>)}</ul></nav>}
         </div>
       </div>
 
