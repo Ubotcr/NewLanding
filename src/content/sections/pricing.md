@@ -1,7 +1,7 @@
 ---
 enable: true
-title: Elige tu plan
-subtitle: Acceso gratuito para todos. Funciones avanzadas con Ubot Premium.
+title: Elegí tu plan de Admisión
+subtitle: Planes de Ubot Admisión. Los beneficios de esta sección corresponden a la preparación para UCR, UNA y TEC.
 pricing_plans:
   - name: Gratuito
     description: Herramientas básicas para tu preparación diaria

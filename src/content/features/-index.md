@@ -1,12 +1,9 @@
 ---
 title: "Características"
-meta_title: "Características de Ubot"
-description: "Descubre todas las características de Ubot."
+meta_title: "Herramientas de Ubot para Estandarizadas y Admisión"
+description: "Conocé qué podés hacer en el piloto de Matemáticas para Estandarizadas y qué herramientas ofrece Ubot Admisión."
 draft: false
 page_header:
-  title: |
-    Todo lo que necesitas para
-    <br/>
-    <mark>aprobar el examen</mark>
-  subtitle: "Descubre cómo nuestra inteligencia artificial, exámenes de práctica y juegos pueden acelerar tu aprendizaje."
+  title: "Herramientas para <mark>tu preparación</mark>"
+  subtitle: "Elegí según lo que estás estudiando: contenidos de Matemáticas en Estandarizadas o razonamiento para Admisión."
 ---

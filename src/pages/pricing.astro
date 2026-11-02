@@ -10,11 +10,14 @@ const data = await getListPage("pricing/-index.md");
 const { title, description, meta_title, page_header } = data.frontmatter;
 const pricing = await getListPage("sections/pricing.md");
 const faq = await getListPage("sections/faq.md");
-const callToAction = await getListPage("sections/call-to-action.md");
+const callToAction = await getListPage("sections/admision-call-to-action.md");
 ---
 
 <Base title={title} meta_title={meta_title} description={description}>
   <PageHeader page_header={page_header} />
+  <aside class="container mx-auto max-w-5xl px-4 py-6" aria-label="Alcance de los planes">
+    <p class="text-text">Estos planes y beneficios corresponden a <strong>Ubot Admisión</strong>. ¿Buscás Matemáticas para las Estandarizadas? <a href="/estandarizadas">Conocé el alcance actual del piloto.</a></p>
+  </aside>
   <PricingSection data={pricing} />
   <FAQ data={faq} />
   <CallToAction data={callToAction} />

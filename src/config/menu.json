@@ -1,20 +1,12 @@
 {
   "main": [
     {
-      "name": "Inicio",
-      "url": "/"
-    },
-    {
       "name": "Características",
       "url": "/features"
     },
     {
       "name": "Precios",
       "url": "/pricing"
-    },
-    {
-      "name": "Nosotros",
-      "url": "/about"
     },
     {
       "name": "Recursos",
@@ -31,6 +23,10 @@
         {
           "name": "Registro de cambios",
           "url": "/changelog"
+        },
+        {
+          "name": "Nosotros",
+          "url": "/about"
         }
       ]
     }
@@ -67,16 +63,6 @@
     {
       "name": "Contacto",
       "url": "/contact"
-    }
-  ],
-  "footer_product": [
-    {
-      "name": "Abrir app",
-      "url": "https://chat.ubotcr.com"
-    },
-    {
-      "name": "Juegos",
-      "url": "https://chat.ubotcr.com/juegos/lobby"
     }
   ],
   "footer_legal": [

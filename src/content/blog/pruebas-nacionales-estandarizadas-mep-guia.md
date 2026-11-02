@@ -54,7 +54,7 @@ Son exámenes distintos y se preparan distinto. Si ya usás Ubot para la PAA, no
 2. **Una materia a la vez.** Matemáticas y Español suelen pesar más; empezá por la que peor llevés.
 3. **Repaso activo, no relectura.** Tarjetas de repaso (frente/reverso) para definiciones y fórmulas; ejercicios para lo procedimental.
 4. **Practica con tiempo.** Acostumbrate al ritmo: 60 ítems en 3 horas son 3 minutos por ítem, pero algunos salen en 30 segundos y otros piden más.
-5. **Preguntá lo que no entendás.** Traé tus dudas a [Ubot](https://chat.ubotcr.com): te explica paso a paso y gratis.
+5. **Preguntá lo que no entendás.** Traé tus dudas a [Ubot Estandarizadas](/estandarizadas) y consultá las actividades disponibles del piloto de Matemáticas.
 
 ## Errores frecuentes
 
@@ -62,4 +62,4 @@ Son exámenes distintos y se preparan distinto. Si ya usás Ubot para la PAA, no
 - **Memorizar sin practicar.** En Matemáticas y Ciencias, si no resolviste ejercicios, no lo sabés.
 - **Ignorar Español.** La producción escrita se entrena escribiendo, no leyendo sobre cómo escribir.
 
-¿Empezando por Matemáticas? Pasate por nuestra [guía de Matemáticas para estandarizadas](/blog/matematicas-estandarizadas-como-prepararse) y después hacé el [examen diagnóstico gratis](/blog/examen-diagnostico-admision-gratis) para medir tu nivel base de razonamiento.
+¿Empezando por Matemáticas? Pasate por nuestra [guía de Matemáticas para estandarizadas](/blog/matematicas-estandarizadas-como-prepararse) y después conocé el [piloto de Matemáticas de Ubot Estandarizadas](/estandarizadas) para elegir tu próxima práctica entre los temas disponibles.

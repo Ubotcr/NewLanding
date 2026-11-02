@@ -12,10 +12,26 @@ const { title, subtitle, faq_list, enable } = data.frontmatter;
 
 {
   enable && (
-    <section
-      id="faq"
-      class="px-4 py-12 md:py-20"
-    >
+    <script
+      is:inline
+      type="application/ld+json"
+      set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: faq_list.map(
+          (faq: { question: string; answer: string }) => ({
+            "@type": "Question",
+            name: faq.question,
+            acceptedAnswer: { "@type": "Answer", text: faq.answer },
+          }),
+        ),
+      })}
+    />
+  )
+}
+{
+  enable && (
+    <section id="faq" class="px-4 py-12 md:py-20">
       <div class="container mx-auto max-w-3xl">
         <SectionHeader title={title} subtitle={subtitle} />
 
@@ -43,7 +59,7 @@ const { title, subtitle, faq_list, enable } = data.frontmatter;
   details[open] summary ~ * {
     animation: faqSlideDown 0.3s ease-out forwards;
   }
-  
+
   @keyframes faqSlideDown {
     0% {
       opacity: 0;

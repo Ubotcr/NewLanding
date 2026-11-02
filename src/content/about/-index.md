@@ -1,12 +1,15 @@
 ---
 title: "Acerca de Nosotros"
-meta_title: "Acerca de Ubot: equipo tico que te prepara para UCR, TEC y UNA"
-description: "Somos un equipo de estudiantes ticos que mantiene Ubot cada semana: guías PAA, calendario de admisión y app con exámenes, rankings y juegos. Escríbenos a contacto@ubotcr.com."
+meta_title: "Acerca de Ubot: Estandarizadas y Admisión en Costa Rica"
+description: "Somos un equipo de estudiantes ticos que crea herramientas para Estandarizadas y Admisión: conocé el piloto de Matemáticas y nuestra preparación para UCR, UNA y TEC."
 draft: false
+page_header:
+  title: "Conocé a <mark>Ubot</mark>"
+  subtitle: "Un equipo de estudiantes ticos creando herramientas para Estandarizadas y Admisión."
 who_we_are:
   title: Nuestra misión
   subtitle: |
-    Nuestra misión es eliminar las barreras económicas y geográficas que impiden el acceso equitativo a la educación superior pública en Costa Rica. Mantenemos Ubot cada semana: publicamos guías, actualizamos el calendario de admisión UCR/UNA/TEC y mejoramos la app con exámenes, rankings y juegos. Todo empieza gratis para que practiques sin pagar un curso caro.
+    Nuestra misión es hacer más accesible la preparación de estudiantes en Costa Rica. Ubot reúne dos caminos: un piloto de Matemáticas para las Estandarizadas de secundaria académica diurna y las herramientas de Admisión para UCR, UNA y TEC. Cada opción tiene su propio alcance, actividades y contenido.
   mission:
     title: "Nuestra Misión"
     content: "Hacer más accesible el ingreso a la educación superior pública con herramientas de inteligencia artificial, contenido en español tico y práctica constante que sí se parece a la prueba real."
@@ -17,7 +20,7 @@ who_we_are:
     icon: lightbulb
   solution:
     title: "Nuestra Solución"
-    content: "Un asistente de IA 24/7 en español, con exámenes tipo PAA, diagnóstico gratuito, rankings, tienda y juegos. Empiezas gratis y practicas a tu ritmo desde el celu o la compu."
+    content: "Práctica y apoyo en español para estudiar a tu ritmo: Matemáticas con actividades según el catálogo del piloto de Estandarizadas, y diagnóstico, simulacros y juegos en Admisión."
     icon: rocket_launch
 our_team:
   title: "Conoce a los creadores de Ubot"

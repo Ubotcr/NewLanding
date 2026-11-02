@@ -13,14 +13,9 @@
     "pagination": 6
   },
   "params": {
-    "footer_text": "Asistente de inteligencia artificial para preparar exámenes de admisión a universidades públicas de Costa Rica.",
+    "footer_text": "Herramientas de preparación para Estandarizadas y Admisión en Costa Rica. Conocé el piloto de Matemáticas y seguí practicando para la U.",
     "mail": "contacto@ubotcr.com",
     "copyright": "© UbotCR. Todos los derechos reservados."
-  },
-  "navigation_button": {
-    "enable": true,
-    "label": "Abrir app",
-    "link": "https://chat.ubotcr.com"
   },
   "google_tag_manager": {
     "enable": false,
@@ -29,6 +24,6 @@
   "metadata": {
     "meta_author": "UbotCR",
     "meta_image": "/images/og-image.png",
-    "meta_description": "Ubot es tu asistente de inteligencia artificial exclusivo para prepararte para los exámenes de admisión de las universidades estatales de Costa Rica (UCR, UNA, TEC)."
+    "meta_description": "Prepará tu próximo paso con Ubot: piloto de Matemáticas para Estandarizadas y herramientas de Admisión para UCR, UNA y TEC."
   }
 }

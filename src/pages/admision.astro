@@ -1,0 +1,168 @@
+---
+import Hero from "@/components/Hero.astro";
+import Base from "@/layouts/Base.astro";
+import CallToAction from "@/partials/CallToAction.astro";
+import DiagnosticExam from "@/partials/DiagnosticExam.astro";
+import EssentialFeatures from "@/partials/EssentialFeatures.astro";
+import FAQ from "@/partials/FAQ.astro";
+import Gallery from "@/partials/Gallery.astro";
+import HowItWorks from "@/partials/HowItWorks.astro";
+import Pricing from "@/partials/Pricing.astro";
+import WhyChooseUs from "@/partials/WhyChooseUs.astro";
+import { getListPage } from "@/lib/contentParser";
+import { admision, estandarizadas } from "@/config/preparation";
+import config from "@/config/config.json";
+
+const [diagnostic, features, gallery, why, how, pricing, faq, cta] =
+  await Promise.all(
+    [
+      "diagnostic-exam",
+      "essential-features",
+      "gallery",
+      "why-choose-us",
+      "how-it-works",
+      "pricing",
+      "faq",
+      "admision-call-to-action",
+    ].map((name) => getListPage(`sections/${name}.md`)),
+  );
+const specialExam = {
+  frontmatter: {
+    enable: true,
+    title: "Simulacros especiales UCR, UNA y TEC",
+    description:
+      "Practicá con los simulacros disponibles: 4 del TEC de 60 preguntas y uno compartido UCR/UNA de 45, con reporte de fortalezas y debilidades.",
+    button: {
+      enable: true,
+      link: `${admision.app}/juegos/examenes/especial`,
+      label: "Ver simulacros",
+    },
+  },
+};
+const examsSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "Exámenes de práctica de Ubot",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      item: {
+        "@type": "LearningResource",
+        "@id": `${config.site.base_url}/admision#diagnostico`,
+        name: "Examen diagnóstico de admisión (PAA)",
+        description:
+          "Prueba diagnóstica gratuita que mide tu nivel en razonamiento lógico, matemático y verbal de cara al examen de admisión (PAA) de la UCR, UNA y TEC.",
+        learningResourceType: "Diagnostic assessment",
+        educationalLevel: "Admisión universitaria",
+        inLanguage: "es-CR",
+        url: "https://chat.ubotcr.com/diagnostico",
+        isAccessibleForFree: true,
+        teaches: [
+          "Razonamiento lógico",
+          "Razonamiento matemático",
+          "Razonamiento verbal",
+        ],
+        provider: {
+          "@type": "Organization",
+          name: config.site.title,
+          url: config.site.base_url,
+        },
+      },
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      item: {
+        "@type": "LearningResource",
+        "@id": `${config.site.base_url}/admision#examen-especial`,
+        name: "Simulacros especiales de admisión UCR, UNA y TEC",
+        description:
+          "Simulacros gratuitos de exámenes especiales por universidad: 4 simulacros del TEC de 60 preguntas y un examen compartido UCR/UNA de 45, con formato de prueba real y reporte personalizado de fortalezas y debilidades.",
+        learningResourceType: "Practice exam",
+        educationalLevel: "Admisión universitaria",
+        inLanguage: "es-CR",
+        url: "https://chat.ubotcr.com/juegos/examenes/especial",
+        isAccessibleForFree: true,
+        about: [
+          {
+            "@type": "CollegeOrUniversity",
+            name: "Universidad de Costa Rica (UCR)",
+          },
+          {
+            "@type": "CollegeOrUniversity",
+            name: "Universidad Nacional (UNA)",
+          },
+          {
+            "@type": "CollegeOrUniversity",
+            name: "Instituto Tecnológico de Costa Rica (TEC)",
+          },
+        ],
+        provider: {
+          "@type": "Organization",
+          name: config.site.title,
+          url: config.site.base_url,
+        },
+      },
+    },
+  ],
+};
+---
+
+<Base
+  meta_title="Ubot Admisión | Diagnóstico, simulacros y práctica UCR, UNA y TEC"
+  description="La temporada de admisión terminó. Seguí practicando con el diagnóstico, simulacros, tutor y herramientas de Ubot Admisión para UCR, UNA y TEC."
+>
+  <Fragment slot="head">
+    <script
+      is:inline
+      type="application/ld+json"
+      set:html={JSON.stringify(examsSchema)}
+    />
+    <script
+      is:inline
+      type="application/ld+json"
+      set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        name: "Ubot Admisión",
+        operatingSystem: "Web",
+        applicationCategory: "EducationalApplication",
+        url: admision.app,
+        offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+      })}
+    />
+  </Fragment>
+  <Hero
+    data={{
+      title: "Seguí practicando para <mark>la U</mark>",
+      content:
+        "La temporada de admisión terminó. Podés seguir practicando con Ubot: medí tu nivel, repasá razonamiento y resolvé simulacros a tu ritmo.",
+      button_primary: {
+        enable: true,
+        label: admision.entryLabel,
+        link: admision.app,
+      },
+      button_secondary: {
+        enable: true,
+        label: "Hacer el diagnóstico",
+        link: "#diagnostico",
+      },
+    }}
+  />
+  <p
+    class="container mx-auto max-w-4xl px-4 py-6 text-center text-sm text-gray"
+  >
+    ¿Buscás Matemáticas para las Estandarizadas? <a href={estandarizadas.page}
+      >Conocé el piloto.</a>
+  </p>
+  <DiagnosticExam data={diagnostic} />
+  <DiagnosticExam data={specialExam} id="examen-especial" />
+  <EssentialFeatures data={features} />
+  <Gallery data={gallery} />
+  <WhyChooseUs data={why} />
+  <HowItWorks data={how} />
+  <Pricing data={pricing} />
+  <FAQ data={faq} />
+  <CallToAction data={cta} />
+</Base>

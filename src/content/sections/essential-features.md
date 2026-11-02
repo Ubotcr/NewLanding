@@ -1,6 +1,6 @@
 ---
 enable: true
-title: Todo lo que necesitas para triunfar
+title: Herramientas de Ubot Admisión
 features:
   - title: Chat con IA
     icon: chat

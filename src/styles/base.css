@@ -2,6 +2,10 @@ html {
   scroll-behavior: smooth;
 }
 
+[id] {
+  scroll-margin-top: calc(80px + env(safe-area-inset-top));
+}
+
 body {
   @apply bg-body text-base font-primary font-normal leading-relaxed text-text-light;
 }

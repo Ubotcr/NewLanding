@@ -1,0 +1,92 @@
+---
+import PageHeader from "@/partials/PageHeader.astro";
+import SectionHeader from "@/components/SectionHeader.astro";
+import Base from "@/layouts/Base.astro";
+import MathOverview from "@/partials/MathOverview.astro";
+import PreparationClosing from "@/partials/PreparationClosing.astro";
+import FAQ from "@/partials/FAQ.astro";
+import { estandarizadas, mathFaq } from "@/config/preparation";
+---
+
+<Base
+  meta_title="Ubot Estandarizadas | Piloto de Matemáticas"
+  description="Conocé el piloto de Matemáticas de Ubot para secundaria académica diurna: práctica por tema, tutor, examen diario y materiales según disponibilidad del catálogo."
+>
+  <Fragment slot="head">
+    <script
+      is:inline
+      type="application/ld+json"
+      set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        name: "Ubot Estandarizadas",
+        operatingSystem: "Web",
+        applicationCategory: "EducationalApplication",
+        url: estandarizadas.app,
+        description: estandarizadas.description,
+      })}
+    />
+  </Fragment>
+  <PageHeader
+    page_header={{
+      title: "Prepará Matemáticas para las <mark>Estandarizadas</mark>",
+      subtitle:
+        "Conocé el nuevo piloto de Ubot para secundaria académica diurna: práctica por tema, tutor y materiales según el catálogo disponible.",
+      button_primary: {
+        enable: true,
+        label: estandarizadas.entryLabel,
+        link: estandarizadas.app,
+      },
+      button_secondary: {
+        enable: true,
+        label: "Cómo empezar",
+        link: "#como-empezar",
+      },
+    }}
+  />
+  <MathOverview detailed />
+  <section id="como-empezar" class="bg-card px-4 py-12 md:py-20">
+    <div class="container mx-auto max-w-3xl">
+      <SectionHeader
+        title="Cómo empezar"
+        subtitle="Consultá qué hay disponible y elegí una actividad para hoy."
+      />
+      <ol class="list-decimal space-y-6 pl-5 text-text">
+        <li>
+          <h3 class="text-lg font-semibold text-text-light">Iniciá sesión</h3><p
+            class="mt-2"
+          >
+            Entrá a la app de Estandarizadas para consultar el catálogo del
+            piloto.
+          </p>
+        </li>
+        <li>
+          <h3 class="text-lg font-semibold text-text-light">
+            Elegí un tema o actividad
+          </h3><p class="mt-2">
+            Revisá los temas con preguntas, los materiales y las actividades
+            habilitadas.
+          </p>
+        </li>
+        <li>
+          <h3 class="text-lg font-semibold text-text-light">
+            Practicá y revisá
+          </h3><p class="mt-2">
+            Resolvé una práctica, consultá su resultado o llevá una duda al
+            tutor cuando esté disponible.
+          </p>
+        </li>
+      </ol>
+      <p class="mt-8 text-sm text-gray">
+        Ubot ofrece preparación; sus prácticas no constituyen resultados
+        oficiales del MEP.
+      </p>
+      <div class="mt-6 text-center">
+        <a href={estandarizadas.app} class="btn btn-primary"
+          >{estandarizadas.entryLabel}</a>
+      </div>
+    </div>
+  </section>
+  <FAQ data={mathFaq} />
+  <PreparationClosing />
+</Base>

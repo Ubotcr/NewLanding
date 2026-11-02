@@ -3,7 +3,7 @@
 }
 
 .btn-primary {
-  @apply bg-primary text-white shadow-sm shadow-primary/20 hover:bg-secondary hover:shadow-md;
+  @apply bg-secondary text-white shadow-sm shadow-primary/20 hover:bg-primary-dark hover:shadow-md;
 }
 
 .btn-outline {

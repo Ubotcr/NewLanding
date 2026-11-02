@@ -1,155 +1,55 @@
 ---
 import Base from "@/layouts/Base.astro";
-import CalendarWidget from "@/components/CalendarWidget.astro";
 import Hero from "@/components/Hero.astro";
-import CallToAction from "@/partials/CallToAction.astro";
-import SpecialExamHighlight from "@/partials/SpecialExamHighlight.astro";
-import DiagnosticExam from "@/partials/DiagnosticExam.astro";
-import EssentialFeatures from "@/partials/EssentialFeatures.astro";
+import SectionHeader from "@/components/SectionHeader.astro";
+import MathOverview from "@/partials/MathOverview.astro";
+import PreparationClosing from "@/partials/PreparationClosing.astro";
 import FAQ from "@/partials/FAQ.astro";
-import Gallery from "@/partials/Gallery.astro";
-import HowItWorks from "@/partials/HowItWorks.astro";
-import Pricing from "@/partials/Pricing.astro";
-import WhyChooseUs from "@/partials/WhyChooseUs.astro";
+import { admision, sharedFaq } from "@/config/preparation";
 import { getListPage } from "@/lib/contentParser";
-import config from "@/config/config.json";
-
-const homepage = await getListPage("homepage/-index.md");
-const essentialFeatures = await getListPage("sections/essential-features.md");
-const whyChooseUs = await getListPage("sections/why-choose-us.md");
-const howItWorks = await getListPage("sections/how-it-works.md");
-const gallery = await getListPage("sections/gallery.md");
-const pricing = await getListPage("sections/pricing.md");
-const faq = await getListPage("sections/faq.md");
-const callToAction = await getListPage("sections/call-to-action.md");
-const diagnosticExam = await getListPage("sections/diagnostic-exam.md");
-// Special exam content (swapped into DiagnosticExam component)
-const specialExam = {
-  frontmatter: {
-    enable: true,
-    badge: "Nuevos · Exámenes especiales por universidad",
-    title: "Simulacros especiales UCR, UNA y TEC",
-    description: "¿Vas para la UCR, UNA o TEC? Practicá gratis: 4 simulacros del TEC de 60 preguntas y un examen compartido UCR/UNA de 45, con formato de prueba real y reporte personalizado de fortalezas y debilidades.",
-    button: {
-      enable: true,
-      link: "https://chat.ubotcr.com/juegos/examenes/especial",
-      label: "Ver exámenes"
-    }
-  }
-};
-const { banner } = homepage.frontmatter;
-
-const softwareSchema = {
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": config.site.title,
-  "operatingSystem": "Web",
-  "applicationCategory": "EducationalApplication",
-  "url": config.site.base_url,
-  "description": config.metadata.meta_description,
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "USD"
-  }
-};
-
-const examsSchema = {
-  "@context": "https://schema.org",
-  "@type": "ItemList",
-  "name": "Exámenes de práctica de Ubot",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "item": {
-        "@type": "LearningResource",
-        "@id": `${config.site.base_url}/#diagnostico`,
-        "name": "Examen diagnóstico de admisión (PAA)",
-        "description": "Prueba diagnóstica gratuita que mide tu nivel en razonamiento lógico, matemático y verbal de cara al examen de admisión (PAA) de la UCR, UNA y TEC.",
-        "learningResourceType": "Diagnostic assessment",
-        "educationalLevel": "Admisión universitaria",
-        "inLanguage": "es-CR",
-        "url": "https://chat.ubotcr.com/diagnostico",
-        "isAccessibleForFree": true,
-        "teaches": ["Razonamiento lógico", "Razonamiento matemático", "Razonamiento verbal"],
-        "provider": {
-          "@type": "Organization",
-          "name": config.site.title,
-          "url": config.site.base_url
-        }
-      }
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "item": {
-        "@type": "LearningResource",
-        "@id": `${config.site.base_url}/#examen-especial`,
-        "name": "Simulacros especiales de admisión UCR, UNA y TEC",
-        "description": "Simulacros gratuitos de exámenes especiales por universidad: 4 simulacros del TEC de 60 preguntas y un examen compartido UCR/UNA de 45, con formato de prueba real y reporte personalizado de fortalezas y debilidades.",
-        "learningResourceType": "Practice exam",
-        "educationalLevel": "Admisión universitaria",
-        "inLanguage": "es-CR",
-        "url": "https://chat.ubotcr.com/juegos/examenes/especial",
-        "isAccessibleForFree": true,
-        "about": [
-          {
-            "@type": "CollegeOrUniversity",
-            "name": "Universidad de Costa Rica (UCR)"
-          },
-          {
-            "@type": "CollegeOrUniversity",
-            "name": "Universidad Nacional (UNA)"
-          },
-          {
-            "@type": "CollegeOrUniversity",
-            "name": "Instituto Tecnológico de Costa Rica (TEC)"
-          }
-        ],
-        "provider": {
-          "@type": "Organization",
-          "name": config.site.title,
-          "url": config.site.base_url
-        }
-      }
-    }
-  ]
-};
-
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": faq.frontmatter.faq_list.map((item: any) => ({
-    "@type": "Question",
-    "name": item.question,
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": item.answer
-    }
-  }))
-};
+const {
+  frontmatter: { banner },
+} = await getListPage("homepage/-index.md");
 ---
 
 <Base
-  meta_title="Ubot | Examen diagnóstico gratis y simulacros especiales UCR, UNA y TEC"
-  description="Haz el examen diagnóstico gratis de Ubot y los simulacros especiales por universidad (4 del TEC de 60 preguntas y examen compartido UCR/UNA de 45). Descubre tu nivel para el examen de admisión (PAA) de la UCR, UNA y TEC con IA, simulacros y práctica diaria."
-  keywords="examen diagnóstico, examen diagnóstico admisión, prueba diagnóstica universidad, test diagnóstico PAA, diagnóstico UCR UNA TEC, exámenes especiales universidad, simulacros especiales UCR UNA TEC, simulacro TEC 60 preguntas, examen compartido UCR UNA 45 preguntas, práctica examen admisión TEC, simulacro examen admisión Costa Rica, preparación PAA gratis"
+  meta_title="Ubot | Estandarizadas y Admisión en Costa Rica"
+  description="Elegí tu preparación con Ubot: conocé el nuevo piloto de Matemáticas para Estandarizadas o seguí practicando para Admisión UCR, UNA y TEC."
 >
-  <Fragment slot="head">
-    <script type="application/ld+json" set:html={JSON.stringify(softwareSchema)} />
-    <script type="application/ld+json" set:html={JSON.stringify(examsSchema)} />
-    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
-  </Fragment>
-  <Hero data={banner} />
-  <SpecialExamHighlight data={diagnosticExam} />
-  <DiagnosticExam data={specialExam} />
-  <EssentialFeatures data={essentialFeatures} />
-  <Gallery data={gallery} />
-  <WhyChooseUs data={whyChooseUs} />
-  <HowItWorks data={howItWorks} />
-  <Pricing data={pricing} />
-  <FAQ data={faq} />
-  <CalendarWidget />
-  <CallToAction data={callToAction} />
+  <Hero data={banner} showUniversities={false} choices />
+  <MathOverview />
+  <section class="bg-card px-4 py-12 md:py-20">
+    <div class="container mx-auto max-w-5xl">
+      <SectionHeader
+        title="Seguí practicando con Admisión"
+        subtitle="La temporada de admisión terminó. Las herramientas siguen disponibles para que practiqués a tu ritmo para UCR, UNA y TEC."
+      />
+      <ul class="mx-auto max-w-2xl list-disc space-y-3 pl-5 text-text">
+        <li>
+          Diagnóstico para reconocer tus fortalezas y lo que podés mejorar.
+        </li>
+        <li>Simulacros y práctica de razonamiento para UCR, UNA y TEC.</li>
+        <li>Chat con IA, juegos e historial para seguir aprendiendo.</li>
+      </ul>
+      <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
+        <a href={admision.page} class="btn btn-outline">Conocé Admisión</a>
+        <a href={admision.app} class="btn btn-outline">{admision.entryLabel}</a>
+      </div>
+      <nav
+        class="mt-8 flex flex-wrap justify-center gap-x-6 gap-y-3 text-sm"
+        aria-label="Herramientas y planes de Admisión"
+      >
+        <a id="diagnostico" href="/admision#diagnostico"
+          >Diagnóstico de Admisión</a
+        >
+        <a id="examen-especial" href="/admision#examen-especial"
+          >Simulacros de Admisión</a
+        >
+        <a id="pricing" href="/pricing">Planes de Admisión</a>
+        <a id="gallery" href="/admision#gallery">Ver Admisión por dentro</a>
+      </nav>
+    </div>
+  </section>
+  <FAQ data={sharedFaq} />
+  <PreparationClosing />
 </Base>

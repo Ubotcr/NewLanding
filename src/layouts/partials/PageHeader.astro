@@ -6,7 +6,7 @@ interface Props {
 }
 
 const { page_header } = Astro.props;
-const { title, subtitle } = page_header || {};
+const { title, subtitle, button_primary, button_secondary } = page_header || {};
 ---
 
 {
@@ -19,6 +19,20 @@ const { title, subtitle } = page_header || {};
           set:html={markdownify(title).__html}
         />
         {subtitle && <p class="mx-auto mt-4 max-w-xl text-text">{subtitle}</p>}
+        {(button_primary?.enable || button_secondary?.enable) && (
+          <div class="mt-7 flex flex-wrap justify-center gap-4">
+            {button_primary?.enable && (
+              <a href={button_primary.link} class="btn btn-primary btn-lg">
+                {button_primary.label}
+              </a>
+            )}
+            {button_secondary?.enable && (
+              <a href={button_secondary.link} class="btn btn-outline btn-lg">
+                {button_secondary.label}
+              </a>
+            )}
+          </div>
+        )}
       </div>
     </section>
   )

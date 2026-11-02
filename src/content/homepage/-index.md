@@ -1,17 +1,5 @@
 ---
-# Banner
 banner:
-  title: |
-    Prepárate para <mark>la U</mark>
-    <br/>
-    con inteligencia artificial
-  content: "Ubot es tu asistente de IA disponible 24/7 para resolver dudas, practicar exámenes y mejorar tu razonamiento — gratis para todos."
-  button_primary:
-    enable: true
-    label: "Comenzar gratis"
-    link: "https://chat.ubotcr.com"
-  button_secondary:
-    enable: true
-    label: "Ver planes"
-    link: "#pricing"
+  title: "Tu preparación <mark>sigue con Ubot</mark>"
+  content: "De lo que aprendés en el cole a tu camino a la U. Elegí lo que necesitás practicar hoy y avanzá a tu ritmo."
 ---

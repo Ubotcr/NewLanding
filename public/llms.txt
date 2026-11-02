@@ -1,13 +1,15 @@
 # Ubot
 
-Asistente de inteligencia artificial para preparar exámenes de admisión a universidades públicas de Costa Rica.
+Herramientas de preparación para Estandarizadas y Admisión en Costa Rica. Estandarizadas es un piloto de Matemáticas para secundaria académica diurna; las actividades y materiales dependen del catálogo disponible. Los precios y beneficios Premium publicados corresponden exclusivamente a Admisión.
 
 ## Páginas
 
 - [Inicio](https://ubotcr.com/): Página principal con información general sobre Ubot.
+- [Estandarizadas](https://ubotcr.com/estandarizadas): Alcance y acceso al piloto de Matemáticas. No se anuncian precios, otras materias ni simulacros completos.
+- [Admisión](https://ubotcr.com/admision): La temporada terminó; las herramientas siguen disponibles para practicar para UCR, UNA y TEC.
 - [Características](https://ubotcr.com/features): Funcionalidades y herramientas disponibles.
-- [Precios](https://ubotcr.com/pricing): Planes y tarifas de Ubot.
-- [Preguntas frecuentes](https://ubotcr.com/pricing#faq): Respuestas a dudas comunes.
+- [Precios](https://ubotcr.com/pricing): Planes y tarifas de Ubot Admisión.
+- [Preguntas frecuentes](https://ubotcr.com/#faq): Cómo elegir tu preparación.
 - [Blog](https://ubotcr.com/blog): Artículos y novedades.
 - [Calendario](https://ubotcr.com/calendario): Fechas oficiales de admisión UCR, UNA y TEC.
 - [Registro de cambios](https://ubotcr.com/changelog): Novedades de la plataforma.
@@ -23,5 +25,6 @@ Asistente de inteligencia artificial para preparar exámenes de admisión a univ
 
 ## Enlaces
 
-- [Abrir app](https://chat.ubotcr.com): Acceso directo al asistente.
+- [Entrar a Estandarizadas](https://estandarizadas.ubotcr.com): App del piloto de Matemáticas; requiere iniciar sesión.
+- [Entrar a Admisión](https://chat.ubotcr.com): App de preparación para admisión universitaria.
 - [Sitemap](https://ubotcr.com/sitemap-index.xml): Mapa del sitio.

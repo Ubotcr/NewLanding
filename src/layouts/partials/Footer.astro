@@ -2,8 +2,13 @@
 import config from "@/config/config.json";
 import menu from "@/config/menu.json";
 import social from "@/config/social.json";
+import { preparation } from "@/config/preparation";
 
-const { footer_company, footer_product, footer_legal } = menu;
+const { footer_company, footer_legal } = menu;
+const footer_product = preparation.choices.flatMap(choice => [
+  { name: choice.name, url: choice.page },
+  { name: choice.entryLabel, url: choice.app },
+]);
 const { params, site } = config;
 
 import Logo from "@/components/Logo.astro";
@@ -110,7 +115,7 @@ import Logo from "@/components/Logo.astro";
         <h3
           class="mb-4 text-sm font-semibold uppercase tracking-wide text-text-light"
         >
-          Producto
+          Tu preparación
         </h3>
         <ul class="space-y-3">
           {

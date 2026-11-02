@@ -52,4 +52,4 @@ Antes de operar, preguntate: si una sube, ¿la otra sube (directa) o baja (inver
 - **Días 9–12:** tandas mixtas de 20 con tiempo (3 min por ítem como referencia).
 - **Días 13–14:** repaso de fórmulas + tanda final.
 
-Traé tus ejercicios trabados a [Ubot](https://chat.ubotcr.com): te los explica paso a paso. Y si querés contexto general del examen, leé la [guía de las Estandarizadas](/blog/pruebas-nacionales-estandarizadas-mep-guia).
+Traé tus ejercicios trabados a [Ubot Estandarizadas](/estandarizadas): conocé el piloto de Matemáticas y consultá los temas y actividades disponibles. Y si querés contexto general del examen, leé la [guía de las Estandarizadas](/blog/pruebas-nacionales-estandarizadas-mep-guia).

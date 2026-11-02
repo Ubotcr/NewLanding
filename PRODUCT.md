@@ -6,29 +6,33 @@ brand
 
 ## Users
 
-Costa Rican high-school students and recent graduates preparing for the admission
-exams of the three main public universities — UCR, UNA, TEC. They study alongside
-school or work, are often time-poor and stressed, and reach the site mostly on
-mobile devices, sometimes over slow or metered connections. Many cannot afford a
-traditional academia or private prep course, so price and access are decisive.
+Costa Rican secondary-school students and recent graduates. Two preparation
+options share this marketing site: Estandarizadas and Admisión. Most visitors
+arrive on mobile devices, sometimes over slow or metered connections.
 
-Secondary audience: parents and guardians who may pay for Ubot Premium on behalf
-of a student, and who need to trust the product quickly.
+Secondary audience: parents and guardians who need to understand the scope of
+each option and, for Admisión, its paid plan.
 
 ## Product Purpose
 
-Ubot is an AI assistant that helps students prepare for Costa Rican public-
-university admission exams: chat-based doubt solving, timed practice exams in the
-real test format, national rankings with a daily streak and Elo points,
-explanatory videos and podcasts, and synced history across devices. A free plan
-covers the essentials; Ubot Premium ($5/mo) unlocks unlimited exams, weekly
-exclusive exams, media generation, and priority AI responses.
+This Astro site helps students choose their preparation and enter the right app.
+The shared home presents both options with comparable visibility. Estandarizadas
+comes first and receives modest emphasis as the newer offering.
 
-This Astro site is the marketing surface for that product. The app itself lives
-separately at chat.ubotcr.com. The landing page exists to convert visitors into
-free signups and to upsell Premium — while establishing Ubot as the credible,
-accessible, AI-native way to prep for the Costa Rican admission exams. Success is
-measured by signup rate and Premium conversion, not by page views.
+- **Estandarizadas** (`/estandarizadas`): a Mathematics pilot for secondary
+  academic day schools, at estandarizadas.ubotcr.com. Topic practice, tutoring,
+  daily exams, materials and results depend on the available catalog. Do not
+  promise complete syllabus coverage, other subjects, full mock exams, prices
+  or Admisión Premium benefits. Ubot practice results are not official MEP results.
+- **Admisión** (`/admision`): preparation for UCR, UNA and TEC, at chat.ubotcr.com.
+  The admission season has ended; diagnostic assessments, mock exams, AI chat,
+  games and practice remain available. Existing free and Premium plans belong
+  to Admisión and are described on `/pricing`.
+
+Use Costa Rican Spanish and student-facing labels such as “¿Para qué te estás
+preparando?” and “Elegí tu preparación”. Name each option directly rather than
+calling them “programas”. Keep both information pages and app entry points easy
+to find. The calendar retains admission dates; seasonal copy changes manually.
 
 ## Brand Personality
 
