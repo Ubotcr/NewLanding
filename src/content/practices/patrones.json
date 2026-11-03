@@ -1,0 +1,119 @@
+{
+  "slug": "patrones",
+  "title": "Patrones y deducción",
+  "product": "admision",
+  "intro": "En secuencias, verificá la regla indicada en todos los pasos. Unos pocos términos pueden admitir varias reglas; acá cada enunciado especifica cómo continuar. En deducción, separá lo que las premisas garantizan de lo que solo permiten como posibilidad.",
+  "example": "En 2, 5, 8, 11, sumar 3 da 14. Si todos los A son B y algo es A, entonces es B; si solo sabemos que es B, no podemos concluir que es A.",
+  "questions": [
+    {
+      "id": "q0",
+      "prompt": "Con la regla de sumar 3, completá: 2, 5, 8, 11, …",
+      "options": [
+        {
+          "id": "0",
+          "text": "14",
+          "explanation": "11 + 3 = 14."
+        },
+        {
+          "id": "1",
+          "text": "13",
+          "explanation": "El salto de 11 a 13 sería 2, no 3."
+        },
+        {
+          "id": "2",
+          "text": "22",
+          "explanation": "Duplicar no sigue la regla indicada."
+        }
+      ],
+      "answer": "0"
+    },
+    {
+      "id": "q1",
+      "prompt": "Cada término se obtiene duplicando el anterior y sumando 1: 2, 5, 11, 23, … ¿Cuál sigue?",
+      "options": [
+        {
+          "id": "0",
+          "text": "47",
+          "explanation": "23 × 2 + 1 = 47."
+        },
+        {
+          "id": "1",
+          "text": "46",
+          "explanation": "Falta sumar 1 después de duplicar."
+        },
+        {
+          "id": "2",
+          "text": "35",
+          "explanation": "Sumar 12 repite el último salto, pero no la regla indicada."
+        }
+      ],
+      "answer": "0"
+    },
+    {
+      "id": "q2",
+      "prompt": "Las diferencias aumentan de dos en dos: 3, 6, 11, 18, 27, … ¿Cuál sigue?",
+      "options": [
+        {
+          "id": "0",
+          "text": "38",
+          "explanation": "Los saltos son 3, 5, 7, 9; el siguiente es 11 y 27 + 11 = 38."
+        },
+        {
+          "id": "1",
+          "text": "36",
+          "explanation": "Sumar 9 repetiría el salto anterior."
+        },
+        {
+          "id": "2",
+          "text": "40",
+          "explanation": "Sumar 13 omite el salto de 11."
+        }
+      ],
+      "answer": "0"
+    },
+    {
+      "id": "q3",
+      "prompt": "Todos los integrantes del club tienen carnet. Paula integra el club. ¿Qué se deduce?",
+      "options": [
+        {
+          "id": "0",
+          "text": "Paula tiene carnet",
+          "explanation": "La regla general se aplica a Paula porque sabemos que integra el club."
+        },
+        {
+          "id": "1",
+          "text": "Quien tiene carnet integra el club",
+          "explanation": "La regla no afirma su recíproca: otras personas podrían tener carnet."
+        },
+        {
+          "id": "2",
+          "text": "Solo Paula tiene carnet",
+          "explanation": "No se establece que Paula sea la única integrante ni la única con carnet."
+        }
+      ],
+      "answer": "0"
+    },
+    {
+      "id": "q4",
+      "prompt": "Todos los participantes del taller entregaron una tarea. Algunas personas que entregaron tarea recibieron una beca. ¿Se deduce que algún participante del taller recibió beca?",
+      "options": [
+        {
+          "id": "0",
+          "text": "No se puede determinar",
+          "explanation": "Las personas becadas podrían estar entre quienes entregaron tarea sin participar del taller."
+        },
+        {
+          "id": "1",
+          "text": "Sí, necesariamente",
+          "explanation": "Compartir la entrega de tarea no garantiza que ambos grupos se crucen."
+        },
+        {
+          "id": "2",
+          "text": "No, ninguno recibió beca",
+          "explanation": "Las premisas tampoco excluyen que haya participantes becados."
+        }
+      ],
+      "answer": "0"
+    }
+  ]
+}

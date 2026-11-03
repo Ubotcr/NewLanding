@@ -1,0 +1,119 @@
+{
+  "slug": "porcentajes",
+  "title": "Porcentajes y proporcionalidad",
+  "product": "estandarizadas",
+  "intro": "Para calcular p% de una cantidad, multiplicá por p/100. En un aumento porcentual, la base es el valor original. Para un descuento multiplicá por 1 − p/100; en cambios sucesivos, cada porcentaje usa la cantidad que resulta del paso anterior.",
+  "example": "El 20% de 150 es 30. Si cuatro entradas iguales cuestan ₡8000, cada una cuesta ₡2000 y seis cuestan ₡12000: es una relación directamente proporcional.",
+  "questions": [
+    {
+      "id": "q0",
+      "prompt": "¿Cuánto es el 15% de 200?",
+      "options": [
+        {
+          "id": "0",
+          "text": "30",
+          "explanation": "200 × 15/100 = 30."
+        },
+        {
+          "id": "1",
+          "text": "15",
+          "explanation": "15% significa 15 por cada 100; hay dos grupos de 100."
+        },
+        {
+          "id": "2",
+          "text": "170",
+          "explanation": "170 es lo que queda al descontar el 15%, no el porcentaje solicitado."
+        }
+      ],
+      "answer": "0"
+    },
+    {
+      "id": "q1",
+      "prompt": "Una mochila de ₡12000 tiene un descuento del 25%. ¿Cuál es el precio final?",
+      "options": [
+        {
+          "id": "0",
+          "text": "₡9000",
+          "explanation": "El descuento es 12000 × 0,25 = 3000; pagás 9000."
+        },
+        {
+          "id": "1",
+          "text": "₡3000",
+          "explanation": "3000 es el descuento, no el precio final."
+        },
+        {
+          "id": "2",
+          "text": "₡11700",
+          "explanation": "El 25% son 3000 colones, no 300."
+        }
+      ],
+      "answer": "0"
+    },
+    {
+      "id": "q2",
+      "prompt": "Un precio sube de ₡800 a ₡1000. ¿Cuál es el aumento porcentual respecto al precio original?",
+      "options": [
+        {
+          "id": "0",
+          "text": "25%",
+          "explanation": "El aumento de 200 se divide entre el original, 800: 200/800 × 100 = 25%."
+        },
+        {
+          "id": "1",
+          "text": "20%",
+          "explanation": "200/1000 usa el precio final como base; se pide la base original."
+        },
+        {
+          "id": "2",
+          "text": "200%",
+          "explanation": "200 es el aumento en colones, no el porcentaje."
+        }
+      ],
+      "answer": "0"
+    },
+    {
+      "id": "q3",
+      "prompt": "Si 3 cuadernos iguales cuestan ₡1800 y no hay descuentos, ¿cuánto cuestan 5?",
+      "options": [
+        {
+          "id": "0",
+          "text": "₡3000",
+          "explanation": "Cada cuaderno cuesta 1800/3 = 600; cinco cuestan 3000."
+        },
+        {
+          "id": "1",
+          "text": "₡1080",
+          "explanation": "Multiplicar por 3/5 invierte la razón: más cuadernos deben costar más."
+        },
+        {
+          "id": "2",
+          "text": "₡1802",
+          "explanation": "Agregar dos cuadernos no equivale a agregar dos colones."
+        }
+      ],
+      "answer": "0"
+    },
+    {
+      "id": "q4",
+      "prompt": "Un artículo de ₡10000 sube 20% y luego baja 20% sobre el nuevo precio. ¿Cuánto cuesta al final?",
+      "options": [
+        {
+          "id": "0",
+          "text": "₡9600",
+          "explanation": "Primero 10000 × 1,20 = 12000; luego 12000 × 0,80 = 9600."
+        },
+        {
+          "id": "1",
+          "text": "₡10000",
+          "explanation": "Los porcentajes se aplican sobre bases distintas y no se cancelan."
+        },
+        {
+          "id": "2",
+          "text": "₡8000",
+          "explanation": "Ese resultado aplica solo una rebaja del 20% al precio original."
+        }
+      ],
+      "answer": "0"
+    }
+  ]
+}

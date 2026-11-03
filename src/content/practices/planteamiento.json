@@ -1,0 +1,119 @@
+{
+  "slug": "planteamiento",
+  "title": "Planteamiento de problemas",
+  "product": "admision",
+  "intro": "Definí la incógnita, traducí las relaciones y comprobá la respuesta. Distinguí un costo fijo de uno variable. Para coincidencias periódicas buscá el mínimo común múltiplo; al sumar grupos que se traslapan, restá la intersección para no contarla dos veces.",
+  "example": "Tres cuadernos y ₡500 suman ₡3500: 3x + 500 = 3500, de donde x = 1000. Si 8 personas estudian inglés, 6 francés y 3 ambos idiomas, hay 8 + 6 − 3 = 11 que estudian al menos uno.",
+  "questions": [
+    {
+      "id": "q0",
+      "prompt": "Tres cuadernos iguales cuestan ₡2400. ¿Cuánto cuesta uno?",
+      "options": [
+        {
+          "id": "0",
+          "text": "₡800",
+          "explanation": "Si x es el precio de uno, 3x = 2400; x = 800."
+        },
+        {
+          "id": "1",
+          "text": "₡7200",
+          "explanation": "Multiplicar el total por tres da el precio de nueve cuadernos."
+        },
+        {
+          "id": "2",
+          "text": "₡2403",
+          "explanation": "Hay que repartir el costo en tres partes iguales."
+        }
+      ],
+      "answer": "0"
+    },
+    {
+      "id": "q1",
+      "prompt": "Un taxi cobra ₡700 de base y ₡300 por kilómetro. Un viaje cuesta ₡2200. ¿Cuántos kilómetros recorrió?",
+      "options": [
+        {
+          "id": "0",
+          "text": "5",
+          "explanation": "700 + 300x = 2200; 300x = 1500; x = 5."
+        },
+        {
+          "id": "1",
+          "text": "7,33…",
+          "explanation": "Dividir el total entre 300 ignora los 700 de base."
+        },
+        {
+          "id": "2",
+          "text": "1500",
+          "explanation": "1500 son los colones del recorrido, que aún hay que dividir entre 300."
+        }
+      ],
+      "answer": "0"
+    },
+    {
+      "id": "q2",
+      "prompt": "Ana tiene el doble de edad que Luis. Entre ambos suman 36 años. ¿Qué edad tiene Luis?",
+      "options": [
+        {
+          "id": "0",
+          "text": "12 años",
+          "explanation": "Si Luis tiene x, Ana tiene 2x; 3x = 36 da x = 12."
+        },
+        {
+          "id": "1",
+          "text": "18 años",
+          "explanation": "Dividir entre dos supone edades iguales."
+        },
+        {
+          "id": "2",
+          "text": "24 años",
+          "explanation": "24 es la edad de Ana, no la de Luis."
+        }
+      ],
+      "answer": "0"
+    },
+    {
+      "id": "q3",
+      "prompt": "Dos buses salen juntos a las 8:00. Uno sale cada 12 minutos y otro cada 18. ¿A qué hora coinciden de nuevo por primera vez?",
+      "options": [
+        {
+          "id": "0",
+          "text": "8:36",
+          "explanation": "El mínimo común múltiplo de 12 y 18 es 36 minutos."
+        },
+        {
+          "id": "1",
+          "text": "8:30",
+          "explanation": "Sumar 12 + 18 no da un múltiplo de ambas frecuencias."
+        },
+        {
+          "id": "2",
+          "text": "8:06",
+          "explanation": "La diferencia de intervalos no determina cuándo coinciden."
+        }
+      ],
+      "answer": "0"
+    },
+    {
+      "id": "q4",
+      "prompt": "En un grupo de 40 personas, 25 estudian Matemática y 22 Química. Todas estudian al menos una. ¿Cuántas estudian ambas?",
+      "options": [
+        {
+          "id": "0",
+          "text": "7",
+          "explanation": "25 + 22 cuenta dos veces a quienes estudian ambas; 47 − 40 = 7."
+        },
+        {
+          "id": "1",
+          "text": "3",
+          "explanation": "25 − 22 compara tamaños, pero no calcula la intersección."
+        },
+        {
+          "id": "2",
+          "text": "47",
+          "explanation": "47 es la suma con duplicados; supera las 40 personas del grupo."
+        }
+      ],
+      "answer": "0"
+    }
+  ]
+}

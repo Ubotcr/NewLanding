@@ -56,8 +56,16 @@ const sectionsCollection = defineCollection({
   schema: z.object({}).catchall(z.any()),
 });
 
+const practicesCollection = defineCollection({
+ loader: glob({ pattern: "*.json", base: "src/content/practices" }),
+ schema: z.object({ slug: z.string(), title: z.string(), product: z.enum(["admision", "estandarizadas"]), intro: z.string(), example: z.string(), questions: z.array(z.object({id: z.string(), prompt: z.string(), answer: z.string(), options: z.array(z.object({id: z.string(), text: z.string(), explanation: z.string()})).min(2)})).length(5) }).superRefine((data, ctx) => {
+ if (new Set(data.questions.map(q => q.id)).size !== data.questions.length) ctx.addIssue({code: "custom", message: "Preguntas duplicadas"});
+ for (const q of data.questions) if (!q.options.some(o => o.id === q.answer) || new Set(q.options.map(o => o.id)).size !== q.options.length) ctx.addIssue({code: "custom", message: "Alternativas inválidas"});
+ }),
+});
 // Export collections
 export const collections = {
+  practices: practicesCollection,
   homepage: homepageCollection,
   about: aboutCollection,
   changelog: changelogCollection,

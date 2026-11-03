@@ -1,0 +1,119 @@
+{
+  "slug": "pendiente",
+  "title": "Pendiente de una recta",
+  "product": "estandarizadas",
+  "intro": "La pendiente es m = (y₂ − y₁)/(x₂ − x₁). Conservá el mismo orden en ambas restas. Una recta horizontal tiene pendiente cero; en una vertical la pendiente no está definida. En un contexto, indicá las unidades del cambio.",
+  "example": "Entre (1, 2) y (3, 8): m = 6/2 = 3. Entre (0, 5) y (2, 1): m = −4/2 = −2; la recta baja hacia la derecha.",
+  "questions": [
+    {
+      "id": "q0",
+      "prompt": "Entre (1, 2) y (3, 8), ¿cuál es la pendiente?",
+      "options": [
+        {
+          "id": "0",
+          "text": "3",
+          "explanation": "Dividí el cambio vertical, 6, entre el horizontal, 2."
+        },
+        {
+          "id": "1",
+          "text": "6",
+          "explanation": "6 es solo el cambio vertical; falta dividir entre 2."
+        },
+        {
+          "id": "2",
+          "text": "1/3",
+          "explanation": "Invertiste el cociente: va cambio vertical entre horizontal."
+        }
+      ],
+      "answer": "0"
+    },
+    {
+      "id": "q1",
+      "prompt": "Entre (−2, 5) y (2, −3), ¿cuál es la pendiente?",
+      "options": [
+        {
+          "id": "0",
+          "text": "−2",
+          "explanation": "m = (−3 − 5)/(2 − (−2)) = −8/4 = −2."
+        },
+        {
+          "id": "1",
+          "text": "2",
+          "explanation": "La recta baja al aumentar x; la pendiente debe ser negativa."
+        },
+        {
+          "id": "2",
+          "text": "−4",
+          "explanation": "El cambio horizontal es 4, porque 2 − (−2) = 4, no 2."
+        }
+      ],
+      "answer": "0"
+    },
+    {
+      "id": "q2",
+      "prompt": "Una recta pasa por (−1, 4) y (6, 4). ¿Cuál es su pendiente?",
+      "options": [
+        {
+          "id": "0",
+          "text": "0",
+          "explanation": "No hay cambio vertical: (4 − 4)/(6 + 1) = 0."
+        },
+        {
+          "id": "1",
+          "text": "No está definida",
+          "explanation": "Una pendiente no definida corresponde a una recta vertical, con x constante."
+        },
+        {
+          "id": "2",
+          "text": "4",
+          "explanation": "La altura de la recta no es su pendiente."
+        }
+      ],
+      "answer": "0"
+    },
+    {
+      "id": "q3",
+      "prompt": "Una recta pasa por (3, −1) y (3, 5). ¿Cuál es su pendiente?",
+      "options": [
+        {
+          "id": "0",
+          "text": "No está definida",
+          "explanation": "El cambio horizontal es cero; no se puede dividir 6 entre cero."
+        },
+        {
+          "id": "1",
+          "text": "0",
+          "explanation": "Cero es la pendiente de una recta horizontal, no vertical."
+        },
+        {
+          "id": "2",
+          "text": "6",
+          "explanation": "6 es el cambio vertical, pero falta un divisor distinto de cero."
+        }
+      ],
+      "answer": "0"
+    },
+    {
+      "id": "q4",
+      "prompt": "El costo de un viaje sigue una recta: a 2 km cuesta ₡1800 y a 5 km, ₡3000. ¿Cuánto aumenta por kilómetro?",
+      "options": [
+        {
+          "id": "0",
+          "text": "₡400 por km",
+          "explanation": "(3000 − 1800)/(5 − 2) = 1200/3 = 400 colones por km."
+        },
+        {
+          "id": "1",
+          "text": "₡600 por km",
+          "explanation": "3000/5 mezcla el costo inicial con el aumento por km."
+        },
+        {
+          "id": "2",
+          "text": "₡1200 por km",
+          "explanation": "1200 es el aumento total en 3 km, no en uno."
+        }
+      ],
+      "answer": "0"
+    }
+  ]
+}

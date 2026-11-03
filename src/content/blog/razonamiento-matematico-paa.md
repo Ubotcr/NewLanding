@@ -16,7 +16,7 @@ La mitad matemática de la PAA no mide si te sabés fórmulas: mide si sabés **
 
 ## 1. Resolución de problemas (la categoría más grande)
 
-Te dan una situación cotidiana con números y tenés que traducirla a operaciones. El error del 90% no es aritmético: es **plantear mal**. Regla de oro: escribí el planteo antes de operar, aunque sea feo.
+Te dan una situación cotidiana con números y tenés que traducirla a operaciones. Un error que conviene evitar es **plantear mal**. Regla de oro: escribí el planteo antes de operar, aunque sea feo.
 
 **Ejercicio 1.** *En una soda, un casado cuesta ₡500 más que un fresco. Si 2 casados y 3 frescos cuestan ₡7.000, ¿cuánto cuesta un fresco?*
 
@@ -52,9 +52,9 @@ Te dan una situación cotidiana con números y tenés que traducirla a operacion
 
 **Ejercicio 5.** *2, 6, 12, 20, 30, ...* Diferencias: 4, 6, 8, 10 → crecen de 2 en 2 → siguiente salto 12 → **42**. (Pista: son `n(n+1)`: 1×2, 2×3, 3×4... pero no necesitás la fórmula si ves las diferencias.)
 
-**Ejercicio 6.** *En una fila hay 5 sillas. Ana no se sienta en los extremos ni junto a Bruno. ¿En cuántas posiciones puede sentarse Ana?*
+**Ejercicio 6.** *Hay cinco sillas numeradas. Bruno ocupa la silla 2. Ana no puede ocupar un extremo ni sentarse junto a Bruno. ¿Dónde puede sentarse?*
 
-> Sillas 1-2-3-4-5. Sin extremos: {2, 3, 4}. "Junto a Bruno" depende de dónde esté Bruno — como no lo sabemos, la única lectura segura: posiciones que nunca son extremo, o sea **2, 3 y 4: 3 posiciones**. Si un ítem así te confunde, reescribí las condiciones como lista y tachá: lo visual le gana a lo mental.
+> Sin extremos quedan 2, 3 y 4. La 2 está ocupada y la 3 queda junto a Bruno. Solo queda la **silla 4**.
 
 ## 3. Razonamiento con figuras
 
@@ -66,7 +66,7 @@ Secuencias donde los elementos rotan, se mueven, aparecen o desaparecen. La téc
 
 ## Errores de mate que cuestan doble
 
-1. **Operar antes de plantear.** El 90% de los fallos está en el planteo, no en la cuenta. Escribí la ecuación primero.
+1. **Operar antes de plantear.** Un planteamiento incorrecto puede arruinar una cuenta correcta. Escribí la ecuación primero.
 2. **Ignorar las opciones.** A veces sustituir las 4 opciones es más rápido que resolver: probá cada una en la ecuación y la que cuadre gana.
 3. **Redondear a medio camino.** Guardá los decimales hasta el final; redondear antes cambia la respuesta en ítems ajustados.
 4. **No verificar.** Te quedan 30 segundos por ítem al final: usalos para re-sustituir tu respuesta en el enunciado, no para empezar ítems nuevos.

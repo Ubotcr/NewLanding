@@ -1,0 +1,119 @@
+{
+  "slug": "funciones-lineales",
+  "title": "Interpretación de funciones lineales",
+  "product": "estandarizadas",
+  "intro": "En una función afín y = mx + b, b es el valor inicial y m el cambio por unidad de x. Podés sustituir x para hallar y, despejar x o comparar dos expresiones. Comprobá tu resultado en los datos originales.",
+  "example": "Si y = 3x + 2, para x = 2 obtenés 8. Si 20 = 3x + 2, restá 2 y dividí entre 3: x = 6.",
+  "questions": [
+    {
+      "id": "q0",
+      "prompt": "Si y = 2x + 3, ¿cuánto vale y para x = 4?",
+      "options": [
+        {
+          "id": "0",
+          "text": "11",
+          "explanation": "2 × 4 + 3 = 11."
+        },
+        {
+          "id": "1",
+          "text": "14",
+          "explanation": "Los paréntesis 2(x + 3) cambiarían la función; primero multiplicá."
+        },
+        {
+          "id": "2",
+          "text": "9",
+          "explanation": "Debés multiplicar 2 por 4 antes de sumar 3."
+        }
+      ],
+      "answer": "0"
+    },
+    {
+      "id": "q1",
+      "prompt": "Un tanque tiene V(t) = 120 − 5t litros, con t en minutos. ¿Qué representa −5?",
+      "options": [
+        {
+          "id": "0",
+          "text": "Pierde 5 litros por minuto",
+          "explanation": "El coeficiente de t indica el cambio por minuto; el signo negativo indica pérdida."
+        },
+        {
+          "id": "1",
+          "text": "Empieza con 5 litros",
+          "explanation": "El valor inicial es V(0) = 120 litros."
+        },
+        {
+          "id": "2",
+          "text": "Se vacía en 5 minutos",
+          "explanation": "Para hallar cuándo se vacía hay que resolver 120 − 5t = 0."
+        }
+      ],
+      "answer": "0"
+    },
+    {
+      "id": "q2",
+      "prompt": "Si C(x) = 400x + 1000 es un costo en colones, ¿para qué x el costo es ₡3000?",
+      "options": [
+        {
+          "id": "0",
+          "text": "5",
+          "explanation": "400x = 3000 − 1000 = 2000; x = 5."
+        },
+        {
+          "id": "1",
+          "text": "7,5",
+          "explanation": "Dividir 3000 entre 400 ignora el costo inicial de 1000."
+        },
+        {
+          "id": "2",
+          "text": "10",
+          "explanation": "Restá el costo inicial antes de dividir entre 400."
+        }
+      ],
+      "answer": "0"
+    },
+    {
+      "id": "q3",
+      "prompt": "Una relación afín cumple f(1) = 5 y f(3) = 9. ¿Cuál es su expresión?",
+      "options": [
+        {
+          "id": "0",
+          "text": "f(x) = 2x + 3",
+          "explanation": "La pendiente es (9 − 5)/(3 − 1) = 2; 5 = 2 × 1 + b da b = 3."
+        },
+        {
+          "id": "1",
+          "text": "f(x) = 4x + 1",
+          "explanation": "Da 5 para x = 1, pero 13 para x = 3; no satisface ambos datos."
+        },
+        {
+          "id": "2",
+          "text": "f(x) = 2x + 5",
+          "explanation": "5 es f(1), no f(0); esta expresión da f(1) = 7."
+        }
+      ],
+      "answer": "0"
+    },
+    {
+      "id": "q4",
+      "prompt": "Dos planes cuestan A(x) = 500 + 100x y B(x) = 200x colones. Para x ≥ 0, ¿cuándo A es más barato que B?",
+      "options": [
+        {
+          "id": "0",
+          "text": "Cuando x > 5",
+          "explanation": "500 + 100x < 200x equivale a 500 < 100x, es decir, x > 5."
+        },
+        {
+          "id": "1",
+          "text": "Cuando x < 5",
+          "explanation": "Con x = 0, A cuesta 500 y B cuesta 0; A no es más barato."
+        },
+        {
+          "id": "2",
+          "text": "Cuando x = 5",
+          "explanation": "En x = 5 ambos cuestan 1000: cuestan lo mismo."
+        }
+      ],
+      "answer": "0"
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "slug": "inferencias",
+  "title": "Inferencias de lectura",
+  "product": "admision",
+  "intro": "Separá información explícita, inferencias respaldadas y suposiciones. Identificá la finalidad y las limitaciones del texto. Que dos cambios ocurran juntos no demuestra que uno cause al otro. Una buena síntesis conserva tanto la idea principal como sus matices.",
+  "example": "«El suelo estaba mojado» no demuestra que llovió: pudieron limpiarlo. «Las clases terminan a las dos y Marta llegó a las tres» permite concluir que llegó después de que terminaron, pero no explica por qué.",
+  "questions": [
+    {
+      "id": "q0",
+      "prompt": "“Ana encontró cerrada la biblioteca y decidió volver por la tarde”. ¿Qué afirma el texto?",
+      "options": [
+        {
+          "id": "0",
+          "text": "Ana decidió regresar más tarde",
+          "explanation": "La decisión de volver por la tarde aparece expresamente."
+        },
+        {
+          "id": "1",
+          "text": "La biblioteca cerró para siempre",
+          "explanation": "No se informa un cierre permanente."
+        },
+        {
+          "id": "2",
+          "text": "Ana había perdido sus llaves",
+          "explanation": "No se mencionan llaves ni la causa del cierre."
+        }
+      ],
+      "answer": "0"
+    },
+    {
+      "id": "q1",
+      "prompt": "“Las inscripciones cerraban a las cinco. A las cuatro, Diego aún reunía los documentos para inscribirse”. ¿Qué se infiere?",
+      "options": [
+        {
+          "id": "0",
+          "text": "Le quedaba una hora antes del cierre",
+          "explanation": "Entre las cuatro y las cinco hay una hora; el texto no confirma que lograra inscribirse."
+        },
+        {
+          "id": "1",
+          "text": "Diego logró inscribirse",
+          "explanation": "Estar reuniendo documentos no demuestra que completara la inscripción."
+        },
+        {
+          "id": "2",
+          "text": "Diego tenía todos los documentos",
+          "explanation": "Aún los reunía; no se afirma que ya los tuviera todos."
+        }
+      ],
+      "answer": "0"
+    },
+    {
+      "id": "q2",
+      "prompt": "“El colegio extendió el horario de la biblioteca para que quienes salen tarde de clases puedan usarla”. ¿Cuál es la finalidad declarada?",
+      "options": [
+        {
+          "id": "0",
+          "text": "Facilitar el acceso después de las clases",
+          "explanation": "La expresión «para que» introduce esa finalidad."
+        },
+        {
+          "id": "1",
+          "text": "Demostrar que ahora se leen más libros",
+          "explanation": "No se presentan datos sobre préstamos ni lectura."
+        },
+        {
+          "id": "2",
+          "text": "Reducir la cantidad de estudiantes",
+          "explanation": "La medida busca facilitar el uso, no reducir usuarios."
+        }
+      ],
+      "answer": "0"
+    },
+    {
+      "id": "q3",
+      "prompt": "“En el grupo que usó la guía aumentó el promedio. También recibió tutorías adicionales. No hubo un grupo de comparación”. ¿Qué conclusión está respaldada?",
+      "options": [
+        {
+          "id": "0",
+          "text": "No se puede atribuir la mejora únicamente a la guía",
+          "explanation": "Las tutorías son otra explicación posible y falta una comparación que permita separar efectos."
+        },
+        {
+          "id": "1",
+          "text": "La guía causó por sí sola toda la mejora",
+          "explanation": "Se ignoran las tutorías y la falta de comparación."
+        },
+        {
+          "id": "2",
+          "text": "La guía no ayudó a nadie",
+          "explanation": "Los datos tampoco demuestran ausencia de beneficio."
+        }
+      ],
+      "answer": "0"
+    },
+    {
+      "id": "q4",
+      "prompt": "“El préstamo digital amplía el acceso fuera del horario de la biblioteca; sin embargo, quienes no tienen conexión siguen necesitando alternativas presenciales”. ¿Cuál resume mejor la postura?",
+      "options": [
+        {
+          "id": "0",
+          "text": "El acceso digital ayuda, pero no sustituye todas las alternativas presenciales",
+          "explanation": "El texto reconoce una ventaja y señala una limitación de acceso."
+        },
+        {
+          "id": "1",
+          "text": "El préstamo digital resuelve todas las barreras",
+          "explanation": "La segunda parte identifica una barrera que continúa."
+        },
+        {
+          "id": "2",
+          "text": "Se debe eliminar el préstamo digital",
+          "explanation": "Se reconoce su beneficio; no se propone eliminarlo."
+        }
+      ],
+      "answer": "0"
+    }
+  ]
+}
