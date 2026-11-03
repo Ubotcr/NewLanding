@@ -30,3 +30,8 @@ yarn.lock
 
 
 .prettierrc
+# Generated CloudFront publication artifact
+/hosting/
+
+# Python check artifacts
+__pycache__/

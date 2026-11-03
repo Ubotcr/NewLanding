@@ -55,7 +55,12 @@ export default defineConfig({
   },
   fonts: fontsConfig,
   integrations: [
-    sitemap(),
+    sitemap({
+      filter: (page) => {
+        const path = new URL(page).pathname.replace(/\/+$/, "") || "/";
+        return path !== "/404" && path !== "/changelog" && !path.startsWith("/blog/page/");
+      },
+    }),
     mdx(),
   ],
   markdown: {

@@ -2,6 +2,7 @@
 import config from "@/config/config.json";
 import "@/styles/main.css";
 import { Font } from "astro:assets";
+import { canonicalUrl as resolveCanonical, serializeSchema, identitySchema, breadcrumbsSchema, type Breadcrumb, type StructuredData } from "@/lib/seo";
 import Header from "./partials/Header.astro";
 import Footer from "./partials/Footer.astro";
 
@@ -13,9 +14,13 @@ export interface Props {
   image?: string;
   noindex?: boolean;
   canonical?: string;
+  mascot?: boolean;
+  ogType?: "website" | "article";
+  structuredData?: StructuredData[];
+  breadcrumbs?: Breadcrumb[];
 }
 
-const { title, meta_title, description, keywords, image, noindex, canonical } =
+const { title, meta_title, description, keywords, image, noindex, canonical, ogType = "website", mascot = false, structuredData = [], breadcrumbs = [] } =
   Astro.props;
 const rawTitle = meta_title || title || config.site.title;
 // Append the brand unless the title already carries it (or is the brand itself)
@@ -24,7 +29,8 @@ const pageTitle = rawTitle.toLowerCase().includes(config.site.title.toLowerCase(
   : `${rawTitle} | ${config.site.title}`;
 const pageDescription = description || config.metadata.meta_description;
 const pageImage = image || config.metadata.meta_image;
-const canonicalUrl = canonical || `${config.site.base_url}${Astro.url.pathname}`;
+const canonicalUrl = resolveCanonical(canonical || Astro.url.pathname);
+if (!pageTitle.trim() || !pageDescription.trim()) throw new Error(`SEO incompleto: ${Astro.url.pathname}`);
 
 import pkg from "../../package.json";
 const v = pkg.version;
@@ -40,17 +46,17 @@ const v = pkg.version;
     <meta name="description" content={pageDescription} />
     {keywords && <meta name="keywords" content={keywords} />}
     <meta name="author" content={config.metadata.meta_author} />
-    {noindex && <meta name="robots" content="noindex,nofollow" />}
+    {noindex && <meta name="robots" content="noindex" />}
     <link rel="canonical" href={canonicalUrl} />
 
     <meta property="og:site_name" content={config.site.title} />
     <meta property="og:locale" content="es_CR" />
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={pageDescription} />
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={ogType} />
     <meta
       property="og:url"
-      content={`${config.site.base_url}${Astro.url.pathname}`}
+      content={canonicalUrl}
     />
     <meta property="og:image" content={`${config.site.base_url}${pageImage}?v=${v}`} />
 
@@ -66,7 +72,7 @@ const v = pkg.version;
     <link rel="icon" type="image/png" href={`/icon-192.png?v=${v}`} sizes="192x192" />
     <link rel="apple-touch-icon" href={`/apple-touch-icon.png?v=${v}`} />
     <link rel="manifest" href={`/site.webmanifest?v=${v}`} />
-    <link rel="stylesheet" href={`/ubit-grad/ubit-grad.css?v=${v}`} />
+    {mascot && <link rel="stylesheet" href={`/ubit-grad/ubit-grad.css?v=${v}`} />}
     <meta name="theme-color" content="#0f1117" />
     <meta name="generator" content={Astro.generator} />
 
@@ -87,20 +93,10 @@ const v = pkg.version;
 
     <Font cssVariable="--font-primary" preload />
 
-    <script type="application/ld+json" set:html={`
-      {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "${config.site.title}",
-        "url": "${config.site.base_url}",
-        "publisher": {
-          "@type": "Organization",
-          "name": "${config.site.title}",
-          "logo": "${config.site.base_url}${config.site.logo_icon}?v=${v}"
-        }
-      }
-    `} />
-    <script src={`/ubit-grad/ubit-grad.js?v=1`} defer></script>
+    <script is:inline type="application/ld+json" set:html={serializeSchema(identitySchema)} />
+    {breadcrumbs.length > 0 && <script is:inline type="application/ld+json" set:html={serializeSchema(breadcrumbsSchema(breadcrumbs))} />}
+    {structuredData.map(data => <script is:inline type="application/ld+json" set:html={serializeSchema(data)} />)}
+    {mascot && <script is:inline src="/ubit-grad/ubit-grad.js?v=1" defer></script>}
     <slot name="head" />
     <!-- GA4 con respeto DNT + consentimiento local. Si activas DNT o rechazas, no mide. -->
     <script

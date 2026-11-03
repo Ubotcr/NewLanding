@@ -21,3 +21,7 @@ In Ubotcr/NewLanding repository Settings > Secrets and variables > Actions > Var
 7. Change Cloudflare DNS only after validation. Disable the Azure deployment in a follow-up PR after cutover.
 
 No resources or DNS are modified by this PR. S3 uploads do not grant public access. Other than the build completed locally during migration, the new workflow must be validated in GitHub Actions before deployment.
+
+## SEO y funciones de hosting
+
+La política vigente y la secuencia de activación están en [SEO: política y operación](../seo/README.md). El build genera `hosting/landing-routes.js`; el artefacto `landing-hosting` contiene esa función y las cabeceras. Deben publicarse y asociarse en CloudFront antes del smoke de producción. Los roles actuales solo cargan archivos e invalidan: no asocian funciones automáticamente.

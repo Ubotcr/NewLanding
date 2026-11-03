@@ -110,6 +110,7 @@ const examsSchema = {
 ---
 
 <Base
+  mascot
   meta_title="Ubot Admisión | Diagnóstico, simulacros y práctica UCR, UNA y TEC"
   description="La temporada de admisión terminó. Seguí practicando con el diagnóstico, simulacros, tutor y herramientas de Ubot Admisión para UCR, UNA y TEC."
 >
@@ -156,6 +157,11 @@ const examsSchema = {
     ¿Buscás Matemáticas para las Estandarizadas? <a href={estandarizadas.page}
       >Conocé el piloto.</a>
   </p>
+  <section class="container mx-auto max-w-3xl px-4 py-8 content">
+    <h2>Organizá tu preparación para la U</h2>
+    <p><a href="/blog">Consultá las guías de razonamiento y preparación</a> y revisá el <a href="/calendario">calendario de admisión</a> para elegir tu siguiente paso.</p>
+    <p>Ubot ofrece preparación independiente; no representa a la UCR, la UNA ni el TEC. Verificá las condiciones de cada convocatoria en los sitios oficiales.</p>
+  </section>
   <DiagnosticExam data={diagnostic} />
   <DiagnosticExam data={specialExam} id="examen-especial" />
   <EssentialFeatures data={features} />
