@@ -7,7 +7,7 @@ export function htmlRoutes(root = 'dist') {
   }).sort();
 }
 export function hostingSource(root = 'dist') {
-  return `// Generated from built HTML; publish to CloudFront Viewer request.\nvar routes = ${JSON.stringify(htmlRoutes(root), null, 2)};
+  return `// Generated from built HTML; publish to CloudFront Viewer request.\nvar routes = ${JSON.stringify(htmlRoutes(root))};
 function queryText(query) {
   var pairs = [];
   Object.keys(query || {}).forEach(function(key) {
@@ -37,20 +37,7 @@ function handler(event) {
     return request;
   }
   if (uri.split('/').pop().indexOf('.') !== -1) return request;
-  return {
-    statusCode: 404,
-    statusDescription: 'Not Found',
-    headers: {
-      'content-type': {value: 'text/html; charset=utf-8'},
-      'x-robots-tag': {value: 'noindex'}
-    },
-    body: request.method === 'HEAD' ? '' : [
-      '<!doctype html><html lang="es">',
-      '<title>Página no encontrada | Ubot</title>',
-      '<h1>Página no encontrada</h1>',
-      '<a href="/">Volver al inicio</a></html>'
-    ].join('')
-  };
+  return { statusCode: 404, statusDescription: 'Not Found', headers: {'content-type': {value: 'text/html; charset=utf-8'}, 'x-robots-tag': {value: 'noindex'}}, body: request.method === 'HEAD' ? '' : '<!doctype html><html lang="es"><title>Página no encontrada | Ubot</title><h1>Página no encontrada</h1><a href="/">Volver al inicio</a></html>' };
 }
 `;
 }
