@@ -5,7 +5,7 @@ export async function getStaticPaths() { return (await getCollection('practices'
 const { unit } = Astro.props;
 ---
 <Base title={unit.title} description={unit.intro}>
-<main class="container content mx-auto max-w-3xl px-4 py-12"><a href={`/${unit.product}/practica`}>Volver a las prácticas</a><h1>{unit.title}</h1><p>Material original de Ubot · Versión inicial, pendiente de revisión humana.</p><p>{unit.intro}</p><h2>Ejemplos resueltos</h2><p>{unit.example}</p>
+<main class="container content mx-auto max-w-3xl px-4 py-12"><a href={`/${unit.product}/practica`}>Volver a las prácticas</a><h1>{unit.title}</h1><p>Material original de Ubot · Revisión humana aprobada por el equipo Ubot.</p><p>{unit.intro}</p><h2>Ejemplos resueltos</h2><p>{unit.example}</p>
 <form data-practice class="quiz">
   <h2>Probá lo aprendido</h2>
   <div data-progress hidden><p data-counter aria-live="polite"></p><progress value="0" max={unit.questions.length} aria-label="Preguntas completadas"></progress></div>

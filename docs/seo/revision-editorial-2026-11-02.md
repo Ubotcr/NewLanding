@@ -36,6 +36,6 @@ Revisión de texto y contraste de fuentes realizada durante el desarrollo. No eq
 ## Pendientes antes de publicar
 
 - El calendario consume una API de backend. Los snapshots contienen fechas aproximadas de resultados TEC (15 de noviembre) y UCR/UNA agrupadas (28 de noviembre), además de etapas futuras estimadas. Por decisión del responsable, el calendario y sus datos se conservan. Se agregó un aviso visible que indica su carácter orientativo, posibles fechas aproximadas y enlaces a fuentes oficiales. El blog ya no reproduce esas estimaciones. No se modifican la API, los snapshots ni los filtros de eventos.
-- Equipo Ubot: revisión humana de las 30 preguntas y de las resoluciones educativas del blog, con registro real de quién y cuándo.
+- Equipo Ubot: el responsable confirmó posteriormente en esta conversación que la revisión humana concluyó positivamente. No se proporcionaron nombres individuales ni una fecha específica de realización; no se inventan atribuciones ni campos reviewedBy/reviewedAt.
 - Operación: comprobar enlaces externos restantes (incluidos documentos, ferias y contactos), diagnósticos y contenido publicado en producción. No se certifica disponibilidad de todas las URLs por haber leído las páginas principales.
 - Producto: comprobar que funciones y planes anunciados coincidan con la app vigente.

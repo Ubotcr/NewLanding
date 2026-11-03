@@ -2,13 +2,13 @@
 
 ## Estado
 
-Se agregaron seis unidades públicas y dos centros de práctica. Son una primera versión: requieren revisión humana antes de considerarse listas. No se publicaron ni se solicitó revisión a AdSense. No hay garantía de aprobación.
+Se agregaron seis unidades públicas y dos centros de práctica. El responsable confirmó en esta conversación que la revisión humana concluyó positivamente; las seis unidades y sus 30 preguntas se consideran aprobadas por el equipo Ubot. No se publicaron ni se solicitó revisión a AdSense. No hay garantía de aprobación.
 
 ## Pendientes para completar el plan
 
-- Equipo Ubot: revisar cada enunciado, alternativa, explicación y pertinencia educativa. Las 30 preguntas ya se diversificaron con progresión dentro de cada unidad; todavía requieren revisión humana antes de anunciar el lote como terminado.
-- Editorial: primera revisión de las guías y fuentes registrada en `revision-editorial-2026-11-02.md`; completar revisión humana educativa y enlaces restantes. Por decisión del responsable, se conserva el calendario y el backend sin cambios de datos; se agregó un aviso visible con enlaces oficiales.
-- Editorial: metodología visible agregada en Nosotros; registrar revisión humana cuando se complete, sin inventar fechas o credenciales.
+- Equipo Ubot: revisión humana concluida positivamente, según confirmación del responsable. Mantener este control ante futuros cambios de preguntas o soluciones.
+- Editorial: primera revisión de las guías y fuentes registrada en `revision-editorial-2026-11-02.md`; revisión humana confirmada positivamente; comprobar enlaces restantes. Por decisión del responsable, se conserva el calendario y el backend sin cambios de datos; se agregó un aviso visible con enlaces oficiales.
+- Editorial: metodología visible agregada en Nosotros; revisión humana aprobada según confirmación del responsable, sin inventar fechas o credenciales.
 - Desarrollo: incorporar eventos consentidos de inicio/finalización y salida a apps tras verificar el consentimiento de la landing. No enviar respuestas ni información personal.
 - Operación: confirmar versión en producción, rutas y rastreabilidad; validar GA4 y Search Console con acceso real. Ejecutar smoke tras publicar y comprobar nuevas rutas en CloudFront.
 - Producto: registrar línea base, observar 28 días y corregir fallos. Esta ventana es interna, no un requisito de Google.

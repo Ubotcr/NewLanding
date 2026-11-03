@@ -6,7 +6,7 @@ Astro: 0 errores y 0 advertencias. Build: 39 páginas. SEO: 35 URLs indexables, 
 
 Las pruebas de navegador incluyen los seis quizzes a 320, 390 y 1280 px, respuesta ausente, respuesta incorrecta, bloqueo al corregir, puntaje, reinicio, foco bajo header y contenido sin JavaScript. Solo se validó la sintaxis del script: su ejecución local falla con EPERM al abrir localhost. Chrome por pipe también queda bloqueado por restricciones de sockets. No se certifica revisión visual automatizada.
 
-El smoke de producción falla por DNS. gh auth status informa token inválido para EddieBeru. No se hizo push ni publicación. No hay herramienta conectada a GA4/Search Console; no se confirmó acceso ni recepción de métricas. La aprobación para publicar no se registra como revisión educativa realizada por el equipo.
+El smoke de producción falla por DNS. gh auth status informa token inválido para EddieBeru. No se hizo push ni publicación. No hay herramienta conectada a GA4/Search Console; no se confirmó acceso ni recepción de métricas. Actualización posterior: el responsable confirmó expresamente que la revisión humana concluyó positivamente. Se registra aprobación del equipo Ubot sin atribuir nombres individuales ni fecha de realización no proporcionados.
 
 ## Ejecutar desde una terminal con red y autenticación válida
 
@@ -45,4 +45,4 @@ Abrir las dos páginas de práctica y sus seis unidades en móvil, verificar el 
 
 - GA4: comprobar en Realtime/DebugView una visita consentida al landing y a una práctica; verificar hostname y ruta, sin enviar datos de respuestas ni identidad personal. La landing aún tiene pendiente unificar consentimiento opt-in e instrumentar eventos específicos de inicio/finalización/salida. No interpretar el page_view como práctica completada.
 - Search Console: verificar propiedad, sitemap procesado e inspeccionar portada, centros y una unidad de cada preparación. Confirmar canonical elegido y acceso al HTML. Solicitar indexación no garantiza inclusión.
-- Registrar día de publicación y comparar uso en ventanas de 28 días. No reenviar a AdSense hasta terminar la revisión humana y evaluar el sitio publicado.
+- Registrar día de publicación y comparar uso en ventanas de 28 días. La revisión humana está aprobada; evaluar el sitio publicado antes de reenviar a AdSense.

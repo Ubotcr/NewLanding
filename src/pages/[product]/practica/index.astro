@@ -6,5 +6,5 @@ const { product } = Astro.params;
 const units = await getCollection('practices', ({data}) => data.product === product);
 ---
 <Base title={`Práctica sin cuenta: ${product}`} description={`Ejercicios originales de ${product} con soluciones explicadas para repasar a tu ritmo.`}>
-<main class="container content mx-auto max-w-3xl px-4 py-12"><h1>Práctica sin cuenta: {product}</h1><p>Repasá con ejercicios originales de Ubot. Esta selección no cubre todo el temario ni constituye una prueba oficial. Material inicial pendiente de revisión humana del equipo.</p><ul>{units.map(({data}) => <li><a href={`/${product}/practica/${data.slug}`}>{data.title}</a><p>{data.intro}</p></li>)}</ul><a href={`/${product}`}>Conocé la preparación</a></main>
+<main class="container content mx-auto max-w-3xl px-4 py-12"><h1>Práctica sin cuenta: {product}</h1><p>Repasá con ejercicios originales de Ubot. Esta selección no cubre todo el temario ni constituye una prueba oficial. Material con revisión humana aprobada por el equipo Ubot.</p><ul>{units.map(({data}) => <li><a href={`/${product}/practica/${data.slug}`}>{data.title}</a><p>{data.intro}</p></li>)}</ul><a href={`/${product}`}>Conocé la preparación</a></main>
 </Base>
