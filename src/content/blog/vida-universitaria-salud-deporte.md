@@ -1,8 +1,12 @@
 ---
 title: "Tu nueva vida en la U: salud, deporte, cultura y cómo adaptarte"
 meta_title: "Vida universitaria en Costa Rica: servicios de salud, deporte y cultura en la U pública"
-description: "La universidad es mucho más que clases: servicios de salud gratuitos, equipos deportivos, grupos culturales y consejos reales para sobrevivir el primer año."
+description: "La universidad es mucho más que clases: servicios de apoyo estudiantil, equipos deportivos, grupos culturales y consejos reales para sobrevivir el primer año."
+updated: 2026-11-02
 date: 2026-07-16T12:00:00Z
+sources:
+  - title: "Departamento de Salud UNA"
+    url: "https://www.vidaestudiantil.una.ac.cr/salud"
 image: "/images/promo/torrePoder.png"
 category: "Vida universitaria"
 featured: false
@@ -16,11 +20,11 @@ Entrar a la U no es solo cambiar de aula: es cambiar de vida. Nuevos horarios, n
 
 ## Servicios de salud (sí, hay médico en el campus)
 
-Las universidades públicas ofrecen atención de salud a sus estudiantes, en general sin costo adicional:
+Las universidades públicas ofrecen atención de salud a sus estudiantes, con condiciones de acceso que conviene consultar en cada sede:
 
 - **UCR:** la **Oficina de Bienestar y Salud (OBS)** brinda atención médica, campañas de promoción de la salud y atención de emergencias dentro del campus. También gestiona el préstamo y alquiler de instalaciones deportivas. Más información en la [Vicerrectoría de Vida Estudiantil (ViVE)](https://www.vive.ucr.ac.cr).
 - **TEC:** cuenta con **Clínica de Salud** en el campus, con servicios también disponibles para quienes viven en residencias. Detalles en [tec.ac.cr](https://www.tec.ac.cr/becas-residencias-estudiantiles).
-- **UNA:** el Departamento de Bienestar Estudiantil coordina servicios de salud y acompañamiento. Información en [vidaestudiantil.una.ac.cr](https://www.vidaestudiantil.una.ac.cr).
+- **UNA:** hay departamentos de Salud y de Orientación y Psicología, además de Bienestar Estudiantil. Información en [vidaestudiantil.una.ac.cr](https://www.vidaestudiantil.una.ac.cr).
 
 **No subestimés la salud mental.** El primer año puede ser pesado — todas las universidades tienen servicios de apoyo psicológico para estudiantes. Pedir ayuda a tiempo es de gente inteligente, no de gente débil.
 
@@ -28,7 +32,7 @@ Las universidades públicas ofrecen atención de salud a sus estudiantes, en gen
 
 Hay deporte para todos los niveles:
 
-- **Recreativo:** cursos, torneos internos y actividades abiertas. En la UCR, la oferta deportiva y recreativa de la ViVE incluye decenas de programas — solo en 2024 hubo 58 programas recreativos con miles de participantes ([fuente](https://www.vive.ucr.ac.cr/index.php/node/index/704)).
+- **Recreativo:** cursos, torneos internos y actividades abiertas. En la UCR, la oferta deportiva y recreativa de la ViVE incluye decenas de programas — consultá los programas y condiciones de la oferta vigente ([fuente](https://www.vive.ucr.ac.cr/index.php/node/index/704)).
 - **Competitivo:** equipos representativos de la universidad en fútbol, baloncesto, voleibol, atletismo y más. Competencias como los **Juegos Deportivos Intersedes** enfrentan a las sedes de la UCR entre sí.
 - **Instalaciones:** gimnasios, canchas y piscinas que podés usar como estudiante (en la UCR se gestionan a través de la OBS).
 
@@ -48,7 +52,7 @@ Además de lo social, las asociaciones son tu representación: si tenés un prob
 2. **Hacé amigos en las primeras semanas.** Todo el mundo anda igual de perdido que vos; es el mejor momento para conectar.
 3. **Ubicá los servicios desde el día uno:** biblioteca, oficina de becas, servicio médico, fotocopiadora buena y barata. Te van a salvar el semestre.
 4. **No matriculés de más.** Es mejor un primer semestre sólido que uno ahogado. Ya habrá tiempo de acelerar.
-5. **Usá los servicios que ya pagaste.** El deporte, la cultura y la atención en salud están incluidos en ser estudiante. Aprovechalos: son parte de la experiencia, no un extra.
+5. **Consultá los servicios disponibles.** Verificá horarios, citas, requisitos y posibles costos de cada actividad antes de asistir.
 
 ## Plata de estudiante: sodas, buses y fotocopias
 

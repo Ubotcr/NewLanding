@@ -2,7 +2,11 @@
 title: "Razonamiento matemático PAA: las 3 categorías con ejercicios resueltos"
 meta_title: "Razonamiento matemático PAA 2026: categorías, estrategias y ejercicios resueltos"
 description: "Resolución de problemas, razonamiento deductivo-inductivo y razonamiento con figuras: qué evalúa cada categoría de la PAA y cómo entrenarla con ejercicios originales resueltos."
+updated: 2026-11-02
 date: 2026-09-26T10:00:00Z
+sources:
+  - title: "Programa PAA — UCR"
+    url: "https://www.paa.iip.ucr.ac.cr/"
 image: "/images/promo/funcionesPreguntaChat.png"
 category: "Guías"
 featured: false
@@ -12,7 +16,7 @@ author:
   designation: "Desarrollador del Frontend & Landing"
 ---
 
-La mitad matemática de la PAA no mide si te sabés fórmulas: mide si sabés **pensar con números**. Son 47 ítems (UCR-UNA) en tres categorías que se entrenan distinto. Acá va cada una con su técnica y ejercicios originales resueltos.
+En esta guía practicamos **razonamiento con números, deducciones y figuras**. Los ejemplos son originales de Ubot, no ítems oficiales ni una distribución confirmada del examen. Acá va cada una con su técnica y ejercicios originales resueltos.
 
 ## 1. Resolución de problemas (la categoría más grande)
 
@@ -69,12 +73,12 @@ Secuencias donde los elementos rotan, se mueven, aparecen o desaparecen. La téc
 1. **Operar antes de plantear.** Un planteamiento incorrecto puede arruinar una cuenta correcta. Escribí la ecuación primero.
 2. **Ignorar las opciones.** A veces sustituir las 4 opciones es más rápido que resolver: probá cada una en la ecuación y la que cuadre gana.
 3. **Redondear a medio camino.** Guardá los decimales hasta el final; redondear antes cambia la respuesta en ítems ajustados.
-4. **No verificar.** Te quedan 30 segundos por ítem al final: usalos para re-sustituir tu respuesta en el enunciado, no para empezar ítems nuevos.
+4. **No verificar.** Si te queda tiempo al final, usalo para re-sustituir tu respuesta en el enunciado, no para empezar ítems nuevos.
 
 ## Cómo repartir tu tiempo de práctica
 
-Si tu [diagnóstico](/blog/examen-diagnostico-admision-gratis) dice que figuras es tu hueco, no estudies "matemática": estudiá figuras, 70% del tiempo ahí hasta emparejar. El entrenamiento por categoría rinde más que repasar temas de colegio, porque la PAA no evalúa temario: evalúa estos tres movimientos mentales.
+Si tu [diagnóstico](/blog/examen-diagnostico-admision-gratis) dice que figuras es tu hueco, no estudies "matemática": estudiá figuras, más tiempo a ese tipo de ejercicio y comprobá si mejorás. El entrenamiento por categoría rinde más que repasar temas de colegio, porque la PAA no evalúa temario: evalúa estos tres movimientos mentales.
 
 ## Plan completo y práctica real
 
-Esto es un tercio del examen. El resto (verbal, estrategia general, calendario) está en nuestra [guía PAA](/blog/como-prepararse-paa). Y la única forma de fijar estas técnicas es con repeticiones cronometradas: en [Ubot](https://chat.ubotcr.com) practicás gratis con formato real y explicación inmediata de cada error.
+Estas actividades son una selección de repaso. El resto (verbal, estrategia general, calendario) está en nuestra [guía PAA](/blog/como-prepararse-paa). Y la única forma de fijar estas técnicas es con repeticiones cronometradas: en [Ubot](https://chat.ubotcr.com) practicás gratis con formato real y explicación inmediata de cada error.

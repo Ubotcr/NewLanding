@@ -62,24 +62,18 @@ const callToAction = await getListPage("sections/call-to-action.md");
 
   <OurTeam data={our_team} />
 
-  <section class="px-4 py-12 md:py-16">
-    <div class="container mx-auto max-w-3xl text-left">
-      <h2 class="text-2xl font-bold text-text-light">Cómo mantenemos Ubot</h2>
-      <p class="mt-4 text-text">
-        Ubot no es un sitio abandonado. Cada semana revisamos contenido y
-        publicamos mejoras. Mantiene el proyecto Eddie Bermúdez,
-        Desarrollador del Frontend & Landing, junto al equipo que ves arriba.
-      </p>
-      <ul class="mt-4 flex list-disc flex-col gap-2 pl-5 text-sm text-text">
-        <li>Guías PAA nuevas y actualizadas en el <a class="text-primary hover:underline" href="/blog">blog</a> — las últimas son de septiembre 2026 sobre razonamiento matemático y verbal.</li>
-        <li>Fechas oficiales UCR, UNA y TEC en el <a class="text-primary hover:underline" href="/calendario">calendario de admisión</a>, con fuente oficial siempre a la vista.</li>
-        <li>Mejoras de la app en el <a class="text-primary hover:underline" href="/changelog">changelog</a> — v2.9 con exámenes especiales y v2.8 con FlipCards y Ruta de Aprendizaje.</li>
-      </ul>
-      <p class="mt-4 text-sm text-text">
-        ¿Ves un error o quieres un tema? Escríbenos a
-        <a class="text-primary hover:underline" href="mailto:contacto@ubotcr.com">contacto@ubotcr.com</a>
-        y lo corregimos. Respondemos en 1-2 días hábiles.
-      </p>
+  <section class="px-4 py-12 md:py-16" aria-labelledby="editorial-method">
+    <div class="container content mx-auto max-w-3xl text-left">
+      <h2 id="editorial-method">Cómo preparamos y corregimos el material</h2>
+      <p>El equipo Ubot prepara guías y ejercicios para apoyar el estudio en Costa Rica. Los ejemplos propios se distinguen del material oficial. Ubot es independiente del MEP, la UCR, la UNA y el TEC; no otorga notas oficiales ni garantiza ingreso o resultados.</p>
+      <h3>Fuentes y alcance</h3>
+      <p>Para requisitos, fechas y formatos, usamos publicaciones de la institución responsable y enlazamos la fuente. Antes de un trámite, comprobá la convocatoria de tu año y tu cita individual. Los planes de estudio que proponemos son orientaciones adaptables, no métodos con resultados garantizados.</p>
+      <h3>Autoría y revisión</h3>
+      <p>Las guías identifican su autor y fecha de publicación. La fecha de actualización indica cambios sustanciales. Solo mostramos un nombre y fecha de revisión cuando esa revisión se haya realizado; no atribuimos formación docente ni aprobación institucional al equipo.</p>
+      <p>Las seis prácticas públicas iniciales siguen pendientes de revisión humana del equipo. Su corrección automática compara respuestas con la solución preparada por Ubot: no sustituye esa revisión educativa. Consultá <a href="/admision/practica">Admisión</a> o <a href="/estandarizadas/practica">Matemáticas de Estandarizadas</a>.</p>
+      <h3>Reportá un error</h3>
+      <p>Escribinos a <a href="mailto:contacto@ubotcr.com">contacto@ubotcr.com</a> con el enlace, el número de pregunta o fragmento y una explicación del problema. Si tenés una fuente o una resolución alternativa, incluíla sin enviar datos personales de estudiantes. Evaluaremos el reporte y corregiremos el material cuando corresponda.</p>
+      <p>Podés consultar las <a href="/blog">guías</a> y las <a href="/changelog">novedades del producto</a>. Las notas de versión describen cambios históricos; no aseguran que todas las funciones sigan disponibles de la misma forma.</p>
     </div>
   </section>
 

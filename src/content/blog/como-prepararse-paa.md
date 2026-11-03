@@ -1,8 +1,14 @@
 ---
-title: "Cómo prepararte para la PAA: qué evalúa y un plan que sí funciona"
+title: "Cómo prepararte para la PAA: qué evalúa y cómo organizar tu práctica"
 meta_title: "Cómo prepararse para la PAA (UCR-UNA): estructura del examen y plan de estudio"
 description: "Qué mide la Prueba de Aptitud Académica, cómo está estructurada y un plan de preparación realista para llegar al examen con confianza."
+updated: 2026-11-02
 date: 2026-07-16T09:00:00Z
+sources:
+  - title: "Enfoque de la PAA — UCR"
+    url: "https://www.paa.iip.ucr.ac.cr/"
+  - title: "Examen de admisión TEC"
+    url: "https://www.tec.ac.cr/examen-admision"
 image: "/images/promo/preguntaExamen.png"
 category: "Guías"
 featured: false
@@ -12,7 +18,7 @@ author:
   designation: "Desarrollador del Frontend & Landing"
 ---
 
-La PAA no es un examen de materia: no te van a preguntar la fórmula que viste en quinto año. Es una prueba de **razonamiento**. Y eso tiene una consecuencia enorme para vos: no se estudia memorizando, se entrena practicando.
+La PAA evalúa razonamiento a partir de conocimientos básicos de secundaria. Es una prueba de **razonamiento**. Y eso tiene una consecuencia enorme para vos: no se estudia memorizando, se entrena practicando.
 
 ## Qué es la PAA y quién la hace
 
@@ -24,12 +30,12 @@ El TEC aplica su propio examen; la información oficial está en la [página de 
 
 La PAA mide tu capacidad de razonar en dos áreas:
 
-| Área | Ítems | Qué incluye |
-|---|---|---|
-| Razonamiento matemático | 47 | Razonamiento inductivo y deductivo, resolución de problemas, razonamiento con figuras |
-| Razonamiento verbal | 33 | Relaciones de significado entre palabras, patrones semánticos, inferencias en textos |
+| Área | Qué podés practicar |
+|---|---|
+| Razonamiento matemático | Razonamiento inductivo y deductivo, resolución de problemas, razonamiento con figuras |
+| Razonamiento verbal | Relaciones de significado entre palabras, patrones semánticos, inferencias en textos |
 
-Dato clave: **los conocimientos que necesitás no pasan de noveno año**. Lo que la prueba mide es cómo usás esos conocimientos para deducir, comparar, inferir y resolver. Por eso alguien con notas regulares pero bien entrenado puede superar a alguien con excelentes notas que nunca practicó el formato.
+Consultá el [sitio oficial de la PAA](https://www.paa.iip.ucr.ac.cr/) para conocer su enfoque y los materiales de familiarización. Comprobá cantidad de preguntas, tiempo e instrucciones en los documentos de tu proceso; esta guía no fija una distribución numérica.
 
 ### Razonamiento matemático, por categoría
 
@@ -51,17 +57,17 @@ Las diferencias (3, 5, 7, 9...) crecen de 2 en 2, así que el siguiente salto es
 
 **1. Semántico.** Relaciones entre palabras: sinónimos, antónimos, analogías ("X es a Y como A es a B") y significado en contexto. Acá el vocabulario pesa, pero más pesa la lógica de la relación. Truco: antes de ver opciones, formulá la frase de la relación ("un médico cura, un profesor ___") y después buscá qué opción la completa.
 
-**2. Inferencial.** Leer dos textos cortos y comparar ideas, sintetizar, sacar conclusiones o seguir instrucciones. La trampa clásica: la opción que repite palabras del texto pero cambia el sentido. La respuesta correcta casi siempre está parafraseada, no copiada. Si una opción dice exactamente lo mismo que el texto, palabra por palabra, desconfiá.
+**2. Inferencial.** Leer dos textos cortos y comparar ideas, sintetizar, sacar conclusiones o seguir instrucciones. La trampa clásica: la opción que repite palabras del texto pero cambia el sentido. Una opción puede estar copiada o parafraseada: lo que importa es que conserve el sentido y responda lo preguntado.
 
 ## Cómo se calcula tu puntaje (y por qué el colegio también cuenta)
 
 Tu nota de admisión combina la PAA con tu **promedio de educación diversificada** (las materias básicas del penúltimo año de cole). Traducción práctica: el examen pesa fuerte, pero unas buenas notas del cole son puntos gratis que ya tenés o podés asegurar este año. No abandones el cole por estudiar solo la PAA.
 
-En el TEC la ponderación oficial es 60% examen y 40% promedio; en UCR-UNA la lógica es la misma (examen + promedio), con sus reglas propias de cálculo y apelación. Los detalles exactos cambian cada proceso: verificalos siempre en [admisión UCR](https://ori.ucr.ac.cr/inicio/estudiantes/admision) y [admisión TEC](https://www.tec.ac.cr/examen-admision).
+Para ingreso al TEC en 2027, la institución publica una ponderación de 60% de prueba y 40% de Educación Diversificada. No trasladés esa ponderación a UCR o UNA: cada institución publica su cálculo. Los detalles exactos cambian cada proceso: verificalos siempre en [admisión UCR](https://ori.ucr.ac.cr/inicio/estudiantes/admision) y [admisión TEC](https://www.tec.ac.cr/examen-admision).
 
 ## Calendario 2026-2027 (fechas que sí importan)
 
-Para el proceso UCR-UNA 2026-2027: la aplicación de la PAA va **del 27 de septiembre al 19 de octubre de 2026**, la cita de examen se obtiene en julio y la práctica oficial está en [paa.iip.ucr.ac.cr](https://www.paa.iip.ucr.ac.cr/practicaenlinea). El cronograma completo con verificación de inscripción, promedios y apelaciones lo tenés en nuestra [guía de cronograma 2026-2027](/blog/cronograma-admision-ucr-una-tec-2026-2027).
+Las fechas de inscripción y aplicación de 2026 ya transcurrieron. Consultá el [cronograma 2026-2027](/blog/cronograma-admision-ucr-una-tec-2026-2027) y tu cita para la información correspondiente.
 
 ## El plan de preparación (realista, para gente ocupada)
 
@@ -73,9 +79,9 @@ Hacé una práctica completa cronometrada **antes** de empezar a estudiar. Te va
 
 No repases "matemática" en general. Entrená por tipo de ejercicio: series, analogías, problemas de razonamiento con figuras, inferencias de texto. Cada tipo tiene sus mañas, y reconocerlas rápido es media respuesta.
 
-### 3. Cronometrá siempre
+### 3. Combiná comprensión y práctica con tiempo
 
-El tiempo es parte del examen. Practicar sin reloj es como entrenar mejenga caminando. Acostumbrate al ritmo real: si un ítem te traba más de un par de minutos, marcá tu mejor opción y seguí.
+Primero resolvé sin presión para comprender el procedimiento. Después agregá bloques cronometrados según las instrucciones oficiales; si te trabás, reservá la pregunta para revisar al final cuando esté permitido.
 
 ### 4. Repasá tus errores (acá está la ganancia real)
 
@@ -83,19 +89,19 @@ Cada error es un regalo: te dice exactamente qué tipo de razonamiento te falta 
 
 ### 5. Las últimas dos semanas: bajá la intensidad, subí la confianza
 
-Ya no vas a aprender razonamiento nuevo la última semana. Hacé prácticas ligeras, dormí bien y llegá descansado. El cerebro descansado razona mejor — y la PAA es 100% razonamiento.
+En la última semana, priorizá repasar errores y organizar lo necesario. Hacé prácticas ligeras, dormí bien y llegá descansado. El cerebro descansado razona mejor.
 
 ## Errores que te roban puntos (y cómo evitarlos)
 
 1. **Quedarte pegado.** Ningún ítem vale más que otro. Si en un par de minutos no sale, marcá tu mejor opción y seguí; al final, si sobra tiempo, volvés.
-2. **Leer a medias en verbal.** La mitad de los errores verbales vienen de no leer las cuatro opciones completas. La trampa suele estar en la opción B: suena bien hasta que leés la D.
+2. **Leer a medias en verbal.** Leé todas las alternativas antes de decidir y contrastalas con el texto.
 3. **Hacer cuentas sin plantear.** En matemática, el error no está en la suma: está en haber planteado mal. Escribí la ecuación o el esquema antes de operar, aunque sea en el borde de la hoja.
-4. **Cambiar respuestas por ansiedad.** Solo cambiés una respuesta si encontrás un error concreto en tu razonamiento, no por "tincada" de último minuto. Estadísticamente, el primer instinto entrenado gana.
+4. **Cambiar respuestas por ansiedad.** Solo cambiés una respuesta si encontrás un error concreto en tu razonamiento, no por "tincada" de último minuto. Comprobá las razones que respaldan cada alternativa.
 5. **Llegar sin haber simulado.** El formato (hoja lectora, tiempo, aula llena) también se entrena. Tu primera vez con esas condiciones no debería ser el día real.
 
 ## El día del examen: checklist
 
-- **Documento de identidad válido y en buen estado** (cédula, DIMEX, licencia, pasaporte o carné de refugio): tiene que coincidir con el de tu cita. Sin esto no entrás y no hay reprogramación.
+- **Documento de identidad admitido por tu convocatoria y en buen estado**: revisá la lista oficial y que tus datos coincidan con la cita. Confirmá los documentos admitidos y las reglas de incidencias en tu cita.
 - Llegá temprano: ubicar tu aula con calma baja la ansiedad más que cualquier técnica.
 - Llevá lápiz, borrador y algo para comer después. Desayuná normal, nada experimental.
 - La cita con aula y hora la obtenés en línea en las fechas oficiales — revisá que tus datos estén bien desde antes.

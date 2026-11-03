@@ -1,7 +1,8 @@
 ---
-title: "Examen diagnóstico gratis: descubrí tu nivel real antes de estudiar para la PAA"
+title: "Examen diagnóstico gratis: descubrí tu punto de partida antes de estudiar para la PAA"
 meta_title: "Examen diagnóstico PAA gratis: mide tu nivel para UCR, UNA y TEC"
-description: "Hacé el examen diagnóstico gratuito de Ubot y descubrí en minutos tu nivel real de razonamiento matemático y verbal antes de tu examen de admisión."
+description: "Hacé el examen diagnóstico gratuito de Ubot y descubrí en minutos tu punto de partida de razonamiento matemático y verbal antes de tu examen de admisión."
+updated: 2026-11-02
 date: 2026-07-30T09:00:00Z
 image: "/images/promo/audioChat.png"
 category: "Guías"
@@ -13,6 +14,10 @@ author:
 ---
 
 Antes de abrir un solo libro de práctica, hay una pregunta que casi nadie se hace: ¿dónde estás parado ahora mismo? El **examen diagnóstico** es la forma más rápida de saberlo, y ya está disponible gratis en Ubot.
+
+El resultado describe tu desempeño en esa práctica de Ubot: no es una nota oficial, una evaluación psicométrica validada ni una predicción del resultado de admisión. Si repetís las mismas preguntas, la familiaridad puede mejorar el puntaje sin demostrar una mejora equivalente en preguntas nuevas.
+
+También podés empezar con [prácticas públicas sin cuenta](/admision/practica).
 
 ## Qué es el examen diagnóstico
 
@@ -32,7 +37,7 @@ Es exactamente el primer paso que recomendamos en nuestra [guía para prepararte
 
 ## Cómo funciona
 
-1. Entrás a la prueba desde el botón de abajo — no necesitás cuenta previa para empezar.
+1. Entrás a la prueba desde el botón de abajo — seguí las indicaciones de acceso; la app puede solicitar inicio de sesión.
 2. Respondés ítems de razonamiento matemático y verbal, con tiempo, igual que en el examen real.
 3. Al terminar, ves tu resultado desglosado por área.
 4. Desde ahí podés seguir practicando en Ubot con exámenes de simulacro, un chat que te explica cada duda, y rankings con racha diaria.
@@ -41,12 +46,12 @@ Es exactamente el primer paso que recomendamos en nuestra [guía para prepararte
 
 El número solo no sirve: lo que importa es el desglose.
 
-- **Fuerte en mate, flojo en verbal (o al revés):** normal. La PAA tiene dos áreas casi independientes y casi todo el mundo cojea de un lado. Asigná 70% de tu tiempo de práctica al lado flojo hasta emparejar.
+- **Fuerte en mate, flojo en verbal (o al revés):** normal. La PAA tiene dos áreas casi independientes y casi todo el mundo cojea de un lado. Dedicá más práctica al área con dificultades y revisá si los errores se repiten en otros ejercicios.
 - **Parejo pero bajo en ambos:** necesitás volumen: práctica diaria corta (la [racha de Ubot](https://chat.ubotcr.com) existe justo para eso) más repaso de errores semanal.
 - **Parejo y alto:** pasá a simulacros completos cronometrados y a pulir velocidad, no contenido. Tu riesgo ya no es "no saber" sino el tiempo y los errores tontos.
 - **Muy desbalanceado por tipo (ej: figuras perfecto, series fatal):** entrená por tipo de ítem, no por área general — ver [cómo prepararte para la PAA](/blog/como-prepararse-paa).
 
-Repetí el diagnóstico cada 3-4 semanas con el mismo formato: la comparación entre fotos es tu medida real de progreso, no cómo te sentís un día dado.
+Repetí el diagnóstico cada 3-4 semanas con el mismo formato: la comparación entre fotos puede ayudarte a observar cambios, teniendo en cuenta la dificultad y la familiaridad con las preguntas, no cómo te sentís un día dado.
 
 ## Errores al interpretar el diagnóstico
 
@@ -61,4 +66,4 @@ Sirve tanto si vas a hacer la **PAA de UCR/UNA** como el **examen del TEC**: amb
 
 ## Hacé tu diagnóstico ahora
 
-Dejá de adivinar en qué estás flojo. En menos de lo que dura un recreo, [hacé el examen diagnóstico gratuito de Ubot](https://chat.ubotcr.com/diagnostico) y arrancá tu preparación sabiendo exactamente por dónde empezar.
+Dejá de adivinar en qué estás flojo. En menos de lo que dura un recreo, [hacé el examen diagnóstico gratuito de Ubot](https://chat.ubotcr.com/diagnostico) y arrancá tu preparación con una referencia para elegir qué repasar.

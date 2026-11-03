@@ -2,6 +2,7 @@
 title: "Dónde informarse bien: recursos oficiales, ferias vocacionales y más"
 meta_title: "Recursos oficiales para informarse sobre la admisión y las carreras (UCR, UNA, TEC)"
 description: "Los sitios oficiales, ferias vocacionales y canales confiables para informarte sobre admisión, carreras y becas — y cómo evitar la desinformación."
+updated: 2026-11-02
 date: 2026-07-16T13:00:00Z
 image: "/images/promo/galeriaArchivos.png"
 category: "Recursos"
@@ -18,7 +19,7 @@ En época de admisión circula de todo: fechas viejas, requisitos inventados y "
 
 | Recurso | Para qué sirve |
 |---|---|
-| [admision.ac.cr (SAU)](https://www.admision.ac.cr) | Inscribirte al proceso de admisión de UCR, UNA, TEC, UNED y UTN con una sola cuenta |
+| [admision.ac.cr (SAU)](https://www.admision.ac.cr) | Consultar la inscripción del proceso de UCR, UNA y TEC; verificá la convocatoria correspondiente |
 | [ori.ucr.ac.cr](https://ori.ucr.ac.cr/inicio/estudiantes/admision) | Oficina de Registro de la UCR: proceso de admisión, fechas y [preguntas frecuentes](https://ori.ucr.ac.cr/inicio/preguntas-frecuentes/admision) |
 | [tec.ac.cr/examen-admision](https://www.tec.ac.cr/examen-admision) | Todo sobre el examen del TEC, con su [calendario de admisión](https://www.tec.ac.cr/calendario-admision) |
 | [paa.iip.ucr.ac.cr](https://www.paa.iip.ucr.ac.cr/) | Sitio oficial de la PAA (UCR-UNA): qué es la prueba y material de familiarización |
@@ -32,8 +33,8 @@ En época de admisión circula de todo: fechas viejas, requisitos inventados y "
 
 Si no sabés qué estudiar (o dudás entre varias), las ferias vocacionales son oro: en un solo lugar hablás directamente con profesores y estudiantes de cada carrera.
 
-- **Feria Vocacional UCR:** se realiza en agosto (en 2026: 5, 6 y 7 de agosto) en el campus Rodrigo Facio, San Pedro. Abierta a todo público, presenta las **179 carreras** de la UCR en sus 12 sedes y recintos. Información oficial: [feriavocacional.ucr.ac.cr](https://feriavocacional.ucr.ac.cr/).
-- **Feria Vocacional TEC:** se realiza en abril (en 2026 fue el 16 y 17) en el Campus Central de Cartago, con versión virtual en [tec.ac.cr/feria-vocacional](https://www.tec.ac.cr/feria-vocacional). Consultas: iprofesional@tec.ac.cr.
+- **UCR:** consultá modalidad, fecha y sede en [Feria Vocacional UCR](https://feriavocacional.ucr.ac.cr/).
+- **TEC:** consultá la edición vigente en [Feria Vocacional TEC](https://www.tec.ac.cr/feria-vocacional).
 - **UNA:** consultá las actividades de orientación en [vidaestudiantil.una.ac.cr](https://www.vidaestudiantil.una.ac.cr).
 
 **Cómo aprovechar una feria:** llevá una lista corta de carreras candidatas, preguntá por el plan de estudios, la empleabilidad y la nota de corte del año anterior, y hablá con estudiantes actuales — ellos te cuentan lo que el brochure no dice.
@@ -43,7 +44,7 @@ Si no sabés qué estudiar (o dudás entre varias), las ferias vocacionales son 
 Para entrenar con el formato real, estas son las fuentes oficiales — no pagués por lo que ya es gratis:
 
 - [Práctica en línea PAA](https://www.paa.iip.ucr.ac.cr/practicaenlinea) y [folletos de práctica](https://www.paa.iip.ucr.ac.cr/folletosdepractica/) del IIP-UCR.
-- [Cuaderno de ejercicios PAA del TEC (PDF)](https://www.tec.ac.cr/sites/default/files/media/doc/cuaderno_de_ejercicios_para_la_paa_tec-2026.pdf): ejercicios resueltos de mate y verbal con estrategias (licencia CC BY-NC-SA: úsalo para estudiar, no para revender).
+- [Cuaderno de ejercicios PAA del TEC (PDF)](https://www.tec.ac.cr/sites/default/files/media/doc/cuaderno_de_ejercicios_para_la_paa_tec-2026.pdf): ejercicios resueltos de mate y verbal con estrategias; respetá las condiciones de uso indicadas en el documento.
 - Nuestra [guía de preparación PAA](/blog/como-prepararse-paa) con plan realista y manejo de ansiedad.
 
 Y para practicar todos los días con corrección inmediata: [Ubot](https://chat.ubotcr.com), gratis para empezar.
@@ -62,9 +63,9 @@ El departamento de **Orientación** de tu colegio recibe información oficial de
 
 Señales de alerta para no comerte un cuento:
 
-1. **No tiene fuente oficial.** Si el dato no aparece en un sitio `.ac.cr` o `.cr` oficial, dudá.
+1. **No tiene fuente oficial.** Verificá que el enlace provenga de la institución responsable; una terminación de dominio por sí sola no acredita una fuente.
 2. **Fechas sin año.** Muchas cadenas reciclan calendarios de años anteriores. Verificá siempre el año.
-3. **"Cupos" o "trámites" pagados por fuera.** La inscripción a la admisión solo se paga por los canales oficiales del SAU. Nadie puede "venderte" un cupo.
+3. **"Cupos" o "trámites" pagados por fuera.** Usá únicamente los medios de pago indicados por la institución en la convocatoria vigente. Nadie puede "venderte" un cupo.
 4. **Promesas de nota garantizada.** Ninguna academia ni curso puede garantizarte entrar. Desconfiá de quien lo prometa.
 5. **Capturas sin contexto.** Una imagen del "calendario" sin link ni año es el formato favorito de la desinformación. Pedí siempre la fuente.
 

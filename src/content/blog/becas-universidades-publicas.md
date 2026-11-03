@@ -2,7 +2,15 @@
 title: "Becas en la U pública: cómo funcionan y cómo solicitarlas"
 meta_title: "Becas socioeconómicas UCR, UNA y TEC: categorías, requisitos y cómo aplicar"
 description: "El sistema de becas de la UCR, la UNA y el TEC explicado fácil: categorías, qué cubren, cómo se solicitan y dónde encontrar la información oficial."
+updated: 2026-11-02
 date: 2026-07-16T10:00:00Z
+sources:
+  - title: "Beca socioeconómica UCR"
+    url: "https://becas.ucr.ac.cr/becasocioeconomica/"
+  - title: "Sistema de becas UNA"
+    url: "https://www.vidaestudiantil.una.ac.cr/becas"
+  - title: "Residencias TEC"
+    url: "https://www.tec.ac.cr/becas-residencias-estudiantiles"
 image: "/images/promo/rankingUnificado.png"
 category: "Guías"
 featured: false
@@ -18,7 +26,7 @@ Que la plata no sea la razón por la que no estudiés: ese es, literalmente, el 
 
 Las tres universidades (UCR, UNA y TEC) tienen sistemas de **beca socioeconómica**: se asigna una categoría según la situación económica tuya y de tu familia, y esa categoría define cuánto se te exonera y a qué beneficios adicionales tenés acceso.
 
-**Importante:** la beca socioeconómica no depende de tus notas. Depende de tu situación económica. (Las notas importan para *mantenerla*, no para obtenerla.)
+La condición económica es central en estas becas. La elegibilidad, los beneficios y las condiciones académicas dependen del tipo de beca y de cada institución; revisá el reglamento aplicable.
 
 ## Becas en la UCR
 
@@ -28,7 +36,7 @@ La UCR asigna **5 categorías de beca**:
 |---|---|
 | Beca 1 | Exoneración parcial, menos beneficios |
 | Becas 2-4 | Exoneración y beneficios crecientes |
-| Beca 5 | Exoneración máxima + acceso a todos los beneficios complementarios |
+| Beca 5 | Exoneración y beneficios sujetos a los requisitos de cada apoyo |
 
 Con beca 5 podés acceder a beneficios como reubicación geográfica, alimentación, y **residencias estudiantiles** (les dedicamos una entrada completa en este blog).
 
@@ -71,10 +79,10 @@ Cada universidad publica su lista exacta cada año: usá esta como base y confir
 
 ## Mitos que te pueden dejar sin beca
 
-- **"Si tengo buenas notas no necesito aplicar."** La socioeconómica no mira notas para otorgar. Podés tener 100 y calificar igual — y al revés: malas notas no te descalifican de entrada.
+- **"Si tengo buenas notas no necesito aplicar."** Una buena nota no sustituye la solicitud ni los documentos económicos. Revisá también los requisitos académicos aplicables.
 - **"Mis papás tienen casa propia, no califico."** La categoría depende del conjunto (ingresos, dependientes, gastos), no de un solo dato.
 - **"Ya entré sin beca, ya fue."** Podés solicitar en ciclos posteriores si tu situación cambia. La beca no es solo de primer ingreso.
-- **"Con beca no puedo trabajar."** En general podés; lo que se evalúa es la situación socioeconómica real, no si tenés un brete de medio tiempo. Declaralo y listo.
+- **"Con beca no puedo trabajar."** En general podés; lo que se evalúa es la situación socioeconómica real, no si tenés un brete de medio tiempo. Reportá tus ingresos y consultá cómo afectan tu caso.
 
 ## Mantener la beca (tan importante como obtenerla)
 
@@ -96,4 +104,4 @@ Primero hay que entrar, eso sí. Si todavía estás preparando el examen de admi
 
 ## Mientras tanto, prepara el examen
 
-Beca sin admisión no sirve. Practica con [cómo prepararte para la PAA](/blog/como-prepararse-paa), revisa el [cronograma](/blog/cronograma-admision-ucr-una-tec-2026-2027) y las [fechas](/calendario), y mide tu nivel con el [diagnóstico gratuito](/blog/examen-diagnostico-admision-gratis).
+La admisión y la beca son trámites distintos; organizá ambos. Practica con [cómo prepararte para la PAA](/blog/como-prepararse-paa), revisa el [cronograma](/blog/cronograma-admision-ucr-una-tec-2026-2027) y las [fechas](/calendario), y mide tu nivel con el [diagnóstico gratuito](/blog/examen-diagnostico-admision-gratis).

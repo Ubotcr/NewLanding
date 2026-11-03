@@ -2,7 +2,11 @@
 title: "Razonamiento verbal PAA: semántico e inferencial con ejercicios resueltos"
 meta_title: "Razonamiento verbal PAA 2026: categorías, analogías e inferencias con ejercicios"
 description: "Las dos categorías verbales de la PAA explicadas con ejemplos originales: relaciones semánticas, analogías y lectura inferencial, más tácticas anti-trampas."
+updated: 2026-11-02
 date: 2026-09-26T11:00:00Z
+sources:
+  - title: "Programa PAA — UCR"
+    url: "https://www.paa.iip.ucr.ac.cr/"
 image: "/images/promo/lobbyExamen.png"
 category: "Guías"
 featured: false
@@ -12,7 +16,7 @@ author:
   designation: "Desarrollador del Frontend & Landing"
 ---
 
-El tercio verbal de la PAA (33 ítems en UCR-UNA) se divide en dos categorías que castigan errores distintos. La buena noticia: ninguna pide vocabulario de diccionario; las dos se entrenan con técnica.
+Esta guía trabaja relaciones de significado e inferencias mediante ejemplos originales de Ubot. No son preguntas oficiales ni una predicción de la distribución del examen.
 
 ## 1. Semántico: relaciones entre palabras
 
@@ -44,9 +48,9 @@ Las fáciles usan causa-efecto obvia. Las que filtran usan relaciones menos visi
 - **Causa-efecto:** *estudio es a aprendizaje como entrenamiento es a rendimiento.*
 - **Oposición:** *amor es a odio como construir es a destruir.* Cuidado: la oposición tiene que ser directa, no temática (amor/dolor no es oposición directa).
 
-**Ejercicio combinado.** *Pincel es a pintar como ___ es a ___: (a) libro-leer (b) partitura-tocar (c) museo-visitar (d) canción-escuchar.*
+**Ejercicio combinado.** *Pincel es a pintar como: (a) tijeras-cortar (b) museo-visitar (c) cuadro-observar (d) pintura-color.*
 
-> La relación es instrumento-acción artística. (a): libro es objeto de lectura, no instrumento → cerca pero no es. (c): lugar. (d): la canción es lo producido, no el instrumento. **(b) partitura-tocar**: la partitura es el instrumento del músico como el pincel del pintor. Este nivel de precisión es lo que separa un 70 de un 90 en verbal.
+> La relación es herramienta-acción. **(a)** conserva esa relación. En (b), el museo es un lugar; en (c), el cuadro es objeto de observación; (d) no expresa una acción.
 
 ## 2. Inferencial: leer entre líneas (sin inventar)
 
@@ -58,21 +62,21 @@ Comparar ideas entre textos, sintetizar, extraer conclusiones, seguir instruccio
 
 **Las tres trampas inferenciales:**
 
-1. **La copia literal.** Repite palabras del texto pero cambia el sentido. La correcta casi siempre está parafraseada.
+1. **La copia literal.** Repite palabras del texto pero cambia el sentido. Comprobá el sentido: copiar o parafrasear palabras no hace correcta una opción.
 2. **La verdad externa.** Algo cierto en la vida real pero no dicho en el texto. Da igual que sea verdad: si no está, no es.
 3. **El extremo.** Conclusiones más fuertes de lo que el texto permite ("demuestra", "prueba" cuando el texto solo "sugiere").
 
-**Ejercicio largo.** Leé y respondé:
+**Ejercicio de inferencia.** Texto ficticio creado para practicar:
 
-> *"Las ferias vocacionales reciben cada año a miles de colegiales. Quienes conversan con estudiantes avanzados eligen carrera con más seguridad que quienes solo leen folletos, según encuestas de orientación. Sin embargo, la mayoría de asistentes llega sin una lista previa de carreras candidatas."*
+> «La feria ofrece conversaciones con estudiantes de las carreras y también folletos. La organización recomienda preparar preguntas antes de asistir para aprovechar esas conversaciones».
 >
-> ¿Qué se infiere? (a) Los folletos son inútiles. (b) Ir a la feria sin preparación desperdicia su principal ventaja. (c) Todos los que van a ferias eligen bien.
+> ¿Qué sostiene el texto? (a) Los folletos son inútiles. (b) Preparar preguntas es una recomendación para aprovechar las conversaciones. (c) Sin preguntas preparadas no se permite entrar.
 
-> (b): el texto dice que la ventaja está en conversar (requiere saber qué preguntar) y que la mayoría llega sin lista → la inferencia conecta ambas ideas sin inventar. (a) exagera ("inútiles" ≠ "menos efectivo"), (c) generaliza con "todos".
+> **(b)** conserva la recomendación y su finalidad. (a) descarta un recurso sin respaldo; (c) convierte una recomendación en una obligación que el texto no establece.
 
 ## Vocabulario sin memorizar diccionarios
 
-Leé 20 minutos al día (noticias, ensayos, lo que sea) y anotá 5 palabras nuevas con su oración original. En un mes tenés 100 palabras en contexto real — más útil que 500 tarjetas sueltas. Y cuando fallés un ítem semántico, no anotés solo la palabra: anotá **la relación** que no viste (era oposición y leíste causa, era parte-todo y leíste secuencia).
+Leé 20 minutos al día (noticias, ensayos, lo que sea) y anotá 5 palabras nuevas con su oración original. Repasalas en su contexto y comprobá que podés explicar su significado. Y cuando fallés un ítem semántico, no anotés solo la palabra: anotá **la relación** que no viste (era oposición y leíste causa, era parte-todo y leíste secuencia).
 
 ## Velocidad lectora: la habilidad escondida
 
