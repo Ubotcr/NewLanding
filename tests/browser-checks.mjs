@@ -78,7 +78,7 @@ try {
       await assertNoOverflow();
       assert.equal(await evaluate(`document.querySelectorAll('[data-question]:not([hidden])').length`), 1);
       await evaluate(`document.querySelector('[data-check]').click()`);
-      assert.ok(await evaluate(`document.querySelector('[data-result]').textContent.includes('Elegí')`));
+      assert.equal(await evaluate(`document.querySelector('[data-result]').textContent`), 'Elige una respuesta antes de comprobar.');
       for (let question = 0; question < 5; question++) {
         await evaluate(`document.querySelector('[data-question]:not([hidden]) input[data-correct="${question === 0 ? 'false' : 'true'}"]').click(); document.querySelector('[data-check]').click()`);
         assert.ok(await evaluate(`document.activeElement.matches('[data-feedback]')`), 'Feedback must receive focus');
