@@ -1,6 +1,6 @@
 ---
 title: "Razonamiento verbal PAA: semántico e inferencial con ejercicios resueltos"
-meta_title: "Razonamiento verbal PAA 2026: categorías, analogías e inferencias con ejercicios"
+meta_title: "Razonamiento verbal PAA: categorías, analogías e inferencias con ejercicios"
 description: "Las dos categorías verbales de la PAA explicadas con ejemplos originales: relaciones semánticas, analogías y lectura inferencial, más tácticas anti-trampas."
 updated: 2026-11-02
 date: 2026-09-26T11:00:00Z
@@ -88,3 +88,10 @@ Lo verbal también es carrera contra el reloj. Dos hábitos la entrenan:
 ## Dónde encaja esto en tu preparación
 
 Lo verbal se entrena en paralelo con lo matemático ([guía de mate](/blog/razonamiento-matematico-paa)) dentro del [plan general PAA](/blog/como-prepararse-paa). Medí tu punto de partida con el [diagnóstico gratis](/blog/examen-diagnostico-admision-gratis) y practicá a diario en [Ubot](https://chat.ubotcr.com): formato real, corrección inmediata y racha que te mantiene en ritmo.
+
+
+## Practica sin cuenta
+
+Aplica lo aprendido con ejercicios originales y explicaciones:
+
+- [Ejercicios de inferencias](/admision/practica/inferencias)

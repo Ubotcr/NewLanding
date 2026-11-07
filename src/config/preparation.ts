@@ -1,5 +1,5 @@
 export const preparation = {
-  selectorLabel: "Elegí tu preparación",
+  selectorLabel: "Elige tu preparación",
   selectorUrl: "/#preparacion",
   choices: [
     {
@@ -9,7 +9,7 @@ export const preparation = {
       app: "https://estandarizadas.ubotcr.com",
       entryLabel: "Entrar a Estandarizadas",
       description:
-        "Prepará Matemáticas para las Pruebas Nacionales Estandarizadas con práctica por tema, tutor y materiales de repaso, según disponibilidad.",
+        "Prepara Matemáticas para las Pruebas Nacionales Estandarizadas con práctica por tema, tutor y materiales de repaso, según disponibilidad.",
     },
     {
       id: "admision",
@@ -18,7 +18,7 @@ export const preparation = {
       app: "https://chat.ubotcr.com",
       entryLabel: "Entrar a Admisión",
       description:
-        "La temporada de admisión terminó. Podés seguir practicando con Ubot: diagnóstico, simulacros y ejercicios de razonamiento para UCR, UNA y TEC.",
+        "Prepárate con Ubot: diagnóstico, simulacros y ejercicios de razonamiento para Admisión UCR, UNA y TEC.",
     },
   ],
 } as const;
@@ -29,22 +29,22 @@ export const mathFeatures = [
   {
     title: "Práctica por tema",
     description:
-      "Elegí entre los temas con preguntas disponibles y resolvé una práctica corta.",
+      "Elige entre los temas con preguntas disponibles y resuelve una práctica corta.",
   },
   {
     title: "Tutor de Matemáticas",
     description:
-      "Consultá una duda, pedí un ejemplo o revisá tu razonamiento con el tutor.",
+      "Consulta una duda, pide un ejemplo o revisa tu razonamiento con el tutor.",
   },
   {
     title: "Examen diario",
     description:
-      "Volvé a practicar con la actividad diaria cuando esté habilitada en el catálogo.",
+      "Vuelve a practicar con la actividad diaria cuando esté habilitada en el catálogo.",
   },
   {
     title: "Materiales y resultados",
     description:
-      "Repasá los documentos disponibles y consultá el resultado de una práctica.",
+      "Repasa los documentos disponibles y consulta el resultado de una práctica.",
   },
 ];
 
@@ -56,12 +56,12 @@ export const sharedFaq = {
       {
         question: "¿Cuál preparación elijo?",
         answer:
-          "Elegí Estandarizadas si buscás practicar contenidos de Matemáticas de secundaria para las Pruebas Nacionales Estandarizadas. Elegí Admisión si querés practicar razonamiento y prepararte para el ingreso a la UCR, UNA o TEC.",
+          "Elige Estandarizadas si buscas practicar contenidos de Matemáticas de secundaria para las Pruebas Nacionales Estandarizadas. Elige Admisión si quieres practicar razonamiento y prepararte para el ingreso a la UCR, UNA o TEC.",
       },
       {
         question: "¿Qué incluye Estandarizadas hoy?",
         answer:
-          "Es un piloto de Matemáticas para secundaria académica diurna. Las prácticas por tema, el tutor, el examen diario y los materiales dependen de lo que esté habilitado en el catálogo. Consultá los temas disponibles al entrar.",
+          "Es un piloto de Matemáticas para secundaria académica diurna. Las prácticas por tema, el tutor, el examen diario y los materiales dependen de lo que esté habilitado en el catálogo. Consulta los temas disponibles al entrar.",
       },
       {
         question: "¿Puedo seguir usando Admisión?",
@@ -71,7 +71,7 @@ export const sharedFaq = {
       {
         question: "¿Dónde consulto los planes y beneficios?",
         answer:
-          "La página de precios detalla los planes y beneficios de Ubot Admisión. Para conocer el alcance actual del piloto de Matemáticas, visitá la página de Estandarizadas.",
+          "La página de precios detalla los planes y beneficios de Ubot Admisión. Para conocer el alcance actual del piloto de Matemáticas, visita la página de Estandarizadas.",
       },
     ],
   },

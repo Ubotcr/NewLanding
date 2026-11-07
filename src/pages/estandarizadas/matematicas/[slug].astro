@@ -28,10 +28,11 @@ const article = { "@context": "https://schema.org", "@type": "Article", headline
     {data.reviewedBy && data.reviewedAt && <p>Revisado por {data.reviewedBy} el {formatDate(data.reviewedAt)}.</p>}
     <Content />
     {data.sources.length > 0 && <section><h2>Fuentes y recursos</h2><ul>{data.sources.map(source => <li><a href={source.url}>{source.title}</a></li>)}</ul></section>}
-    <nav aria-label="Seguir estudiando"><h2>Seguí estudiando</h2><ul>
+    <nav aria-label="Seguir estudiando"><h2>Continúa estudiando</h2><ul>
+      {guide.id === "pendiente-de-una-recta" && <li><a href="/estandarizadas/practica/pendiente">Practicar pendiente con ejercicios resueltos sin cuenta</a></li>}
       <li><a href="/estandarizadas/matematicas">Volver al repaso de Matemáticas</a></li>
       {data.related.map(href => <li><a href={href}>Plan de preparación de Matemáticas</a></li>)}
-      <li><a href="https://estandarizadas.ubotcr.com/matematicas">Consultar las prácticas disponibles en Ubot</a></li>
+      <li><a href="https://estandarizadas.ubotcr.com/matematicas">Consultar las prácticas en Ubot (requiere iniciar sesión)</a></li>
     </ul></nav>
     <p>Ubot ofrece preparación independiente. Esta guía no sustituye el temario ni las indicaciones oficiales de tu convocatoria.</p>
   </article>

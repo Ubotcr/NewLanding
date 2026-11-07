@@ -15,25 +15,25 @@ const {
 <Base
   mascot
   meta_title="Ubot | Estandarizadas y Admisión en Costa Rica"
-  description="Elegí tu preparación con Ubot: conocé el nuevo piloto de Matemáticas para Estandarizadas o seguí practicando para Admisión UCR, UNA y TEC."
+  description="Prepárate con Ubot para Admisión UCR, UNA y TEC o Matemáticas de Estandarizadas del MEP. Consulta guías y ejercicios con explicaciones sin cuenta."
 >
   <Hero data={banner} showUniversities={false} choices />
   <MathOverview />
   <section class="bg-card px-4 py-12 md:py-20">
     <div class="container mx-auto max-w-5xl">
       <SectionHeader
-        title="Seguí practicando con Admisión"
-        subtitle="La temporada de admisión terminó. Las herramientas siguen disponibles para que practiqués a tu ritmo para UCR, UNA y TEC."
+        title="Sigue practicando con Admisión"
+        subtitle="Practica a tu ritmo para UCR, UNA y TEC con diagnóstico, simulacros y ejercicios de razonamiento."
       />
       <ul class="mx-auto max-w-2xl list-disc space-y-3 pl-5 text-text">
         <li>
-          Diagnóstico para reconocer tus fortalezas y lo que podés mejorar.
+          Diagnóstico para reconocer tus fortalezas y lo que puedes mejorar.
         </li>
         <li>Simulacros y práctica de razonamiento para UCR, UNA y TEC.</li>
         <li>Chat con IA, juegos e historial para seguir aprendiendo.</li>
       </ul>
       <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
-        <a href={admision.page} class="btn btn-outline">Conocé Admisión</a>
+        <a href={admision.page} class="btn btn-outline">Conoce Admisión</a>
         <a href={admision.app} class="btn btn-outline">{admision.entryLabel}</a>
       </div>
       <nav
@@ -53,5 +53,5 @@ const {
   </section>
   <FAQ data={sharedFaq} />
   <PreparationClosing />
-<section class="container content mx-auto px-4 py-8"><h2>Practicá sin cuenta</h2><p>Resolvé ejercicios originales y consultá sus explicaciones.</p><a href="/admision/practica">Admisión</a> · <a href="/estandarizadas/practica">Matemáticas de Estandarizadas</a></section>
+<section class="container content mx-auto px-4 py-8"><h2>Practica sin cuenta</h2><p>Resuelve ejercicios originales y consulta sus explicaciones.</p><a href="/admision/practica">Admisión</a> · <a href="/estandarizadas/practica">Matemáticas de Estandarizadas</a></section>
 </Base>

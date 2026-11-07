@@ -1,6 +1,6 @@
 ---
 title: "Razonamiento matemático PAA: las 3 categorías con ejercicios resueltos"
-meta_title: "Razonamiento matemático PAA 2026: categorías, estrategias y ejercicios resueltos"
+meta_title: "Razonamiento matemático PAA: categorías, estrategias y ejercicios resueltos"
 description: "Resolución de problemas, razonamiento deductivo-inductivo y razonamiento con figuras: qué evalúa cada categoría de la PAA y cómo entrenarla con ejercicios originales resueltos."
 updated: 2026-11-02
 date: 2026-09-26T10:00:00Z
@@ -82,3 +82,11 @@ Si tu [diagnóstico](/blog/examen-diagnostico-admision-gratis) dice que figuras 
 ## Plan completo y práctica real
 
 Estas actividades son una selección de repaso. El resto (verbal, estrategia general, calendario) está en nuestra [guía PAA](/blog/como-prepararse-paa). Y la única forma de fijar estas técnicas es con repeticiones cronometradas: en [Ubot](https://chat.ubotcr.com) practicás gratis con formato real y explicación inmediata de cada error.
+
+
+## Practica sin cuenta
+
+Aplica lo aprendido con ejercicios originales y explicaciones:
+
+- [Ejercicios de planteamiento](/admision/practica/planteamiento)
+- [Ejercicios de patrones](/admision/practica/patrones)

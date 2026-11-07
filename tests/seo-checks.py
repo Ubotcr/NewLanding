@@ -44,6 +44,7 @@ def validate(root):
             sitemap_urls.update((ORIGIN + "/" if e.text == ORIGIN else e.text) for e in xml.findall('.//{*}loc'))
     expected = {ORIGIN + route for route,p in pages.items() if not p.noindex}
     assert sitemap_urls == expected, f'Sitemap mismatch: extra {sitemap_urls - expected}; missing {expected - sitemap_urls}'
+    graph = {route: set() for route in pages}
     incoming = Counter(); titles = Counter(); descriptions = Counter()
     for route, page in pages.items():
         def require(condition, message): assert condition, f'{route}: {message}'
@@ -54,9 +55,10 @@ def validate(root):
         require(page.metas('og:url') == canonical, 'og:url differs from canonical')
         require(len(page.metas('og:type')) == 1, 'duplicate og:type')
         require(len([1 for t,a in page.tags if t == 'h1']) == 1, 'exactly one h1')
-        require(any(t == 'main' for t,a in page.tags), 'missing main content')
+        require(sum(t == 'main' for t,a in page.tags) == 1, 'exactly one main landmark')
         require(any(t == 'meta' and a.get('name') == 'viewport' for t,a in page.tags), 'viewport missing')
         require(page.schemas, 'JSON-LD missing')
+        require(page.metas('robots') in ([], ['noindex']), 'conflicting or unexpected robots directives')
         if not page.noindex:
             titles[page.title.strip()] += 1; descriptions[page.metas('description')[0]] += 1
         for href in page.links:
@@ -64,8 +66,28 @@ def validate(root):
             if url.scheme in ('mailto','tel') or url.netloc and url.netloc != 'ubotcr.com': continue
             if not url.path or not url.path.startswith('/'): continue
             target = unquote(url.path).rstrip('/') or '/'
-            if target in pages: incoming[target] += route != target
+            if target in pages:
+                incoming[target] += route != target
+                graph[route].add(target)
             else: require((root / target.lstrip('/')).is_file(), f'broken internal link: {href}')
+    reached = set(); pending = ['/']
+    while pending:
+        route = pending.pop()
+        if route in reached: continue
+        reached.add(route); pending.extend(graph[route] - reached)
+    assert expected <= {ORIGIN + route for route in reached}, 'Indexable pages unreachable from home'
+    for route, page in pages.items():
+        if '/practica' in route:
+            assert any(t == 'nav' and a.get('aria-label') == 'Ruta de navegación' for t,a in page.tags), f'{route}: visible breadcrumbs missing'
+            assert any(schema.get('@type') == 'BreadcrumbList' for schema in page.schemas), f'{route}: breadcrumb schema missing'
+    required_links = {
+        '/estandarizadas/matematicas/pendiente-de-una-recta': '/estandarizadas/practica/pendiente',
+        '/estandarizadas/practica/pendiente': '/estandarizadas/matematicas/pendiente-de-una-recta',
+        '/blog/razonamiento-matematico-paa': '/admision/practica/planteamiento',
+        '/blog/razonamiento-verbal-paa': '/admision/practica/inferencias',
+    }
+    for source, target in required_links.items():
+        assert target in graph[source], f'{source}: missing contextual link to {target}'
     assert all(count == 1 for count in titles.values()), f'Duplicate titles: {titles}'
     assert all(count == 1 for count in descriptions.values()), 'Duplicate descriptions'
     for route, page in pages.items():

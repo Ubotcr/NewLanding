@@ -32,7 +32,17 @@
     },
     {
       "name": "Práctica sin cuenta",
-      "url": "/admision/practica"
+      "url": "",
+      "children": [
+        {
+          "name": "Práctica de Admisión",
+          "url": "/admision/practica"
+        },
+        {
+          "name": "Práctica de Estandarizadas",
+          "url": "/estandarizadas/practica"
+        }
+      ]
     }
   ],
   "footer_company": [

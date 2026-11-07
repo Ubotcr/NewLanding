@@ -1,13 +1,20 @@
 ---
 import Base from '@/layouts/Base.astro';
+import Breadcrumbs from '@/components/Breadcrumbs.astro';
 import { getCollection } from 'astro:content';
 export async function getStaticPaths() { return (await getCollection('practices')).map(({data}) => ({params:{product:data.product,slug:data.slug},props:{unit:data}})); }
 const { unit } = Astro.props;
+const productName = unit.product === 'admision' ? 'Admisión' : 'Estandarizadas';
+const breadcrumbs = [{name:'Inicio',path:'/'},{name:productName,path:`/${unit.product}`},{name:'Práctica sin cuenta',path:`/${unit.product}/practica`},{name:unit.title,path:`/${unit.product}/practica/${unit.slug}`}];
+const related = unit.product === 'admision'
+  ? [{href:unit.slug === 'inferencias' ? '/blog/razonamiento-verbal-paa' : '/blog/razonamiento-matematico-paa',label:unit.slug === 'inferencias' ? 'Guía de razonamiento verbal' : 'Guía de razonamiento matemático'}]
+  : [{href:'/estandarizadas/matematicas',label:'Guías de Matemáticas'}, ...(unit.slug === 'pendiente' ? [{href:'/estandarizadas/matematicas/pendiente-de-una-recta',label:'Cómo calcular e interpretar la pendiente'}] : [])];
 ---
-<Base title={unit.title} description={unit.intro}>
-<main class="container content mx-auto max-w-3xl px-4 py-12"><a href={`/${unit.product}/practica`}>Volver a las prácticas</a><h1>{unit.title}</h1><p>Material original de Ubot · Revisión humana aprobada por el equipo Ubot.</p><p>{unit.intro}</p><h2>Ejemplos resueltos</h2><p>{unit.example}</p>
+<Base title={unit.title} description={unit.intro} breadcrumbs={breadcrumbs}>
+<Breadcrumbs items={breadcrumbs} />
+<section class="container content mx-auto max-w-3xl px-4 py-12"><a href={`/${unit.product}/practica`}>Volver a las prácticas</a><h1>{unit.title}</h1><p>Material original de Ubot · Revisión humana aprobada por el equipo Ubot.</p><p>{unit.intro}</p><h2>Ejemplos resueltos</h2><p>{unit.example}</p>
 <form data-practice class="quiz">
-  <h2>Probá lo aprendido</h2>
+  <h2>Pon a prueba lo aprendido</h2>
   <div data-progress hidden><p data-counter aria-live="polite"></p><progress value="0" max={unit.questions.length} aria-label="Preguntas completadas"></progress></div>
   {unit.questions.map((q, index) => <fieldset class="question-card" data-question>
     <legend tabindex="-1">{index + 1}. {q.prompt}</legend>
@@ -17,9 +24,10 @@ const { unit } = Astro.props;
   </fieldset>)}
   <div class="quiz-actions"><button type="submit" class="btn btn-primary" data-check hidden>Comprobar respuesta</button><button type="button" class="btn btn-primary" data-next hidden>Siguiente pregunta →</button><button type="reset" class="btn btn-primary" data-restart hidden>Volver a empezar</button></div>
   <p role="status" aria-live="polite" data-result tabindex="-1"></p>
-  <noscript><p>Podés resolver las preguntas y abrir sus soluciones para comprobar tus respuestas.</p></noscript>
+  <noscript><p>Puedes resolver las preguntas y abrir sus soluciones para comprobar tus respuestas.</p></noscript>
 </form>
-<p>Revisá las explicaciones de los ejercicios que fallaste y repetí el planteamiento antes de reiniciar.</p><p><a href={`https://${unit.product === 'admision' ? 'chat' : 'estandarizadas'}.ubotcr.com`}>Seguí practicando en la app</a></p><p>Preparación independiente: no es una prueba oficial ni predice un resultado de admisión o del MEP. <a href="/contact">Reportá un error</a>.</p></main>
+<nav aria-label="Recursos relacionados"><h2>Continúa aprendiendo</h2><ul>{related.map(item => <li><a href={item.href}>{item.label}</a></li>)}</ul></nav>
+<p>Revisa las explicaciones de los ejercicios que fallaste y repite el planteamiento antes de reiniciar.</p><p><a href={unit.product === 'admision' ? 'https://chat.ubotcr.com/juegos/examenes' : 'https://estandarizadas.ubotcr.com/matematicas/practica'}>{unit.product === 'admision' ? 'Continuar en Ubot Admisión' : 'Continuar en Estandarizadas (requiere iniciar sesión)'}</a></p><p>Preparación independiente: no es una prueba oficial ni predice un resultado de admisión o del MEP. <a href="/contact">Reporta un error</a>.</p></section>
 </Base>
 <script>
  document.querySelectorAll<HTMLFormElement>('[data-practice]').forEach(form => {
@@ -65,7 +73,7 @@ const { unit } = Astro.props;
     const field = fields[current];
     const selected = field.querySelector<HTMLInputElement>('input:checked');
     if (!selected) {
-      result.textContent = 'Elegí una respuesta antes de comprobar.';
+      result.textContent = 'Elige una respuesta antes de comprobar.';
       focusContent(field.querySelector<HTMLInputElement>('input')!);
       return;
     }
@@ -74,7 +82,7 @@ const { unit } = Astro.props;
     if (correct) score++;
     checked = true;
     const feedback = field.querySelector<HTMLElement>('[data-feedback]')!;
-    feedback.textContent = correct ? '¡Correcto! Revisá la explicación para reforzar lo aprendido.' : 'Esta vez no. Revisá la solución antes de seguir.';
+    feedback.textContent = correct ? '¡Correcto! Revisa la explicación para reforzar lo aprendido.' : 'Esta vez no. Revisa la solución antes de seguir.';
     feedback.hidden = false;
     field.dataset.outcome = correct ? 'correct' : 'incorrect';
     field.querySelectorAll<HTMLInputElement>('input').forEach(input => input.disabled = true);
@@ -92,7 +100,7 @@ const { unit } = Astro.props;
     next.hidden = true;
     restart.hidden = false;
     counter.textContent = 'Práctica completada';
-    result.textContent = `${score} de ${fields.length} correctas. Podés repasar tus respuestas y sus explicaciones en las tarjetas.`;
+    result.textContent = `${score} de ${fields.length} correctas. Puedes repasar tus respuestas y sus explicaciones en las tarjetas.`;
     fields.forEach(field => { field.hidden = false; field.querySelector('details')!.open = false; });
     focusContent(result, true);
   });

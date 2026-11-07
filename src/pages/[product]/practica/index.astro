@@ -1,10 +1,14 @@
 ---
 import Base from '@/layouts/Base.astro';
+import Breadcrumbs from '@/components/Breadcrumbs.astro';
 import { getCollection } from 'astro:content';
 export function getStaticPaths() { return ['admision','estandarizadas'].map(product => ({params:{product}})); }
 const { product } = Astro.params;
+const productName = product === 'admision' ? 'Admisión' : 'Estandarizadas';
+const breadcrumbs = [{name:'Inicio',path:'/'},{name:productName,path:`/${product}`},{name:'Práctica sin cuenta',path:`/${product}/practica`}];
 const units = await getCollection('practices', ({data}) => data.product === product);
 ---
-<Base title={`Práctica sin cuenta: ${product}`} description={`Ejercicios originales de ${product} con soluciones explicadas para repasar a tu ritmo.`}>
-<main class="container content mx-auto max-w-3xl px-4 py-12"><h1>Práctica sin cuenta: {product}</h1><p>Repasá con ejercicios originales de Ubot. Esta selección no cubre todo el temario ni constituye una prueba oficial. Material con revisión humana aprobada por el equipo Ubot.</p><ul>{units.map(({data}) => <li><a href={`/${product}/practica/${data.slug}`}>{data.title}</a><p>{data.intro}</p></li>)}</ul><a href={`/${product}`}>Conocé la preparación</a></main>
+<Base title={`Ejercicios de ${productName} sin cuenta`} description={`Practica ${productName} con ejercicios originales, ejemplos y soluciones explicadas. Accede sin cuenta y repasa a tu ritmo.`} breadcrumbs={breadcrumbs}>
+<Breadcrumbs items={breadcrumbs} />
+<section class="container content mx-auto max-w-3xl px-4 py-12"><h1>Ejercicios de {productName} sin cuenta</h1><p>Repasa con ejercicios originales de Ubot. Esta selección no cubre todo el temario ni constituye una prueba oficial. Material con revisión humana aprobada por el equipo Ubot.</p><ul>{units.map(({data}) => <li><a href={`/${product}/practica/${data.slug}`}>{data.title}</a><p>{data.intro}</p></li>)}</ul><a href={`/${product}`}>Conoce la preparación</a></section>
 </Base>

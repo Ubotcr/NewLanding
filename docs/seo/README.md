@@ -90,3 +90,9 @@ El entorno local de esta implementación no tiene resolución DNS saliente ni ac
 - [Google: datos estructurados](https://developers.google.com/search/docs/appearance/structured-data/sd-policies)
 - [Google: Core Web Vitals](https://developers.google.com/search/docs/appearance/core-web-vitals)
 - [Google: funciones de IA en Search](https://developers.google.com/search/docs/appearance/ai-features)
+
+## Política de indexación y verificación (2026-11-07)
+
+El sitio público `ubotcr.com` concentra productos, guías y ejercicios sin cuenta. Admisión y Estandarizadas mantienen exactamente una etiqueta `robots` con valor `noindex` en el HTML inicial y la cabecera `X-Robots-Tag: noindex` en las respuestas HTML. No usar `Disallow: /`, sitemaps de las apps ni un canonical global para rutas diferentes. La autenticación protege los datos; `noindex` controla la búsqueda. Los perfiles públicos de Admisión siguen excluidos.
+
+Las comprobaciones de publicación deben validar los archivos generados y las respuestas de producción: raíz, cuenta y rutas internas representativas, robots y 404. Verificar la asociación de las funciones de CloudFront además de publicar S3. El monitor diario comprueba ambas capas de exclusión. Los textos nuevos y modificados usan español neutro sin voseo.

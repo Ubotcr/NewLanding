@@ -7,19 +7,19 @@ const guides = await getCollection("guides", ({ data }) => !data.draft);
 const breadcrumbs = [{ name: "Inicio", path: "/" }, { name: "Estandarizadas", path: "/estandarizadas" }, { name: "Matemáticas", path: "/estandarizadas/matematicas" }];
 ---
 <Base title="Matemáticas para las Pruebas Estandarizadas del MEP"
-  description="Repasá Matemáticas con ejemplos resueltos, guías y recursos oficiales del MEP. Conocé cómo practicar por tema con Ubot Estandarizadas."
+  description="Repasa Matemáticas con ejemplos resueltos, guías y recursos oficiales del MEP. Conoce cómo practicar por tema con Ubot Estandarizadas."
   breadcrumbs={breadcrumbs}>
   <Breadcrumbs items={breadcrumbs} />
   <section class="container mx-auto max-w-3xl px-4 py-12 content">
     <h1>Matemáticas para las Estandarizadas</h1>
-    <p>Prepararte empieza por identificar qué necesitás repasar. Acá encontrás explicaciones públicas y recursos para organizar tu estudio; en la app podés practicar los temas habilitados y consultar tus dudas con el tutor.</p>
-    <h2>Elegí tu próximo repaso</h2>
+    <p>Prepararte empieza por identificar qué necesitas repasar. Aquí encontrás explicaciones públicas y recursos para organizar tu estudio; en la app puedes practicar los temas habilitados y consultar tus dudas con el tutor.</p>
+    <h2>Elige tu próximo repaso</h2>
     <ul>{guides.map(guide => <li><a href={`/estandarizadas/matematicas/${guide.id}`}>{guide.data.title}</a><p>{guide.data.description}</p></li>)}</ul>
-    <h2>Organizá tu preparación</h2>
+    <h2>Organiza tu preparación</h2>
     <ol>
-      <li>Consultá los documentos de la DGEC correspondientes a tu convocatoria y modalidad.</li>
-      <li>Elegí un tema, resolvé un ejemplo y explicá por qué funciona cada paso.</li>
-      <li>Comprobá el resultado y anotá el error que querés evitar en la próxima práctica.</li>
+      <li>Consulta los documentos de la DGEC correspondientes a tu convocatoria y modalidad.</li>
+      <li>Elige un tema, resuelve un ejemplo y explicá por qué funciona cada paso.</li>
+      <li>Comprueba el resultado y anota el error que quieres evitar en la próxima práctica.</li>
     </ol>
     <ul>
       <li><a href="/blog/matematicas-estandarizadas-como-prepararse">Plan de estudio y ejemplos por tema</a></li>
@@ -27,10 +27,10 @@ const breadcrumbs = [{ name: "Inicio", path: "/" }, { name: "Estandarizadas", pa
       <li><a href="https://dgec.mep.go.cr/pruebas-nacionales-estandarizadas/informacion-2026/documentos-2026/">Documentos oficiales DGEC 2026</a></li>
       <li><a href="https://dgec.mep.go.cr/MATEMATICAS_SECUNDARIA_20261/">Práctica oficial de Matemática de secundaria 2026</a></li>
     </ul>
-    <h2>Practicá con Ubot</h2>
-    <p>El piloto está dirigido a secundaria académica diurna. Iniciá sesión para consultar las preguntas, actividades y materiales disponibles; el catálogo no implica cobertura completa del temario.</p>
+    <h2>Practica con Ubot</h2>
+    <p>El piloto está dirigido a secundaria académica diurna. Inicia sesión para consultar las preguntas, actividades y materiales disponibles; el catálogo no implica cobertura completa del temario.</p>
     <p><a href={`${estandarizadas.app}/matematicas`} class="btn btn-primary">Entrar a practicar Matemáticas</a></p>
     <p>Ubot es una herramienta independiente de preparación. Sus prácticas no son pruebas ni resultados oficiales del MEP.</p>
   </section>
-<section class="container content mx-auto px-4 py-8"><h2>Practicá sin cuenta</h2><p>Resolvé ejercicios originales y consultá sus explicaciones.</p><a href="/admision/practica">Admisión</a> · <a href="/estandarizadas/practica">Matemáticas de Estandarizadas</a></section>
+<section class="container content mx-auto px-4 py-8"><h2>Practica sin cuenta</h2><p>Resuelve ejercicios originales y consulta sus explicaciones.</p><a href="/admision/practica">Admisión</a> · <a href="/estandarizadas/practica">Matemáticas de Estandarizadas</a></section>
 </Base>
