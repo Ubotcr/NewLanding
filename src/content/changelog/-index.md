@@ -11,6 +11,10 @@ page_header:
   subtitle: "Mejoras, nuevas funciones y correcciones recientes."
 
 changelog_list:
+  - version: "v3.0.0"
+    date: "Noviembre 2026"
+    title: "Admisión y Estandarizadas, cada una en su espacio"
+    description: "Ubot 3.0 separa Admisión (chat.ubotcr.com) y Estandarizadas (estandarizadas.ubotcr.com) en aplicaciones propias conectadas desde el menú. Estandarizadas llega con el piloto de Matemáticas: práctica por tema, examen diario, revisión de respuestas y tutor con historial. En Admisión se suman mejoras desde la v2.9: Torre de Retos (antes Torre de Poder), racha diaria con 6 hitos en el sidebar, modos con y sin tiempo en exámenes especiales UCR/UNA, Ruta de Aprendizaje más sólida, rankings renovados y mejoras de legibilidad y navegación móvil."
   - version: "v2.9"
     date: "Agosto 2026"
     title: "Examen tipo PAA, exámenes especiales por universidad y recordatorios"

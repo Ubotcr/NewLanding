@@ -10,10 +10,10 @@ features:
     content: Practica con exámenes cronometrados en el formato real de la prueba. Recibe retroalimentación detallada y consulta tu historial.
   - title: Rankings y competencia
     icon: emoji_events
-    content: Mide tu avance contra estudiantes de todo el país. Mantén tu racha diaria y sube de nivel con el sistema de puntos Elo (como en el ajedrez).
-  - title: Torre de Poder & Economía
+    content: Mide tu avance contra estudiantes de todo el país. Mantén tu racha diaria, desbloquea hitos y sube de nivel con el sistema de puntos Elo (como en el ajedrez).
+  - title: Torre de Retos & Economía
     icon: keyboard_double_arrow_up
-    content: Escala la torre contestando preguntas mientras ganas monedas en nuestro sistema de economía in-game. ¿Buscas un reto mayor? Prueba el modo Nightmare exclusivo para suscriptores.
+    content: Escala la torre contestando preguntas mientras ganas monedas en nuestro sistema de economía in-game. ¿Buscas un reto mayor? Prueba el Modo Pesadilla exclusivo para suscriptores.
   - title: Flipmatch
     icon: style
     content: Aprende de forma divertida con nuestras flipcards. Juega en modo Match para vincular definiciones con términos, o usa el modo Simple para repasar y memorizar.
