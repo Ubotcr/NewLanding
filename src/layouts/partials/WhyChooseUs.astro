@@ -19,7 +19,7 @@ const { title, feature_list, enable } = data.frontmatter;
         <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {feature_list.map((item: any) => (
             <article class="group relative rounded-xl border border-border bg-body p-6 shadow-sm transition-all hover:-translate-y-0.5 hover:border-primary/30 hover:shadow-md">
-              <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
+              <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-link">
                 <Icon name={item.icon} class="text-2xl" />
               </span>
               <h3 class="mt-4 text-lg font-semibold text-text-light">

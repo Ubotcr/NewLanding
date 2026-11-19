@@ -88,7 +88,7 @@ img {
 }
 
 mark {
-  @apply bg-transparent text-primary;
+  @apply bg-transparent text-link;
 }
 
 .material-symbols-rounded {
