@@ -16,7 +16,19 @@ interface NavItem {
   children?: NavItem[];
 }
 const main: NavItem[] = [
-  ...preparation.choices.map(choice => ({ name: choice.name, url: choice.page })),
+  ...preparation.choices.map((choice) =>
+    choice.page === "/admision"
+      ? {
+          name: choice.name,
+          url: choice.page,
+          children: [
+            { name: "Inicio Admisión", url: "/admision" },
+            { name: "Características", url: "/features" },
+            { name: "Precios", url: "/pricing" },
+          ],
+        }
+      : { name: choice.name, url: choice.page },
+  ),
   ...menu.main,
 ];
 ---
@@ -78,7 +90,7 @@ const main: NavItem[] = [
                       />
                     </button>
                     <ul
-                      class="invisible absolute left-0 top-full z-50 mt-1 min-w-48 rounded-lg border border-border bg-card p-1 opacity-0 shadow-lg transition-all duration-150 group-data-[open=true]:visible group-data-[open=true]:opacity-100"
+                      class="invisible absolute left-0 top-full z-50 mt-1 min-w-48 origin-top-left scale-95 rounded-lg border border-border bg-card p-1 opacity-0 shadow-lg transition-[opacity,transform] duration-150 group-data-[open=true]:visible group-data-[open=true]:scale-100 group-data-[open=true]:opacity-100"
                       data-dropdown-menu
                     >
                       {item.children.map((child) => (

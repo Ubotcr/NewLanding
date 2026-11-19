@@ -1,5 +1,11 @@
 html {
   scroll-behavior: smooth;
+  scrollbar-color: var(--color-border) var(--color-body);
+}
+
+::selection {
+  background: var(--color-secondary);
+  color: #fff;
 }
 
 [id] {
@@ -43,8 +49,8 @@ body {
   outline-color: #fff;
 }
 
-/* Reduced motion: neutralize all animations and transitions, and disable
-   smooth scrolling. Per PRODUCT.md this is a brand promise, not optional. */
+/* Reduced motion: stop decorative/spatial animations and smooth scrolling,
+   while keeping brief opacity/focus state transitions perceptible. */
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -52,9 +58,8 @@ body {
   *,
   *::before,
   *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
+    animation: none !important;
+    transition-duration: 120ms !important;
     scroll-behavior: auto !important;
   }
 }
@@ -70,6 +75,10 @@ h6 {
   text-wrap: balance;
 }
 
+p {
+  text-wrap: pretty;
+}
+
 b,
 strong {
   @apply font-semibold;
@@ -81,6 +90,7 @@ a {
 
 a:hover {
   @apply underline;
+  text-underline-offset: 3px;
 }
 
 img {

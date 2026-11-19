@@ -1,14 +1,6 @@
 {
   "main": [
     {
-      "name": "Características",
-      "url": "/features"
-    },
-    {
-      "name": "Precios",
-      "url": "/pricing"
-    },
-    {
       "name": "Recursos",
       "url": "",
       "children": [
