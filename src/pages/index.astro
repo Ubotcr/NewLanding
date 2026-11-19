@@ -4,6 +4,7 @@ import Hero from "@/components/Hero.astro";
 import SectionHeader from "@/components/SectionHeader.astro";
 import MathOverview from "@/partials/MathOverview.astro";
 import PreparationClosing from "@/partials/PreparationClosing.astro";
+import PracticeStrip from "@/partials/PracticeStrip.astro";
 import FAQ from "@/partials/FAQ.astro";
 import { admision, sharedFaq } from "@/config/preparation";
 import { getListPage } from "@/lib/contentParser";
@@ -52,6 +53,6 @@ const {
     </div>
   </section>
   <FAQ data={sharedFaq} />
+  <PracticeStrip />
   <PreparationClosing />
-<section class="container content mx-auto px-4 py-8"><h2>Practica sin cuenta</h2><p>Resuelve ejercicios originales y consulta sus explicaciones.</p><a href="/admision/practica">Admisión</a> · <a href="/estandarizadas/practica">Matemáticas de Estandarizadas</a></section>
 </Base>

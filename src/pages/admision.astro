@@ -2,6 +2,7 @@
 import Hero from "@/components/Hero.astro";
 import Base from "@/layouts/Base.astro";
 import CallToAction from "@/partials/CallToAction.astro";
+import PracticeStrip from "@/partials/PracticeStrip.astro";
 import DiagnosticExam from "@/partials/DiagnosticExam.astro";
 import EssentialFeatures from "@/partials/EssentialFeatures.astro";
 import FAQ from "@/partials/FAQ.astro";
@@ -170,6 +171,6 @@ const examsSchema = {
   <HowItWorks data={how} />
   <Pricing data={pricing} />
   <FAQ data={faq} />
+  <PracticeStrip highlight="admision" />
   <CallToAction data={cta} />
-<section class="container content mx-auto px-4 py-8"><h2>Practica sin cuenta</h2><p>Resuelve ejercicios originales y consulta sus explicaciones.</p><a href="/admision/practica">Admisión</a> · <a href="/estandarizadas/practica">Matemáticas de Estandarizadas</a></section>
 </Base>
