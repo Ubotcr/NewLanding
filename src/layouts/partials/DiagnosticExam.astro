@@ -6,54 +6,59 @@ import ubitBooks from "@/assets/ubit-books.webp";
 interface Props {
   data: any;
   id?: string;
+  compact?: boolean;
 }
 
-const { data, id = "diagnostico" } = Astro.props;
+const { data, id = "diagnostico", compact = false } = Astro.props;
 const { badge, title, description, button, enable } = data.frontmatter;
 ---
 
 {
   enable && (
-    <section id={id} class="border-y border-border bg-card px-4 py-12 md:py-20">
+    <section
+      id={id}
+      class:list={[
+        "px-4 py-12 md:py-16",
+        compact ? "bg-body" : "border-y border-border bg-card",
+      ]}
+    >
       <div class="container relative mx-auto max-w-3xl">
-        <Image
-          src={ubitBooks}
-          alt=""
-          aria-hidden="true"
-          widths={[160, 320]}
-          sizes="(min-width: 768px) 144px, 96px"
-          width={320}
-          loading="lazy"
-          decoding="async"
-          class="diagnostic-card__ubit pointer-events-none relative z-20 mx-auto -mb-8 block h-auto w-24 select-none md:-mb-12 md:w-36"
-        />
+        {!compact && (
+          <Image
+            src={ubitBooks}
+            alt=""
+            aria-hidden="true"
+            widths={[160, 320]}
+            sizes="(min-width: 768px) 144px, 96px"
+            width={320}
+            loading="lazy"
+            decoding="async"
+            class="diagnostic-card__ubit pointer-events-none relative z-20 mx-auto -mb-8 block h-auto w-24 select-none md:-mb-12 md:w-36"
+          />
+        )}
 
-        <div class="diagnostic-card relative z-10 overflow-hidden rounded-2xl bg-gradient-dark px-6 py-14 text-center shadow-lg md:px-12 md:py-20">
-          <div class="diagnostic-card__blob diagnostic-card__blob--1 absolute -right-16 -top-16 h-48 w-48 rounded-full bg-primary/20 blur-3xl" />
-          <div class="diagnostic-card__blob diagnostic-card__blob--2 absolute -bottom-16 -left-16 h-48 w-48 rounded-full bg-primary/20 blur-3xl" />
-
+        <div class="diagnostic-card relative z-10 rounded-2xl border border-border bg-ink-raised px-6 py-12 text-center shadow-xl md:px-12 md:py-16">
           {badge && (
-            <span class="diagnostic-card__badge relative inline-flex rounded-full bg-primary px-3 py-1 text-xs font-bold uppercase tracking-wide text-white">
+            <span class="inline-flex rounded-full bg-secondary px-3 py-1 text-xs font-bold uppercase tracking-wide text-white">
               {badge}
             </span>
           )}
           <h2
-            class="relative mt-4 font-bold text-text-light"
+            class="mt-4 font-bold text-text-light"
             style="font-size: clamp(1.875rem, 4vw, 2.25rem); text-wrap: balance;"
           >
             {title}
           </h2>
-          <p class="relative mx-auto mt-4 max-w-xl text-text">{description}</p>
+          <p class="mx-auto mt-4 max-w-[60ch] text-text">{description}</p>
           {button?.enable && (
             <a
               href={button.link}
               target="_blank"
               rel="noopener noreferrer"
-              class="diagnostic-card__cta btn btn-primary btn-lg relative mt-8 inline-flex overflow-hidden"
+              class="btn btn-primary btn-lg mt-8 inline-flex min-h-[44px]"
             >
               <Icon name="quiz" class="text-lg" filled />
               {button.label}
-              <span class="diagnostic-card__cta-shine" aria-hidden="true" />
             </a>
           )}
         </div>
@@ -63,77 +68,8 @@ const { badge, title, description, button, enable } = data.frontmatter;
 }
 
 <style>
-  .diagnostic-card {
-    border: 1px solid color-mix(in srgb, var(--color-primary) 30%, transparent);
-    animation: diagnostic-card-border 3.2s ease-in-out infinite;
-  }
-
-  .diagnostic-card__blob {
-    animation: diagnostic-card-drift 7s ease-in-out infinite;
-  }
-
-  .diagnostic-card__blob--2 {
-    animation-delay: -3.5s;
-  }
-
-  .diagnostic-card__badge {
-    box-shadow: 0 0 0 0 color-mix(in srgb, var(--color-primary) 55%, transparent);
-    animation: diagnostic-card-badge-glow 2.4s ease-out infinite;
-  }
-
   .diagnostic-card__ubit {
-    animation: diagnostic-card-ubit-arrive 450ms ease-out both;
-  }
-
-  .diagnostic-card__cta {
-    position: relative;
-  }
-
-  .diagnostic-card__cta-shine {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-      100deg,
-      transparent 20%,
-      color-mix(in srgb, white 35%, transparent) 50%,
-      transparent 80%
-    );
-    transform: translateX(-120%);
-    animation: diagnostic-card-shine 2.8s ease-in-out infinite;
-  }
-
-  @keyframes diagnostic-card-border {
-    0%,
-    100% {
-      border-color: color-mix(in srgb, var(--color-primary) 30%, transparent);
-      box-shadow: 0 0 0 0 transparent;
-    }
-    50% {
-      border-color: color-mix(in srgb, var(--color-primary) 70%, transparent);
-      box-shadow: 0 0 32px 0 color-mix(in srgb, var(--color-primary) 25%, transparent);
-    }
-  }
-
-  @keyframes diagnostic-card-drift {
-    0%,
-    100% {
-      transform: translate(0, 0) scale(1);
-    }
-    50% {
-      transform: translate(-12px, 12px) scale(1.15);
-    }
-  }
-
-  @keyframes diagnostic-card-badge-glow {
-    0% {
-      box-shadow: 0 0 0 0 color-mix(in srgb, var(--color-primary) 55%, transparent);
-    }
-    70% {
-      box-shadow: 0 0 0 10px color-mix(in srgb, var(--color-primary) 0%, transparent);
-    }
-    100% {
-      box-shadow: 0 0 0 0 color-mix(in srgb, var(--color-primary) 0%, transparent);
-    }
+    animation: diagnostic-card-ubit-arrive 450ms cubic-bezier(0.22, 1, 0.36, 1) both;
   }
 
   @keyframes diagnostic-card-ubit-arrive {
@@ -147,28 +83,9 @@ const { badge, title, description, button, enable } = data.frontmatter;
     }
   }
 
-  @keyframes diagnostic-card-shine {
-    0%,
-    15% {
-      transform: translateX(-120%);
-    }
-    50%,
-    100% {
-      transform: translateX(120%);
-    }
-  }
-
   @media (prefers-reduced-motion: reduce) {
-    .diagnostic-card,
-    .diagnostic-card__blob,
-    .diagnostic-card__badge,
-    .diagnostic-card__cta-shine,
     .diagnostic-card__ubit {
       animation: none;
-    }
-
-    .diagnostic-card {
-      border-color: color-mix(in srgb, var(--color-primary) 40%, transparent);
     }
   }
 </style>
