@@ -13,6 +13,7 @@ export interface Props {
   keywords?: string;
   image?: string;
   noindex?: boolean;
+  enableAds?: boolean;
   canonical?: string;
   mascot?: boolean;
   ogType?: "website" | "article";
@@ -20,7 +21,7 @@ export interface Props {
   breadcrumbs?: Breadcrumb[];
 }
 
-const { title, meta_title, description, keywords, image, noindex, canonical, ogType = "website", mascot = false, structuredData = [], breadcrumbs = [] } =
+const { title, meta_title, description, keywords, image, noindex, enableAds = true, canonical, ogType = "website", mascot = false, structuredData = [], breadcrumbs = [] } =
   Astro.props;
 const rawTitle = meta_title || title || config.site.title;
 // Append the brand unless the title already carries it (or is the brand itself)
@@ -122,13 +123,14 @@ const v = pkg.version;
         gtag("config", "G-XHGSQZ25SH", { anonymize_ip: true });
       })();
     </script>
-    <!-- Google AdSense: verificación + revisión del sitio. Sin unidades de
-      anuncio no renderiza nada visible hasta la aprobación. -->
-    <script
-      async
-      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4694183941873770"
-      crossorigin="anonymous"
-    ></script>
+    <!-- Google AdSense: verificación + revisión del sitio. Solo en páginas indexables con contenido editorial o práctica. -->
+    {!noindex && enableAds && (
+      <script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4694183941873770"
+        crossorigin="anonymous"
+      ></script>
+    )}
   </head>
   <body class="bg-body text-text-light font-primary antialiased">
     <a href="#main-content" class="skip-link">Saltar al contenido</a>

@@ -7,12 +7,31 @@ const { unit } = Astro.props;
 const productName = unit.product === 'admision' ? 'Admisión' : 'Estandarizadas';
 const breadcrumbs = [{name:'Inicio',path:'/'},{name:productName,path:`/${unit.product}`},{name:'Práctica sin cuenta',path:`/${unit.product}/practica`},{name:unit.title,path:`/${unit.product}/practica/${unit.slug}`}];
 const related = unit.product === 'admision'
-  ? [{href:unit.slug === 'inferencias' ? '/blog/razonamiento-verbal-paa' : '/blog/razonamiento-matematico-paa',label:unit.slug === 'inferencias' ? 'Guía de razonamiento verbal' : 'Guía de razonamiento matemático'}]
-  : [{href:'/estandarizadas/matematicas',label:'Guías de Matemáticas'}, ...(unit.slug === 'pendiente' ? [{href:'/estandarizadas/matematicas/pendiente-de-una-recta',label:'Cómo calcular e interpretar la pendiente'}] : [])];
+  ? [
+      {href:unit.slug === 'inferencias' ? '/blog/razonamiento-verbal-paa' : '/blog/razonamiento-matematico-paa',label:unit.slug === 'inferencias' ? 'Guía de razonamiento verbal' : 'Guía de razonamiento matemático'},
+      {href:'/blog/como-prepararse-paa',label:'Cómo prepararse para la PAA'},
+    ]
+  : [
+      {href:'/estandarizadas/matematicas',label:'Centro de guías de Matemáticas'},
+      ...(unit.slug === 'pendiente' ? [{href:'/estandarizadas/matematicas/pendiente-de-una-recta',label:'Guía: cómo calcular e interpretar la pendiente'}] : []),
+      ...(unit.slug === 'funciones-lineales' ? [{href:'/estandarizadas/matematicas/funcion-lineal-e-interpretacion',label:'Guía: función lineal, cortes y contexto'}] : []),
+      ...(unit.slug === 'porcentajes' ? [{href:'/estandarizadas/matematicas/porcentajes-y-proporcionalidad',label:'Guía: porcentajes y proporcionalidad'}] : []),
+    ];
+const studyTips = unit.product === 'admision'
+  ? [
+      'Leé primero lo que pide exactamente la pregunta antes de operar o interpretar el texto.',
+      'Descartá las alternativas que agregan información que no aparece en el enunciado o confunden causa con coincidencia.',
+      'Comprobá tu respuesta sustituyendo el resultado en las condiciones originales del problema.',
+    ]
+  : [
+      'Identificá las variables y sus unidades antes de aplicar una fórmula.',
+      'Verificá los signos y el orden de las restas o factores multiplicativos.',
+      'Contrastá si la magnitud del resultado tiene sentido frente al ejemplo resuelto.',
+    ];
 ---
 <Base title={unit.title} description={unit.intro} breadcrumbs={breadcrumbs}>
 <Breadcrumbs items={breadcrumbs} />
-<section class="container content mx-auto max-w-3xl px-4 py-12"><a href={`/${unit.product}/practica`}>Volver a las prácticas</a><h1>{unit.title}</h1><p>Material original de Ubot · Revisión humana aprobada por el equipo Ubot.</p><p>{unit.intro}</p><h2>Ejemplos resueltos</h2><p>{unit.example}</p>
+<section class="container content mx-auto max-w-3xl px-4 py-12"><a href={`/${unit.product}/practica`}>Volver a las prácticas</a><h1>{unit.title}</h1><p>Material original de Ubot · Revisión humana aprobada por el equipo Ubot.</p><p>{unit.intro}</p><h2>Ejemplo resuelto</h2><p>{unit.example}</p><h2>Qué revisar antes de responder</h2><ul>{studyTips.map(tip => <li>{tip}</li>)}</ul>
 <form data-practice class="quiz">
   <h2>Pon a prueba lo aprendido</h2>
   <div data-progress hidden><p data-counter aria-live="polite"></p><progress value="0" max={unit.questions.length} aria-label="Preguntas completadas"></progress></div>

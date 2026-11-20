@@ -47,7 +47,7 @@ const blogCollection = defineCollection({
     author: z.object({ name: z.string().min(1), designation: z.string().optional() }).optional(),
     reviewedBy: z.string().optional(), reviewedAt: z.coerce.date().optional(),
     sources: z.array(z.object({ title: z.string().min(1), url: z.string().url() })).default([]),
-    related: z.array(z.string().startsWith("/")).default([]), draft: z.boolean().default(false),
+    related: z.array(z.string().startsWith("/")).default([]), draft: z.boolean().default(false), noindex: z.boolean().default(false),
   }).catchall(z.any()).superRefine((data, ctx) => {
     if (data.kind !== "index" && !data.draft && (!data.date || !data.author)) ctx.addIssue({ code: "custom", message: "Un artículo publicado requiere date y author" });
     if (data.updated && data.date && data.updated < data.date) ctx.addIssue({ code: "custom", message: "updated anterior a date" });

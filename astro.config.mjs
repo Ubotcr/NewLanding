@@ -58,7 +58,15 @@ export default defineConfig({
     sitemap({
       filter: (page) => {
         const path = new URL(page).pathname.replace(/\/+$/, "") || "/";
-        return path !== "/404" && path !== "/changelog" && !path.startsWith("/blog/page/");
+        const excluded = new Set([
+          "/404",
+          "/changelog",
+          "/features",
+          "/blog/ubot-frontend-v2-8-0",
+          "/blog/ubot-frontend-v2-9-0",
+          "/blog/ubot-v3-0-0",
+        ]);
+        return !excluded.has(path) && !path.startsWith("/blog/page/");
       },
     }),
     mdx(),

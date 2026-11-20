@@ -12,7 +12,7 @@ const essential_features = await getListPage("sections/essential-features.md");
 const callToAction = await getListPage("sections/call-to-action.md");
 ---
 
-<Base title={title} meta_title={meta_title} description={description}>
+<Base title={title} meta_title={meta_title} description={description} noindex={true} enableAds={false}>
   <PageHeader page_header={page_header} />
   <MathOverview />
   <div class="container mx-auto max-w-5xl px-4 pt-8">

@@ -3,34 +3,141 @@ import Base from "@/layouts/Base.astro";
 import Breadcrumbs from "@/components/Breadcrumbs.astro";
 import { getCollection } from "astro:content";
 import { estandarizadas } from "@/config/preparation";
-const guides = await getCollection("guides", ({ data }) => !data.draft);
-const breadcrumbs = [{ name: "Inicio", path: "/" }, { name: "Estandarizadas", path: "/estandarizadas" }, { name: "Matemáticas", path: "/estandarizadas/matematicas" }];
+
+const guides = (await getCollection("guides", ({ data }) => !data.draft)).sort(
+  (a, b) => a.data.title.localeCompare(b.data.title, "es"),
+);
+const breadcrumbs = [
+  { name: "Inicio", path: "/" },
+  { name: "Estandarizadas", path: "/estandarizadas" },
+  { name: "Matemáticas", path: "/estandarizadas/matematicas" },
+];
 ---
-<Base title="Matemáticas para las Pruebas Estandarizadas del MEP"
-  description="Repasa Matemáticas con ejemplos resueltos, guías y recursos oficiales del MEP. Conoce cómo practicar por tema con Ubot Estandarizadas."
-  breadcrumbs={breadcrumbs}>
+
+<Base
+  title="Matemáticas para las Pruebas Estandarizadas del MEP"
+  description="Repasa Matemáticas para las Pruebas Nacionales Estandarizadas del MEP con guías paso a paso, ejemplos resueltos, errores frecuentes y práctica sin cuenta."
+  breadcrumbs={breadcrumbs}
+>
   <Breadcrumbs items={breadcrumbs} />
   <section class="container mx-auto max-w-3xl px-4 py-12 content">
-    <h1>Matemáticas para las Estandarizadas</h1>
-    <p>Prepararte empieza por identificar qué necesitas repasar. Aquí encontrás explicaciones públicas y recursos para organizar tu estudio; en la app puedes practicar los temas habilitados y consultar tus dudas con el tutor.</p>
-    <h2>Elige tu próximo repaso</h2>
-    <ul>{guides.map(guide => <li><a href={`/estandarizadas/matematicas/${guide.id}`}>{guide.data.title}</a><p>{guide.data.description}</p></li>)}</ul>
-    <h2>Organiza tu preparación</h2>
-    <ol>
-      <li>Consulta los documentos de la DGEC correspondientes a tu convocatoria y modalidad.</li>
-      <li>Elige un tema, resuelve un ejemplo y explicá por qué funciona cada paso.</li>
-      <li>Comprueba el resultado y anota el error que quieres evitar en la próxima práctica.</li>
-    </ol>
+    <h1>Matemáticas para las Pruebas Estandarizadas</h1>
+    <p>
+      Preparar la componente de Matemáticas de las Pruebas Nacionales
+      Estandarizadas requiere dominar la lectura de representaciones
+      (gráficas, tablas, ecuaciones) y evitar errores de procedimiento bajo
+      tiempo limitado. En este centro reunimos guías públicas con ejemplos
+      resueltos, ejercicios sin cuenta y enlaces a los documentos oficiales del
+      MEP.
+    </p>
+
+    <h2>Guías de estudio por tema</h2>
+    <p>
+      Cada guía incluye la fórmula o concepto clave, un ejemplo desarrollado
+      paso a paso, los errores más comunes al resolver y una comprobación
+      rápida para verificar tu razonamiento antes de pasar a la práctica.
+    </p>
     <ul>
-      <li><a href="/blog/matematicas-estandarizadas-como-prepararse">Plan de estudio y ejemplos por tema</a></li>
-      <li><a href="/blog/pruebas-nacionales-estandarizadas-mep-guia">Qué son las Pruebas Nacionales Estandarizadas</a></li>
-      <li><a href="https://dgec.mep.go.cr/pruebas-nacionales-estandarizadas/informacion-2026/documentos-2026/">Documentos oficiales DGEC 2026</a></li>
-      <li><a href="https://dgec.mep.go.cr/MATEMATICAS_SECUNDARIA_20261/">Práctica oficial de Matemática de secundaria 2026</a></li>
+      {
+        guides.map((guide) => (
+          <li>
+            <a href={`/estandarizadas/matematicas/${guide.id}`}>
+              {guide.data.title}
+            </a>
+            <p>{guide.data.description}</p>
+          </li>
+        ))
+      }
     </ul>
-    <h2>Practica con Ubot</h2>
-    <p>El piloto está dirigido a secundaria académica diurna. Inicia sesión para consultar las preguntas, actividades y materiales disponibles; el catálogo no implica cobertura completa del temario.</p>
-    <p><a href={`${estandarizadas.app}/matematicas`} class="btn btn-primary">Entrar a practicar Matemáticas</a></p>
-    <p>Ubot es una herramienta independiente de preparación. Sus prácticas no son pruebas ni resultados oficiales del MEP.</p>
+
+    <h2>Áreas principales que conviene repasar</h2>
+    <p>
+      Según los temarios publicados por la Dirección de Gestión y Evaluación de
+      la Calidad (DGEC), la evaluación de secundaria organiza los ítems en tres
+      grandes bloques. Conviene alternar teoría y práctica en los tres en lugar
+      de concentrarse en uno solo:
+    </p>
+    <ul>
+      <li>
+        <strong>Relaciones y Álgebra:</strong> función lineal (pendiente,
+        intersecciones y modelado de tarifas), función cuadrática (concavidad,
+        vértice y discriminante), sistemas de ecuaciones y proporcionalidad.
+      </li>
+      <li>
+        <strong>Geometría analítica y métricas:</strong> ecuación ordinaria de
+        la circunferencia en el plano cartesiano, posición relativa de puntos y
+        rectas, traslaciones y cálculo de áreas y perímetros de polígonos.
+      </li>
+      <li>
+        <strong>Estadística y Probabilidad:</strong> lectura de tablas de
+        frecuencias, gráficos, medidas de tendencia central (media, mediana y
+        moda) y cálculo básico de probabilidades en espacios finitos.
+      </li>
+    </ul>
+
+    <h2>Método recomendado en 3 pasos</h2>
+    <ol>
+      <li>
+        <strong>Ubicá el contenido en la convocatoria oficial:</strong> revisá
+        los documentos de la DGEC correspondientes a tu modalidad y año para
+        confirmar qué aprendizajes entran en tu prueba.
+      </li>
+      <li>
+        <strong>Resolvé sin ver la solución primero:</strong> leé una guía,
+        tapá la respuesta del ejercicio de comprobación y justificá cada paso
+        antes de verificar.
+      </li>
+      <li>
+        <strong>Anotá el error específico:</strong> si fallaste por signo, por
+        invertir una razón o por leer mal el enunciado, registralo y volvé a
+        intentarlo en las{" "}
+        <a href="/estandarizadas/practica">prácticas sin cuenta</a>.
+      </li>
+    </ol>
+
+    <h2>Documentos oficiales y recursos de apoyo</h2>
+    <ul>
+      <li>
+        <a href="/blog/matematicas-estandarizadas-como-prepararse">
+          Plan de estudio y ejemplos por tema para Matemáticas MEP
+        </a>
+      </li>
+      <li>
+        <a href="/blog/pruebas-nacionales-estandarizadas-mep-guia">
+          Qué son las Pruebas Nacionales Estandarizadas: formato y asignaturas
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://dgec.mep.go.cr/pruebas-nacionales-estandarizadas/informacion-2026/documentos-2026/"
+        >
+          Documentos oficiales DGEC 2026
+        </a>
+      </li>
+      <li>
+        <a href="https://dgec.mep.go.cr/MATEMATICAS_SECUNDARIA_20261/">
+          Práctica oficial de Matemática de secundaria 2026
+        </a>
+      </li>
+    </ul>
+
+    <h2>Práctica sin cuenta y app de Estandarizadas</h2>
+    <p>
+      Podés resolver ejercicios originales con explicación inmediata de cada
+      alternativa en{" "}
+      <a href="/estandarizadas/practica">Práctica de Estandarizadas</a>, o
+      ingresar a la app de Ubot Estandarizadas (piloto para secundaria
+      académica diurna) para repasar con el tutor y las actividades
+      disponibles según catálogo.
+    </p>
+    <p>
+      <a href={`${estandarizadas.app}/matematicas`} class="btn btn-primary">
+        Entrar a practicar Matemáticas
+      </a>
+    </p>
+    <p>
+      Ubot es una herramienta independiente de preparación. Sus prácticas no son
+      pruebas ni resultados oficiales del MEP.
+    </p>
   </section>
-<section class="container content mx-auto px-4 py-8"><h2>Practica sin cuenta</h2><p>Resuelve ejercicios originales y consulta sus explicaciones.</p><a href="/admision/practica">Admisión</a> · <a href="/estandarizadas/practica">Matemáticas de Estandarizadas</a></section>
 </Base>

@@ -1,14 +1,140 @@
 ---
-import Base from '@/layouts/Base.astro';
-import Breadcrumbs from '@/components/Breadcrumbs.astro';
-import { getCollection } from 'astro:content';
-export function getStaticPaths() { return ['admision','estandarizadas'].map(product => ({params:{product}})); }
+import Base from "@/layouts/Base.astro";
+import Breadcrumbs from "@/components/Breadcrumbs.astro";
+import { getCollection } from "astro:content";
+
+export function getStaticPaths() {
+  return ["admision", "estandarizadas"].map((product) => ({
+    params: { product },
+  }));
+}
+
 const { product } = Astro.params;
-const productName = product === 'admision' ? 'Admisión' : 'Estandarizadas';
-const breadcrumbs = [{name:'Inicio',path:'/'},{name:productName,path:`/${product}`},{name:'Práctica sin cuenta',path:`/${product}/practica`}];
-const units = await getCollection('practices', ({data}) => data.product === product);
+const isAdmision = product === "admision";
+const productName = isAdmision ? "Admisión" : "Estandarizadas";
+const breadcrumbs = [
+  { name: "Inicio", path: "/" },
+  { name: productName, path: `/${product}` },
+  { name: "Práctica sin cuenta", path: `/${product}/practica` },
+];
+const units = await getCollection(
+  "practices",
+  ({ data }) => data.product === product,
+);
+
+const companionGuides = isAdmision
+  ? [
+      {
+        href: "/blog/razonamiento-verbal-paa",
+        label: "Guía de razonamiento verbal (PAA)",
+      },
+      {
+        href: "/blog/razonamiento-matematico-paa",
+        label: "Guía de razonamiento matemático (PAA)",
+      },
+      {
+        href: "/blog/como-prepararse-paa",
+        label: "Cómo organizar tu preparación para la PAA",
+      },
+    ]
+  : [
+      {
+        href: "/estandarizadas/matematicas/pendiente-de-una-recta",
+        label: "Pendiente de una recta: fórmula y comprobación",
+      },
+      {
+        href: "/estandarizadas/matematicas/funcion-lineal-e-interpretacion",
+        label: "Función lineal: ecuación, cortes y contexto",
+      },
+      {
+        href: "/estandarizadas/matematicas/porcentajes-y-proporcionalidad",
+        label: "Porcentajes y proporcionalidad: regla de tres y variaciones",
+      },
+    ];
 ---
-<Base title={`Ejercicios de ${productName} sin cuenta`} description={`Practica ${productName} con ejercicios originales, ejemplos y soluciones explicadas. Accede sin cuenta y repasa a tu ritmo.`} breadcrumbs={breadcrumbs}>
-<Breadcrumbs items={breadcrumbs} />
-<section class="container content mx-auto max-w-3xl px-4 py-12"><h1>Ejercicios de {productName} sin cuenta</h1><p>Repasa con ejercicios originales de Ubot. Esta selección no cubre todo el temario ni constituye una prueba oficial. Material con revisión humana aprobada por el equipo Ubot.</p><ul>{units.map(({data}) => <li><a href={`/${product}/practica/${data.slug}`}>{data.title}</a><p>{data.intro}</p></li>)}</ul><a href={`/${product}`}>Conoce la preparación</a></section>
+
+<Base
+  title={`Ejercicios de ${productName} sin cuenta`}
+  description={`Practica ${productName} con ejercicios originales, ejemplos resueltos y explicaciones de cada alternativa. Accede sin cuenta y repasa a tu ritmo.`}
+  breadcrumbs={breadcrumbs}
+>
+  <Breadcrumbs items={breadcrumbs} />
+  <section class="container content mx-auto max-w-3xl px-4 py-12">
+    <h1>Ejercicios de {productName} sin cuenta</h1>
+    <p>
+      {
+        isAdmision
+          ? "Estas unidades abiertas reúnen ejercicios de razonamiento verbal y matemático similares al enfoque de la Prueba de Aptitud Académica (UCR y UNA) y las pruebas de admisión universitaria en Costa Rica. No necesitás crear cuenta ni iniciar sesión para resolverlas."
+          : "Estas unidades abiertas permiten repasar contenidos clave de Matemáticas para las Pruebas Nacionales Estandarizadas del MEP. Cada práctica presenta un ejemplo resuelto y cinco preguntas originales con retroalimentación inmediata."
+      }
+    </p>
+    <p>
+      Todo el material es original de Ubot, cuenta con revisión humana aprobada
+      por el equipo y está pensado como estudio independiente: no sustituye los
+      temarios ni las pruebas oficiales.
+    </p>
+
+    <h2>Unidades disponibles para practicar</h2>
+    <ul>
+      {
+        units.map(({ data }) => (
+          <li>
+            <a href={`/${product}/practica/${data.slug}`}>{data.title}</a>
+            <p>{data.intro}</p>
+          </li>
+        ))
+      }
+    </ul>
+
+    <h2>Cómo aprovechar cada unidad</h2>
+    <ol>
+      <li>
+        <strong>Leé el ejemplo resuelto antes de empezar:</strong> identificá
+        qué dato se usa primero y qué trampa busca evitar el planteamiento.
+      </li>
+      <li>
+        <strong>Respondé sin adivinar al azar:</strong> si dudás entre dos
+        opciones, anotá por qué descartaste las demás antes de presionar
+        comprobar.
+      </li>
+      <li>
+        <strong>Revisá las explicaciones de las opciones incorrectas:</strong>{" "}
+        cada distractor explica el error típico que lleva a elegirlo, lo que te
+        ayuda a corregirlo en el siguiente intento.
+      </li>
+    </ol>
+
+    <h2>Guías recomendadas antes o después de practicar</h2>
+    <ul>
+      {
+        companionGuides.map((g) => (
+          <li>
+            <a href={g.href}>{g.label}</a>
+          </li>
+        ))
+      }
+    </ul>
+
+    <h2>Preguntas frecuentes sobre la práctica abierta</h2>
+    <h3>¿Necesito registrarme o pagar para usar estas unidades?</h3>
+    <p>
+      No. Las unidades de esta sección son públicas y funcionan directamente en
+      el navegador sin guardar datos personales.
+    </p>
+    <h3>¿Estas preguntas cubren todo el examen oficial?</h3>
+    <p>
+      No. Son unidades focalizadas para reforzar habilidades puntuales. Para
+      conocer el alcance oficial, consultá siempre los documentos de{" "}
+      {
+        isAdmision
+          ? "la PAA (UCR-UNA) y del TEC."
+          : "la DGEC del Ministerio de Educación Pública."
+      }
+    </p>
+    <p>
+      <a href={`/${product}`} class="btn btn-outline">
+        Ver guía completa de {productName}
+      </a>
+    </p>
+  </section>
 </Base>

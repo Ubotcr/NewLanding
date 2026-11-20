@@ -7,6 +7,7 @@ image: "/images/promo/flipmatch.png"
 category: "Novedades"
 featured: false
 draft: false
+noindex: true
 author:
   name: "Equipo Ubot"
 ---

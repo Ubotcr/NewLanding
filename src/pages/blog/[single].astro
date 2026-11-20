@@ -18,7 +18,7 @@ export async function getStaticPaths() {
 }
 
 const { post } = Astro.props;
-const { title, meta_title, description, image, date, updated, author } = post.data;
+const { title, meta_title, description, image, date, updated, author, noindex } = post.data;
 
 const canonicalUrl = `${config.site.base_url}/blog/${post.id}`;
 const published = date ? isoDate(date) : undefined;
@@ -55,6 +55,7 @@ const articleSchema = {
   meta_title={meta_title}
   description={description}
   image={image}
+  noindex={Boolean(noindex)}
   canonical={canonicalUrl}
   ogType="article"
   structuredData={[articleSchema]}

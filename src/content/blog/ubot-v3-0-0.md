@@ -7,6 +7,7 @@ image: "/images/promo/estandarizadasInicio.png"
 category: "Novedades"
 featured: false
 draft: false
+noindex: true
 author:
   name: "Eddie Bermúdez"
   designation: "Desarrollador del Frontend & Landing"

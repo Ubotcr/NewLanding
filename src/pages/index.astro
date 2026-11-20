@@ -8,18 +8,116 @@ import PracticeStrip from "@/partials/PracticeStrip.astro";
 import FAQ from "@/partials/FAQ.astro";
 import { admision, sharedFaq } from "@/config/preparation";
 import { getListPage } from "@/lib/contentParser";
+import { getCollection } from "astro:content";
+
 const {
   frontmatter: { banner },
 } = await getListPage("homepage/-index.md");
+
+const featuredSlugs = new Set([
+  "como-prepararse-paa",
+  "razonamiento-matematico-paa",
+  "razonamiento-verbal-paa",
+  "pruebas-nacionales-estandarizadas-mep-guia",
+  "matematicas-estandarizadas-como-prepararse",
+  "cronograma-admision-ucr-una-tec-2026-2027",
+]);
+const featuredGuides = (
+  await getCollection(
+    "blog",
+    ({ id, data }) => !data.draft && featuredSlugs.has(id),
+  )
+).sort((a, b) => a.data.title.localeCompare(b.data.title, "es"));
 ---
 
 <Base
   mascot
   meta_title="Ubot | Estandarizadas y Admisión en Costa Rica"
-  description="Prepárate con Ubot para Admisión UCR, UNA y TEC o Matemáticas de Estandarizadas del MEP. Consulta guías y ejercicios con explicaciones sin cuenta."
+  description="Prepárate con Ubot para Admisión UCR, UNA y TEC o Matemáticas de Estandarizadas del MEP. Consulta guías, fechas y ejercicios con explicaciones sin cuenta."
 >
   <Hero data={banner} showUniversities={false} choices />
+
+  <section class="px-4 py-12 md:py-16">
+    <div class="container mx-auto max-w-5xl">
+      <SectionHeader
+        title="Qué evalúa cada prueba en Costa Rica"
+        subtitle="Compara el enfoque de las principales evaluaciones de secundaria y admisión universitaria para organizar tu repaso."
+      />
+      <div class="overflow-x-auto rounded-xl border border-border bg-card">
+        <table class="w-full border-collapse text-left text-sm text-text">
+          <thead>
+            <tr class="border-b border-border text-text-light">
+              <th class="px-4 py-3 font-semibold">Prueba</th>
+              <th class="px-4 py-3 font-semibold">Quién la aplica</th>
+              <th class="px-4 py-3 font-semibold">Qué evalúa</th>
+              <th class="px-4 py-3 font-semibold">Recurso en Ubot</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-border">
+            <tr>
+              <td class="px-4 py-3 font-semibold text-text-light">PAA</td>
+              <td class="px-4 py-3">UCR y UNA</td>
+              <td class="px-4 py-3">
+                Razonamiento verbal (lectura crítica, inferencias) y
+                razonamiento matemático (planteamiento, patrones y aritmética).
+              </td>
+              <td class="px-4 py-3">
+                <a class="text-link hover:underline" href="/blog/como-prepararse-paa">
+                  Guía PAA
+                </a>
+                {" · "}
+                <a class="text-link hover:underline" href="/admision/practica">
+                  Práctica
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3 font-semibold text-text-light">
+                Prueba de Admisión TEC
+              </td>
+              <td class="px-4 py-3">Instituto Tecnológico de Costa Rica</td>
+              <td class="px-4 py-3">
+                Razonamiento lógico-matemático y comprensión verbal con
+                ponderación propia para el ingreso institucional.
+              </td>
+              <td class="px-4 py-3">
+                <a class="text-link hover:underline" href="/blog/como-entrar-universidad-publica-costa-rica">
+                  Pasos UCR/UNA/TEC
+                </a>
+                {" · "}
+                <a class="text-link hover:underline" href="/calendario">
+                  Calendario
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3 font-semibold text-text-light">
+                Pruebas Nacionales Estandarizadas
+              </td>
+              <td class="px-4 py-3">MEP (DGEC)</td>
+              <td class="px-4 py-3">
+                Contenidos curriculares de secundaria en Matemáticas
+                (álgebra, funciones, geometría y estadística), Español,
+                Ciencias y Estudios Sociales.
+              </td>
+              <td class="px-4 py-3">
+                <a class="text-link hover:underline" href="/estandarizadas/matematicas">
+                  Guías de Mate
+                </a>
+                {" · "}
+                <a class="text-link hover:underline" href="/estandarizadas/practica">
+                  Práctica
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
   <MathOverview />
+
   <section class="bg-card px-4 py-12 md:py-20">
     <div class="container mx-auto max-w-5xl">
       <SectionHeader
@@ -35,7 +133,9 @@ const {
       </ul>
       <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
         <a href={admision.page} class="btn btn-outline">Conoce Admisión</a>
-        <a href={admision.app} class="btn btn-outline">{admision.entryLabel}</a>
+        <a href="/admision/practica" class="btn btn-outline">
+          Practicar sin cuenta
+        </a>
       </div>
       <nav
         class="mt-8 flex flex-wrap justify-center gap-x-6 gap-y-3 text-sm"
@@ -52,6 +152,44 @@ const {
       </nav>
     </div>
   </section>
+
+  <section class="px-4 py-12 md:py-16">
+    <div class="container mx-auto max-w-5xl">
+      <SectionHeader
+        title="Guías de estudio gratuitas"
+        subtitle="Lecturas prácticas sobre temarios, becas, calendario oficial y técnicas para resolver ejercicios paso a paso."
+      />
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {
+          featuredGuides.map((post) => (
+            <article class="flex flex-col justify-between rounded-xl border border-border bg-card p-6">
+              <div>
+                <h3 class="text-lg font-semibold text-text-light">
+                  <a
+                    href={`/blog/${post.id}`}
+                    class="hover:text-primary"
+                  >
+                    {post.data.title}
+                  </a>
+                </h3>
+                <p class="mt-2 text-sm text-text">{post.data.description}</p>
+              </div>
+              <a
+                href={`/blog/${post.id}`}
+                class="mt-4 inline-block text-sm font-semibold text-link hover:underline"
+              >
+                Leer guía →
+              </a>
+            </article>
+          ))
+        }
+      </div>
+      <div class="mt-8 text-center">
+        <a href="/blog" class="btn btn-outline">Ver todas las guías del blog</a>
+      </div>
+    </div>
+  </section>
+
   <FAQ data={sharedFaq} />
   <PracticeStrip />
   <PreparationClosing />
